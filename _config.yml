@@ -65,6 +65,12 @@ index_generator:
   per_page: 10
   order_by: -date
 
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -93,6 +99,14 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: sn2KFy7ufB9WArLU2DI0pbTw-gzGzoHsz
+  app_key: 6SFjgatzcaGUF72bbVe02gYA
+  username: liuweijie1234 # Will be asked while deploying if is left blank
+  password: Aa123456 # Recommmended to be left blank. Will be asked while deploying if is left blank
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/

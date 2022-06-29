@@ -115,7 +115,7 @@ leancloud_counter_security:
 # git clone https://github.com/theme-next/hexo-theme-next themes/next
 # theme: next
 # git clone https://github.com/next-theme/hexo-theme-next themes/next-theme
-theme: next-theme
+theme: jekyll-theme-minimal
 
 
 # Deployment

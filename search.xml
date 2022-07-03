@@ -60,11 +60,33 @@
 <p>显示 Hexo 版本</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
 
-<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> liuweijie1234.github.io/</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-theme</span><br></pre></td></tr></table></figure>
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><ul>
+<li><p>下载主题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> liuweijie1234.github.io/</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-theme</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改主题配置<br>打开 _config.yml 文件，将主题修改为 next-theme</p>
+</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next-theme</span></span><br></pre></td></tr></table></figure>
 
-<p>打开 _config.yml 文件，该文件为站点配置文件</p>
-<p>将主题修改为 next-theme</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next-theme</span></span><br></pre></td></tr></table></figure>]]></content>
+<ul>
+<li>本地测试<br><code>hexo clean &amp;&amp; hexo server</code></li>
+</ul>
+<h2 id="部署至-github-pages"><a href="#部署至-github-pages" class="headerlink" title="部署至 github pages"></a>部署至 github pages</h2><ul>
+<li><p>安装 hexo-deployer-git</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置</p>
+</li>
+</ul>
+<p>修改根目录下的 <code>_config.yml</code>，配置 GitHub 相关信息</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/liuweijie1234/liuweijie1234.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">xxxxxxxxxxxxxxxxxxxxxx</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">liuweijie1234</span></span><br></pre></td></tr></table></figure>
+<p>其中 token 为 GitHub 的 <a href="https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal access tokens</a></p>
+<ul>
+<li>部署<br><code>hexo g -d</code></li>
+</ul>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p><a href="https://theme-next.js.org/">参考 theme-next 官方文档</a></p>
+]]></content>
       <categories>
         <category>hexo</category>
       </categories>
@@ -73,13 +95,41 @@
       </tags>
   </entry>
   <entry>
-    <title>Python list使用</title>
-    <url>/python/list/</url>
-    <content><![CDATA[]]></content>
+    <title>hexo next-theme 配置</title>
+    <url>/hexo/next-theme/</url>
+    <content><![CDATA[<h2 id="next-theme-配置"><a href="#next-theme-配置" class="headerlink" title="next-theme 配置"></a>next-theme 配置</h2><p>根目录下的 <code>_config.yml</code>，简称【站点配置文件】，例 <code>liuweijie1234.github.io\_config.yml</code><br>主题下的 <code>_config.yml</code>，简称【主题配置文件】，例 <code>liuweijie1234.github.io\themes\next-theme\_config.yml</code></p>
+<p><a href="https://github.com/next-theme/hexo-theme-next">主题代码</a><br><a href="https://theme-next.js.org/">主题官方文档</a></p>
+<h2 id="方案选择"><a href="#方案选择" class="headerlink" title="方案选择"></a>方案选择</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scheme Settings</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
+<h2 id="黑暗模式"><a href="#黑暗模式" class="headerlink" title="黑暗模式"></a>黑暗模式</h2><p>npm install hexo-next-darkmode –save</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Dark Mode</span></span><br><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h2><p>npm install hexo-generator-searchdb</p>
+<p>七、添加阅读量统计</p>
+<p>npm install hexo-leancloud-counter-security</p>
+<p>另外一种web分析</p>
+<p><a href="https://www.cloudflare.com/zh-cn/web-analytics/">https://www.cloudflare.com/zh-cn/web-analytics/</a></p>
+<p>评论系统</p>
+<p><a href="https://theme-next.js.org/docs/third-party-services/comments">https://theme-next.js.org/docs/third-party-services/comments</a></p>
+<h2 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h2><p>npm install hexo-symbols-count-time</p>
+<p>npm install hexo-word-counter</p>
+<p>参考 <a href="https://www.mdnice.com/writing/382af676baff4ed4ad5511074fb736da">https://www.mdnice.com/writing/382af676baff4ed4ad5511074fb736da</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
   </entry>
   <entry>
     <title>Python dict使用</title>
     <url>/python/dict/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Python list使用</title>
+    <url>/python/list/</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>

@@ -209,6 +209,7 @@
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">comments: false</span><br></pre></td></tr></table></figure>
 
 <p><a href="https://www.mdnice.com/writing/382af676baff4ed4ad5511074fb736da">本文参考</a></p>
+<p>其他优化可以参考大佬的文章<br><a href="https://yuumiy.github.io/posts/2789.html">https://yuumiy.github.io/posts/2789.html</a><br><a href="https://blog.csdn.net/awt_fudonglai/category_10191857.html?spm=1001.2014.3001.5482">https://blog.csdn.net/awt_fudonglai/category_10191857.html?spm=1001.2014.3001.5482</a><br><a href="https://blog.csdn.net/tuckEnough/article/details/107383201">https://blog.csdn.net/tuckEnough/article/details/107383201</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -216,18 +217,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python list 使用</title>
-    <url>/python/list/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>python 列表</tag>
       </tags>
   </entry>
   <entry>
@@ -240,6 +229,18 @@
       <tags>
         <tag>Python</tag>
         <tag>python 字典</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python list 使用</title>
+    <url>/python/list/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 列表</tag>
       </tags>
   </entry>
 </search>

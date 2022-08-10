@@ -244,4 +244,32 @@
         <tag>python 列表</tag>
       </tags>
   </entry>
+  <entry>
+    <title>在 shell 脚本中对 python 传递带有空格的字符串参数</title>
+    <url>/python/shell_run_python_script/</url>
+    <content><![CDATA[<h1 id="在-shell-脚本中对-python-传递带有空格的字符串参数"><a href="#在-shell-脚本中对-python-传递带有空格的字符串参数" class="headerlink" title="在 shell 脚本中对 python 传递带有空格的字符串参数"></a>在 shell 脚本中对 python 传递带有空格的字符串参数</h1><ul>
+<li>问题描述</li>
+</ul>
+<p>linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">parameter=&#x27;IEG straget test&#x27; </span><br><span class="line"></span><br><span class="line">python3 xxx.py $&#123;xxx&#125; $&#123;parameter&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>本地复现(windows)</li>
+</ul>
+<p><img data-src="/image/20220810_python_script.png"></p>
+<p>发现双引号不会导致参数移位</p>
+<ul>
+<li>解决办法</li>
+</ul>
+<p>对于<code>有空格的变量</code>加上双引号，如果为了省事，可以全部都加上双引号</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python3 xxx.py $&#123;xxx&#125; &quot;$&#123;parameter&#125;&quot; &quot;$&#123;xxx&#125;&quot; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
 </search>

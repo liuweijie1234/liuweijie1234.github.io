@@ -21,26 +21,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuweijie1234.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="刘伟杰的个人博客">
+    <meta name="description" content="在 shell 脚本中对 python 传递带有空格的字符串参数 问题描述  linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对 123parameter&#x3D;&amp;#x27;IEG straget test&amp;#x27; python3 xxx.py $&amp;#123;xxx&amp;#125; $&amp;#123;paramet">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="刘伟杰的个人博客">
-<meta property="og:url" content="http://liuweijie1234.github.io/archives/2022/index.html">
+<meta property="og:title" content="在 shell 脚本中对 python 传递带有空格的字符串参数">
+<meta property="og:url" content="http://liuweijie1234.github.io/python/shell_run_python_script/index.html">
 <meta property="og:site_name" content="刘伟杰的个人博客">
-<meta property="og:description" content="刘伟杰的个人博客">
+<meta property="og:description" content="在 shell 脚本中对 python 传递带有空格的字符串参数 问题描述  linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对 123parameter&#x3D;&amp;#x27;IEG straget test&amp;#x27; python3 xxx.py $&amp;#123;xxx&amp;#125; $&amp;#123;paramet">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuweijie1234.github.io/image/20220810_python_script.png">
+<meta property="article:published_time" content="2022-08-10T08:14:00.000Z">
+<meta property="article:modified_time" content="2022-08-10T07:18:47.241Z">
 <meta property="article:author" content="liuweijie1234">
-<meta property="article:tag" content="个人博客">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Shell">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuweijie1234.github.io/image/20220810_python_script.png">
 
 
-<link rel="canonical" href="http://liuweijie1234.github.io/archives/2022/">
+<link rel="canonical" href="http://liuweijie1234.github.io/python/shell_run_python_script/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2022/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://liuweijie1234.github.io/python/shell_run_python_script/","path":"python/shell_run_python_script/","title":"在 shell 脚本中对 python 传递带有空格的字符串参数"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 刘伟杰的个人博客</title>
+<title>在 shell 脚本中对 python 传递带有空格的字符串参数 | 刘伟杰的个人博客</title>
   
 
 
@@ -70,7 +75,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">刘伟杰的个人博客</h1>
+      <p class="site-title">刘伟杰的个人博客</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -129,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
     <div id="music">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1394963332&auto=1&height=66"></iframe>
     </div>
@@ -145,6 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8-shell-%E8%84%9A%E6%9C%AC%E4%B8%AD%E5%AF%B9-python-%E4%BC%A0%E9%80%92%E5%B8%A6%E6%9C%89%E7%A9%BA%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">在 shell 脚本中对 python 传递带有空格的字符串参数</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,129 +214,146 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/shell_run_python_script/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="在 shell 脚本中对 python 传递带有空格的字符串参数 | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 shell 脚本中对 python 传递带有空格的字符串参数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-08-10 16:14:00 / 修改时间：15:18:47" itemprop="dateCreated datePublished" datetime="2022-08-10T16:14:00+08:00">2022-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>452</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="在-shell-脚本中对-python-传递带有空格的字符串参数"><a href="#在-shell-脚本中对-python-传递带有空格的字符串参数" class="headerlink" title="在 shell 脚本中对 python 传递带有空格的字符串参数"></a>在 shell 脚本中对 python 传递带有空格的字符串参数</h1><ul>
+<li>问题描述</li>
+</ul>
+<p>linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parameter=&#x27;IEG straget test&#x27; </span><br><span class="line"></span><br><span class="line">python3 xxx.py $&#123;xxx&#125; $&#123;parameter&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>本地复现(windows)</li>
+</ul>
+<p><img data-src="/image/20220810_python_script.png"></p>
+<p>发现双引号不会导致参数移位</p>
+<ul>
+<li>解决办法</li>
+</ul>
+<p>对于<code>有空格的变量</code>加上双引号，如果为了省事，可以全部都加上双引号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 xxx.py $&#123;xxx&#125; &quot;$&#123;parameter&#125;&quot; &quot;$&#123;xxx&#125;&quot; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-08-10T16:14:00+08:00"
-              content="2022-08-10">
-          08-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/python/shell_run_python_script/" itemprop="url">
-            <span itemprop="name">在 shell 脚本中对 python 传递带有空格的字符串参数</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-07-04T16:14:00+08:00"
-              content="2022-07-04">
-          07-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/python/dict/" itemprop="url">
-            <span itemprop="name">Python dict 使用</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-07-04T16:12:53+08:00"
-              content="2022-07-04">
-          07-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/python/list/" itemprop="url">
-            <span itemprop="name">Python list 使用</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-07-03T16:44:15+08:00"
-              content="2022-07-03">
-          07-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/hexo/next-theme/" itemprop="url">
-            <span itemprop="name">hexo next-theme 配置</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-07-01T16:27:10+08:00"
-              content="2022-07-01">
-          07-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/hexo/install/" itemprop="url">
-            <span itemprop="name">hexo 入门与使用</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div>
+        
+            <div style="text-align:center;color: #ccc;font-size:14px;">
+                ------------- 本文结束 <i class="fa fa-heart-o"></i> 感谢您的阅读-------------
+        </div>
+        
     </div>
-  </div>
-  
-  
-  
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/Shell/" rel="tag"><i class="fa fa-tag"></i> Shell</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/python/dict/" rel="prev" title="Python dict 使用">
+                  <i class="fa fa-chevron-left"></i> Python dict 使用
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>

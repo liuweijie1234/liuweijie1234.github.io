@@ -248,7 +248,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-08-10 16:14:00 / 修改时间：15:18:47" itemprop="dateCreated datePublished" datetime="2022-08-10T16:14:00+08:00">2022-08-10</time>
+      <time title="创建时间：2022-08-10 16:14:00 / 修改时间：15:40:27" itemprop="dateCreated datePublished" datetime="2022-08-10T16:14:00+08:00">2022-08-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -267,7 +267,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>452</span>
+      <span>431</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -285,21 +285,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="在-shell-脚本中对-python-传递带有空格的字符串参数"><a href="#在-shell-脚本中对-python-传递带有空格的字符串参数" class="headerlink" title="在 shell 脚本中对 python 传递带有空格的字符串参数"></a>在 shell 脚本中对 python 传递带有空格的字符串参数</h1><ul>
-<li>问题描述</li>
-</ul>
-<p>linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对</p>
+          <h2 id="发现问题-linux"><a href="#发现问题-linux" class="headerlink" title="发现问题(linux)"></a>发现问题(linux)</h2><p>linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parameter=&#x27;IEG straget test&#x27; </span><br><span class="line"></span><br><span class="line">python3 xxx.py $&#123;xxx&#125; $&#123;parameter&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>本地复现(windows)</li>
-</ul>
-<p><img data-src="/image/20220810_python_script.png"></p>
+<h2 id="本地复现-windows"><a href="#本地复现-windows" class="headerlink" title="本地复现(windows)"></a>本地复现(windows)</h2><p><img data-src="/images/20220810_python_script.png"></p>
 <p>发现双引号不会导致参数移位</p>
-<ul>
-<li>解决办法</li>
-</ul>
-<p>对于<code>有空格的变量</code>加上双引号，如果为了省事，可以全部都加上双引号</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>对于<code>有空格的变量</code>加上双引号，如果为了省事，可以全部都加上双引号</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 xxx.py $&#123;xxx&#125; &quot;$&#123;parameter&#125;&quot; &quot;$&#123;xxx&#125;&quot; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
 
       

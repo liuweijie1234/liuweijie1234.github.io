@@ -406,8 +406,21 @@
   <entry>
     <title>Python 文档入口</title>
     <url>/python/python_summary/</url>
-    <content><![CDATA[<a href="/python/dict/" title="Python3 dict 常用方法">Python3 dict 常用方法</a>
-]]></content>
+    <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><a href="/python/number/" title="Python3 数字 常用方法">Python3 数字 常用方法</a><br>
+
+<a href="/python/string/" title="Python3 字符串 常用方法">Python3 字符串 常用方法</a><br>
+
+<a href="/python/list/" title="Python3 list 常用方法">Python3 list 常用方法</a><br>
+
+<a href="/python/dict/" title="Python3 dict 常用方法">Python3 dict 常用方法</a><br>
+
+<a href="/python/set/" title="Python3 集合 常用方法">Python3 集合 常用方法</a><br>
+
+<a href="/python/tuple/" title="Python3 元组 常用方法">Python3 元组 常用方法</a><br>
+
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><a href="/interview_questions/python/" title="Python 相关面试题">Python 相关面试题</a><br>
+
+<h2 id="工作问题"><a href="#工作问题" class="headerlink" title="工作问题"></a>工作问题</h2><a href="/python/shell_run_python_script/" title="在 shell 脚本中对 python 传递带有空格的字符串参数">在 shell 脚本中对 python 传递带有空格的字符串参数</a><br>]]></content>
       <categories>
         <category>Python</category>
       </categories>

@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuweijie1234.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="字典Python 如何对字典排序">
+    <meta name="description" content="字典Python 如何对字典排序 思路  字典本身是无序，排序可使用 sorted(iterable, key&#x3D;None, reverse&#x3D;False)  排序：  1234567891011121314151617181920test_dict &#x3D; &amp;#123;6: 9, 10: 5, 3: 11, 8: 2, 7: 6&amp;#125;# 对字典的所有key进行排序test_da">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Python3 元组 常用方法">
+<meta property="og:title" content="Python 相关面试题">
 <meta property="og:url" content="http://liuweijie1234.github.io/interview_questions/python/index.html">
 <meta property="og:site_name" content="刘伟杰的个人博客">
-<meta property="og:description" content="字典Python 如何对字典排序">
+<meta property="og:description" content="字典Python 如何对字典排序 思路  字典本身是无序，排序可使用 sorted(iterable, key&#x3D;None, reverse&#x3D;False)  排序：  1234567891011121314151617181920test_dict &#x3D; &amp;#123;6: 9, 10: 5, 3: 11, 8: 2, 7: 6&amp;#125;# 对字典的所有key进行排序test_da">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-04T08:14:00.000Z">
-<meta property="article:modified_time" content="2022-08-10T08:42:40.245Z">
+<meta property="article:published_time" content="2022-08-11T06:14:00.000Z">
+<meta property="article:modified_time" content="2022-08-11T06:22:02.991Z">
 <meta property="article:author" content="liuweijie1234">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -39,10 +39,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://liuweijie1234.github.io/interview_questions/python/","path":"interview_questions/python/","title":"Python3 元组 常用方法"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://liuweijie1234.github.io/interview_questions/python/","path":"interview_questions/python/","title":"Python 相关面试题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Python3 元组 常用方法 | 刘伟杰的个人博客</title>
+<title>Python 相关面试题 | 刘伟杰的个人博客</title>
   
 
 
@@ -235,12 +235,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Python3 元组 常用方法 | 刘伟杰的个人博客">
+      <meta itemprop="name" content="Python 相关面试题 | 刘伟杰的个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python3 元组 常用方法
+          Python 相关面试题
         </h1>
 
         <div class="post-meta-container">
@@ -250,15 +250,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-07-04 16:14:00" itemprop="dateCreated datePublished" datetime="2022-07-04T16:14:00+08:00">2022-07-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-10 16:42:40" itemprop="dateModified" datetime="2022-08-10T16:42:40+08:00">2022-08-10</time>
+      <time title="创建时间：2022-08-11 14:14:00 / 修改时间：14:22:02" itemprop="dateCreated datePublished" datetime="2022-08-11T14:14:00+08:00">2022-08-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -288,7 +282,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>15</span>
+      <span>964</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -306,7 +300,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3>
+        <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3><ul>
+<li>思路</li>
+</ul>
+<p>字典本身是无序，排序可使用 <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-func-sorted.html">sorted(iterable, key&#x3D;None, reverse&#x3D;False)</a></p>
+<ul>
+<li>排序：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">test_dict = &#123;<span class="number">6</span>: <span class="number">9</span>, <span class="number">10</span>: <span class="number">5</span>, <span class="number">3</span>: <span class="number">11</span>, <span class="number">8</span>: <span class="number">2</span>, <span class="number">7</span>: <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典的所有key进行排序</span></span><br><span class="line">test_data_0 = <span class="built_in">sorted</span>(test_dict.keys())</span><br><span class="line"><span class="built_in">print</span>(test_data_0)  <span class="comment"># [3, 6, 7, 8, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照key的大小升序排列</span></span><br><span class="line">test_data_1 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_1)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (8, 2), (10, 5)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小升序排列</span></span><br><span class="line">test_data_2 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_2)  <span class="comment"># [(8, 2), (10, 5), (7, 6), (6, 9), (3, 11)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小降序排列</span></span><br><span class="line">test_data_3 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(test_data_3)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (10, 5), (8, 2)]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>面试题</li>
+</ul>
+<p><code>m1 = &#123;&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 1&#125;</code> 将同样的 value 的 key 集合在 list 里，输出 <code>&#123;1: [&#39;a&#39;, &#39;c&#39;], 2: [&#39;b&#39;]&#125;</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">m1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">f = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> m1.items():</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> f:</span><br><span class="line">        f[value] = [key]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f[value].append(key)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -329,14 +336,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/python/number/" rel="prev" title="Python3 数字 常用方法">
-                  <i class="fa fa-chevron-left"></i> Python3 数字 常用方法
+                <a href="/python/shell_run_python_script/" rel="prev" title="在 shell 脚本中对 python 传递带有空格的字符串参数">
+                  <i class="fa fa-chevron-left"></i> 在 shell 脚本中对 python 传递带有空格的字符串参数
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/python/dict/" rel="next" title="Python3 dict 常用方法">
-                  Python3 dict 常用方法 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -369,14 +373,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">12k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

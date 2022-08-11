@@ -367,9 +367,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Python3 元组 常用方法</title>
+    <title>Python 相关面试题</title>
     <url>/interview_questions/python/</url>
-    <content><![CDATA[<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3>]]></content>
+    <content><![CDATA[<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3><ul>
+<li>思路</li>
+</ul>
+<p>字典本身是无序，排序可使用 <a href="https://www.runoob.com/python3/python3-func-sorted.html">sorted(iterable, key&#x3D;None, reverse&#x3D;False)</a></p>
+<ul>
+<li>排序：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">test_dict = &#123;<span class="number">6</span>: <span class="number">9</span>, <span class="number">10</span>: <span class="number">5</span>, <span class="number">3</span>: <span class="number">11</span>, <span class="number">8</span>: <span class="number">2</span>, <span class="number">7</span>: <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典的所有key进行排序</span></span><br><span class="line">test_data_0 = <span class="built_in">sorted</span>(test_dict.keys())</span><br><span class="line"><span class="built_in">print</span>(test_data_0)  <span class="comment"># [3, 6, 7, 8, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照key的大小升序排列</span></span><br><span class="line">test_data_1 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_1)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (8, 2), (10, 5)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小升序排列</span></span><br><span class="line">test_data_2 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_2)  <span class="comment"># [(8, 2), (10, 5), (7, 6), (6, 9), (3, 11)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小降序排列</span></span><br><span class="line">test_data_3 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(test_data_3)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (10, 5), (8, 2)]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>面试题</li>
+</ul>
+<p><code>m1 = &#123;&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 1&#125;</code> 将同样的 value 的 key 集合在 list 里，输出 <code>&#123;1: [&#39;a&#39;, &#39;c&#39;], 2: [&#39;b&#39;]&#125;</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">m1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">f = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> m1.items():</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> f:</span><br><span class="line">        f[value] = [key]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f[value].append(key)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Python</category>
         <category>面试题</category>

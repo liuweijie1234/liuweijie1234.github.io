@@ -220,7 +220,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Python list 使用</title>
+    <title>Python3 list 常用方法</title>
     <url>/python/list/</url>
     <content><![CDATA[<h2 id="list-介绍"><a href="#list-介绍" class="headerlink" title="list 介绍"></a>list 介绍</h2><p>Python 中的数组叫做 list</p>
 ]]></content>
@@ -233,9 +233,112 @@
       </tags>
   </entry>
   <entry>
-    <title>Python dict 使用</title>
+    <title>Python3 dict 常用方法</title>
     <url>/python/dict/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p><a href="https://docs.python.org/zh-cn/3/">Python 官方文档</a></p>
+<p><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">官方文档-字典</a></p>
+<p>字典 &#x3D;&#x3D; 键值对的集合</p>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
+<li><p>type()</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">type</span>(tel)</span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;dict&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>len()</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(tel)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>str()</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>(tel)</span><br><span class="line"><span class="string">&quot;&#123;&#x27;jack&#x27;: 4098, &#x27;sape&#x27;: 4139&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list()：返回该字典中所有键的列表</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(tel)</span><br><span class="line">[<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;sape&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><ul>
+<li>dict 推导式</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;x: x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> (<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>)&#125;</span><br><span class="line">&#123;<span class="number">2</span>: <span class="number">4</span>, <span class="number">4</span>: <span class="number">16</span>, <span class="number">6</span>: <span class="number">36</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="dict-get-key-value"><a href="#dict-get-key-value" class="headerlink" title="dict.get(key[, value])"></a>dict.get(key[, value])</h4><ul>
+<li>作用</li>
+</ul>
+<p>用于返回指定 key 的值</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>key – 字典中要查找的键。<br>value – 可选，如果指定键的值不存在时，返回该默认值。</p>
+<ul>
+<li><code>get()</code> 方法 与 <code>dict[key]</code> 访问元素 区别</li>
+</ul>
+<p>get(key) 方法在 key（键）不在字典中时，可以返回默认值 None 或者设置的默认值。</p>
+<p>dict[key] 在 key（键）不在字典中时，会触发 KeyError 异常。</p>
+<ul>
+<li>示例：嵌套字典使用</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line">testdict = &#123;<span class="string">&#x27;tencent&#x27;</span>: &#123;<span class="string">&#x27;url&#x27;</span>: <span class="string">&#x27;https://www.qq.com/&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">res = testdict.get(<span class="string">&#x27;tencent&#x27;</span>, &#123;&#125;).get(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;tencent url 为 : <span class="subst">&#123;<span class="built_in">str</span>(res)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以上实例输出结果为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tencent url 为 : https://www.qq.com/</span><br></pre></td></tr></table></figure>
+<h4 id="dict-setdefault-key-default-x3D-None"><a href="#dict-setdefault-key-default-x3D-None" class="headerlink" title="dict.setdefault(key, default&#x3D;None)"></a>dict.setdefault(key, default&#x3D;None)</h4><ul>
+<li>作用</li>
+</ul>
+<p>setdefault() 方法和 get()方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值。</p>
+<h4 id="Key-in-dict"><a href="#Key-in-dict" class="headerlink" title="Key in dict"></a>Key in dict</h4><ul>
+<li>作用</li>
+</ul>
+<p>用于判断 key 是否存在字典中，返回值是布尔类型(true&#x2F;false)</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>常和 if 配合使用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">not</span> <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="dict-items"><a href="#dict-items" class="headerlink" title="dict.items()"></a>dict.items()</h4><ul>
+<li>作用</li>
+</ul>
+<p>返回该字典的包含键值的列表作为字典的元组对</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>不接受任何参数，如果字典为空，则 dict.items() 方法返回一个空列表。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> knights.items():</span><br><span class="line">    <span class="built_in">print</span>(k, v)</span><br><span class="line"><span class="built_in">print</span>(knights.items())</span><br></pre></td></tr></table></figure>
+
+<p>返回</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dict_items([(<span class="string">&#x27;gallahad&#x27;</span>, <span class="string">&#x27;the pure&#x27;</span>), (<span class="string">&#x27;robin&#x27;</span>, <span class="string">&#x27;the brave&#x27;</span>)])</span><br></pre></td></tr></table></figure>
+<h4 id="dict-keys-dict-values"><a href="#dict-keys-dict-values" class="headerlink" title="dict.keys() + dict.values()"></a>dict.keys() + dict.values()</h4><ul>
+<li>作用</li>
+</ul>
+<p>返回字典的视图对象(只读)，可以使用 list() 转换成列表</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>不接受任何参数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> knights.keys():</span><br><span class="line">    <span class="built_in">print</span>(k)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> knights.values():</span><br><span class="line">    <span class="built_in">print</span>(v)</span><br><span class="line"><span class="built_in">print</span>(knights.keys())</span><br><span class="line"><span class="built_in">print</span>(knights.values())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="dict-update-dict2"><a href="#dict-update-dict2" class="headerlink" title="dict.update(dict2)"></a>dict.update(dict2)</h4><ul>
+<li>作用</li>
+</ul>
+<p>update() 函数把字典参数 dict2 的 key&#x2F;value(键&#x2F;值) 对更新到字典 dict 里。</p>
+<h3 id="其他方法-不常用"><a href="#其他方法-不常用" class="headerlink" title="其他方法(不常用)"></a>其他方法(不常用)</h3><h4 id="dict-clear"><a href="#dict-clear" class="headerlink" title="dict.clear()"></a>dict.clear()</h4><ul>
+<li>作用</li>
+</ul>
+<p>clear() 函数用于删除字典内所有元素。</p>
+<h4 id="dict-copy"><a href="#dict-copy" class="headerlink" title="dict.copy()"></a>dict.copy()</h4><ul>
+<li>作用</li>
+</ul>
+<p>copy() 函数返回一个字典的浅复制，子对象是引用</p>
+<p><a href="https://www.runoob.com/w3cnote/python-understanding-dict-copy-shallow-or-deep.html">Python 直接赋值、浅拷贝和深度拷贝解析</a></p>
+<h4 id="dict-fromkeys-seq-value"><a href="#dict-fromkeys-seq-value" class="headerlink" title="dict.fromkeys(seq[, value])"></a>dict.fromkeys(seq[, value])</h4><ul>
+<li>作用</li>
+</ul>
+<p>fromkeys() 函数用于创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值。</p>
+<h4 id="pop-key-default"><a href="#pop-key-default" class="headerlink" title="pop(key[, default])"></a>pop(key[, default])</h4><ul>
+<li>作用</li>
+</ul>
+<p>pop() 方法删除字典 key（键）所对应的值，返回被删除的值，当键 key 不存在时返回的值为 default</p>
+<h4 id="popitem"><a href="#popitem" class="headerlink" title="popitem()"></a>popitem()</h4><ul>
+<li>作用</li>
+</ul>
+<p>popitem() 方法随机返回并删除字典中的最后一对键和值，返回格式是元组。如果字典已经为空，却调用了此方法，就报出 KeyError 异常。</p>
+]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -261,6 +364,78 @@
       <tags>
         <tag>Python</tag>
         <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 元组 常用方法</title>
+    <url>/interview_questions/python/</url>
+    <content><![CDATA[<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3>]]></content>
+      <categories>
+        <category>Python</category>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 数字 常用方法</title>
+    <url>/python/number/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 数字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 文档入口</title>
+    <url>/python/python_summary/</url>
+    <content><![CDATA[<a href="/python/dict/" title="Python3 dict 常用方法">Python3 dict 常用方法</a>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 字符串 常用方法</title>
+    <url>/python/string/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 集合 常用方法</title>
+    <url>/python/set/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 集合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 元组 常用方法</title>
+    <url>/python/tuple/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 元祖</tag>
       </tags>
   </entry>
 </search>

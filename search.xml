@@ -1,6 +1,552 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python 相关面试题</title>
+    <url>/interview_questions/python/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/54430650">知乎：110 道 Python 面试题（真题）</a></p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3><ul>
+<li>思路</li>
+</ul>
+<p>字典本身是无序，排序可使用 <a href="https://www.runoob.com/python3/python3-func-sorted.html">sorted(iterable, key&#x3D;None, reverse&#x3D;False)</a></p>
+<ul>
+<li>排序：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">test_dict = &#123;<span class="number">6</span>: <span class="number">9</span>, <span class="number">10</span>: <span class="number">5</span>, <span class="number">3</span>: <span class="number">11</span>, <span class="number">8</span>: <span class="number">2</span>, <span class="number">7</span>: <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典的所有key进行排序</span></span><br><span class="line">test_data_0 = <span class="built_in">sorted</span>(test_dict.keys())</span><br><span class="line"><span class="built_in">print</span>(test_data_0)  <span class="comment"># [3, 6, 7, 8, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照key的大小升序排列</span></span><br><span class="line">test_data_1 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_1)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (8, 2), (10, 5)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小升序排列</span></span><br><span class="line">test_data_2 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_2)  <span class="comment"># [(8, 2), (10, 5), (7, 6), (6, 9), (3, 11)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小降序排列</span></span><br><span class="line">test_data_3 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(test_data_3)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (10, 5), (8, 2)]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>面试题</li>
+</ul>
+<p><code>m1 = &#123;&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 1&#125;</code> 将同样的 value 的 key 集合在 list 里，输出 <code>&#123;1: [&#39;a&#39;, &#39;c&#39;], 2: [&#39;b&#39;]&#125;</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">m1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">f = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> m1.items():</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> f:</span><br><span class="line">        f[value] = [key]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f[value].append(key)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 list 常用方法</title>
+    <url>/python/list/</url>
+    <content><![CDATA[<h2 id="list-介绍"><a href="#list-介绍" class="headerlink" title="list 介绍"></a>list 介绍</h2><p>列表是 Python 中最常用的数据类型</p>
+<p>Python 中的数组叫做 list</p>
+<p>列表可以进行的操作包括 索引、切片、加、乘、检查成员。</p>
+<p>列表索引从 0 开始</p>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
+<li>len(list)：列表元素个数</li>
+<li>max(list)：返回列表元素最大值</li>
+<li>min(list)：返回列表元素最小值</li>
+<li>list(tuple)：将元组转换为列表</li>
+</ul>
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="list-append-obj"><a href="#list-append-obj" class="headerlink" title="list.append(obj)"></a>list.append(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>在列表末尾添加新的对象</p>
+<h4 id="list-insert-index-obj"><a href="#list-insert-index-obj" class="headerlink" title="list.insert(index, obj)"></a>list.insert(index, obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>将指定对象插入列表的指定位置。</p>
+<h4 id="list-extend-seq"><a href="#list-extend-seq" class="headerlink" title="list.extend(seq)"></a>list.extend(seq)</h4><ul>
+<li>作用</li>
+</ul>
+<p>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</p>
+<h4 id="list-count-obj"><a href="#list-count-obj" class="headerlink" title="list.count(obj)"></a>list.count(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>统计某个元素在列表中出现的次数</p>
+<h4 id="list-index-obj"><a href="#list-index-obj" class="headerlink" title="list.index(obj)"></a>list.index(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>从列表中找出某个值第一个匹配项的索引位置</p>
+<ul>
+<li>语法<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>.index(x[, start[, end]])</span><br></pre></td></tr></table></figure>
+x– 查找的对象。<br>start– 可选，查找的起始位置。<br>end– 可选，查找的结束位置。</li>
+</ul>
+<h4 id="list-sort-key-x3D-None-reverse-x3D-False"><a href="#list-sort-key-x3D-None-reverse-x3D-False" class="headerlink" title="list.sort( key&#x3D;None, reverse&#x3D;False)"></a>list.sort( key&#x3D;None, reverse&#x3D;False)</h4><ul>
+<li>作用</li>
+</ul>
+<p>对原列表进行排序</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。<br>reverse – 排序规则，reverse &#x3D; True 降序， reverse &#x3D; False 升序（默认）。</p>
+<blockquote>
+<p>注意：sort 和 sorted<br>sort 是列表独有的</p>
+</blockquote>
+<h4 id="list-reverse"><a href="#list-reverse" class="headerlink" title="list.reverse()"></a>list.reverse()</h4><ul>
+<li>作用</li>
+</ul>
+<p>反向列表中元素</p>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><h4 id="list-pop-index-x3D-1"><a href="#list-pop-index-x3D-1" class="headerlink" title="list.pop([index&#x3D;-1])"></a>list.pop([index&#x3D;-1])</h4><ul>
+<li>作用</li>
+</ul>
+<p>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</p>
+<h4 id="list-remove-obj"><a href="#list-remove-obj" class="headerlink" title="list.remove(obj)"></a>list.remove(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>移除列表中某个值的第一个匹配项</p>
+<h4 id="list-clear"><a href="#list-clear" class="headerlink" title="list.clear()"></a>list.clear()</h4><ul>
+<li>作用</li>
+</ul>
+<p>清空列表</p>
+<h4 id="list-copy"><a href="#list-copy" class="headerlink" title="list.copy()"></a>list.copy()</h4><ul>
+<li>作用</li>
+</ul>
+<p>复制列表</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 列表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 dict 常用方法</title>
+    <url>/python/dict/</url>
+    <content><![CDATA[<p><a href="https://docs.python.org/zh-cn/3/">Python 官方文档</a></p>
+<p><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">官方文档-字典</a></p>
+<p>字典 &#x3D;&#x3D; 键值对的集合</p>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
+<li><p>type()：返回输入的变量类型，如果变量是字典就返回字典类型。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">type</span>(tel)</span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;dict&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>len()：计算字典元素个数，即键的总数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(tel)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>str()：输出字典，可以打印的字符串表示。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>(tel)</span><br><span class="line"><span class="string">&quot;&#123;&#x27;jack&#x27;: 4098, &#x27;sape&#x27;: 4139&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list()：返回该字典中所有键的列表</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(tel)</span><br><span class="line">[<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;sape&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><ul>
+<li>dict 推导式</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;x: x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> (<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>)&#125;</span><br><span class="line">&#123;<span class="number">2</span>: <span class="number">4</span>, <span class="number">4</span>: <span class="number">16</span>, <span class="number">6</span>: <span class="number">36</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="dict-get-key-value"><a href="#dict-get-key-value" class="headerlink" title="dict.get(key[, value])"></a>dict.get(key[, value])</h4><ul>
+<li>作用</li>
+</ul>
+<p>用于返回指定 key 的值</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>key – 字典中要查找的键。<br>value – 可选，如果指定键的值不存在时，返回该默认值。</p>
+<ul>
+<li><code>get()</code> 方法 与 <code>dict[key]</code> 访问元素 区别</li>
+</ul>
+<p>get(key) 方法在 key（键）不在字典中时，可以返回默认值 None 或者设置的默认值。</p>
+<p>dict[key] 在 key（键）不在字典中时，会触发 KeyError 异常。</p>
+<ul>
+<li>示例：嵌套字典使用</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line">testdict = &#123;<span class="string">&#x27;tencent&#x27;</span>: &#123;<span class="string">&#x27;url&#x27;</span>: <span class="string">&#x27;https://www.qq.com/&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">res = testdict.get(<span class="string">&#x27;tencent&#x27;</span>, &#123;&#125;).get(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;tencent url 为 : <span class="subst">&#123;<span class="built_in">str</span>(res)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以上实例输出结果为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tencent url 为 : https://www.qq.com/</span><br></pre></td></tr></table></figure>
+<h4 id="dict-setdefault-key-default-x3D-None"><a href="#dict-setdefault-key-default-x3D-None" class="headerlink" title="dict.setdefault(key, default&#x3D;None)"></a>dict.setdefault(key, default&#x3D;None)</h4><ul>
+<li>作用</li>
+</ul>
+<p>setdefault() 方法和 get()方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值。</p>
+<h4 id="Key-in-dict"><a href="#Key-in-dict" class="headerlink" title="Key in dict"></a>Key in dict</h4><ul>
+<li>作用</li>
+</ul>
+<p>用于判断 key 是否存在字典中，返回值是布尔类型(true&#x2F;false)</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>常和 if 配合使用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">not</span> <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="dict-items"><a href="#dict-items" class="headerlink" title="dict.items()"></a>dict.items()</h4><ul>
+<li>作用</li>
+</ul>
+<p>返回该字典的包含键值的列表作为字典的元组对</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>不接受任何参数，如果字典为空，则 dict.items() 方法返回一个空列表。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> knights.items():</span><br><span class="line">    <span class="built_in">print</span>(k, v)</span><br><span class="line"><span class="built_in">print</span>(knights.items())</span><br></pre></td></tr></table></figure>
+
+<p>返回</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dict_items([(<span class="string">&#x27;gallahad&#x27;</span>, <span class="string">&#x27;the pure&#x27;</span>), (<span class="string">&#x27;robin&#x27;</span>, <span class="string">&#x27;the brave&#x27;</span>)])</span><br></pre></td></tr></table></figure>
+<h4 id="dict-keys-dict-values"><a href="#dict-keys-dict-values" class="headerlink" title="dict.keys() + dict.values()"></a>dict.keys() + dict.values()</h4><ul>
+<li>作用</li>
+</ul>
+<p>返回字典的视图对象(只读)，可以使用 list() 转换成列表</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>不接受任何参数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> knights.keys():</span><br><span class="line">    <span class="built_in">print</span>(k)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> knights.values():</span><br><span class="line">    <span class="built_in">print</span>(v)</span><br><span class="line"><span class="built_in">print</span>(knights.keys())</span><br><span class="line"><span class="built_in">print</span>(knights.values())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="dict-update-dict2"><a href="#dict-update-dict2" class="headerlink" title="dict.update(dict2)"></a>dict.update(dict2)</h4><ul>
+<li>作用</li>
+</ul>
+<p>update() 函数把字典参数 dict2 的 key&#x2F;value(键&#x2F;值) 对更新到字典 dict 里。</p>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><h4 id="dict-clear"><a href="#dict-clear" class="headerlink" title="dict.clear()"></a>dict.clear()</h4><ul>
+<li>作用</li>
+</ul>
+<p>clear() 函数用于删除字典内所有元素。</p>
+<h4 id="dict-copy"><a href="#dict-copy" class="headerlink" title="dict.copy()"></a>dict.copy()</h4><ul>
+<li>作用</li>
+</ul>
+<p>copy() 函数返回一个字典的浅复制，子对象是引用</p>
+<p><a href="https://www.runoob.com/w3cnote/python-understanding-dict-copy-shallow-or-deep.html">Python 直接赋值、浅拷贝和深度拷贝解析</a></p>
+<h4 id="dict-fromkeys-seq-value"><a href="#dict-fromkeys-seq-value" class="headerlink" title="dict.fromkeys(seq[, value])"></a>dict.fromkeys(seq[, value])</h4><ul>
+<li>作用</li>
+</ul>
+<p>fromkeys() 函数用于创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值。</p>
+<h4 id="pop-key-default"><a href="#pop-key-default" class="headerlink" title="pop(key[, default])"></a>pop(key[, default])</h4><ul>
+<li>作用</li>
+</ul>
+<p>pop() 方法删除字典 key（键）所对应的值，返回被删除的值，当键 key 不存在时返回的值为 default</p>
+<h4 id="popitem"><a href="#popitem" class="headerlink" title="popitem()"></a>popitem()</h4><ul>
+<li>作用</li>
+</ul>
+<p>popitem() 方法随机返回并删除字典中的最后一对键和值，返回格式是元组。如果字典已经为空，却调用了此方法，就报出 KeyError 异常。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 字典</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 数字 常用方法</title>
+    <url>/python/number/</url>
+    <content><![CDATA[<h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul>
+<li>整型(int) </li>
+<li>浮点型(float)</li>
+<li>复数(complex)</li>
+</ul>
+<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>abs(x)</td>
+<td>返回数字的绝对值。</td>
+</tr>
+<tr>
+<td>max(x1, x2,…)</td>
+<td>返回给定参数的最大值，参数可以为序列。</td>
+</tr>
+<tr>
+<td>min(x1, x2,…)</td>
+<td>返回给定参数的最小值，参数可以为序列。</td>
+</tr>
+<tr>
+<td>round(x [,n])</td>
+<td>返回浮点数 x 的四舍五入值，如给出 n 值，则代表舍入到小数点后的位数。<br>其实准确的说是保留值将保留到离上一位更近的一端。</td>
+</tr>
+</tbody></table>
+<h2 id="随机数函数"><a href="#随机数函数" class="headerlink" title="随机数函数"></a>随机数函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>random()</td>
+<td>随机生成下一个实数，它在[0,1)范围内。</td>
+</tr>
+<tr>
+<td>randrange()</td>
+<td>返回指定递增基数集合中的一个随机数，基数默认值为 1。</td>
+</tr>
+<tr>
+<td>choice(seq)</td>
+<td>从序列的元素中随机挑选一个元素，比如 random.choice(range(10))，从 0 到 9 中随机挑选一个整数。</td>
+</tr>
+</tbody></table>
+<h2 id="数学常量"><a href="#数学常量" class="headerlink" title="数学常量"></a>数学常量</h2><table>
+<thead>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pi</td>
+<td>数学常量 pi（圆周率，一般以π来表示）</td>
+</tr>
+<tr>
+<td>e</td>
+<td>数学常量 e，e 即自然常数（自然常数）。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 数字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 入门与使用</title>
+    <url>/hexo/install/</url>
+    <content><![CDATA[<h2 id="用-hexo-搭建博客"><a href="#用-hexo-搭建博客" class="headerlink" title="用 hexo 搭建博客"></a>用 hexo 搭建博客</h2><p>个人通过使用以下工具来实现个人博客搭建</p>
+<p>1、hexo（框架）： <a href="https://hexo.io/zh-cn/docs/">文档入口</a><br>2、next（主题）： <a href="https://theme-next.js.org/">文档入口</a><br>3、github pages（服务）： <a href="https://docs.github.com/cn/pages">文档入口</a></p>
+<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><ul>
+<li><p>安装框架依赖</p>
+<ul>
+<li><p>安装 git、node.js<br><a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">git 安装文档</a><br><a href="https://nodejs.org/zh-cn/">Node.js 安装文档</a><br>一般安装 node.js 默认安装 npm</p>
+</li>
+<li><p>查看版本</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>安装 框架</p>
+<ul>
+<li>安装 hexo（mac 需要切换权限 <code>sudo -s</code>） <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo</span><br></pre></td></tr></table></figure></li>
+<li>添加环境变量<br> 将 Hexo 所在的目录下的 node_modules 添加到环境变量之中即可直接使用 hexo <command>： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## hexo init &lt;folder&gt; 在指定文件夹中新建所需要的文件</span></span><br><span class="line">hexo init liuweijie1234.github.io</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> liuweijie1234.github.io/</span><br><span class="line"></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件，简写 hexo g</span></span><br><span class="line">hexo generate</span><br><span class="line"><span class="comment"># 启动服务器。默认情况下，访问网址为： http://localhost:4000/。简写 hexo s</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这样本地一个 demo 博客就启动了，下面讲 【基本知识】 和 【hexo 使用】怎么修改主题、写文章 并部署到 gitHub。</p>
+<h2 id="基本知识和命令"><a href="#基本知识和命令" class="headerlink" title="基本知识和命令"></a>基本知识和命令</h2><h3 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h3><p>文件及其作用 可以<a href="https://hexo.io/zh-cn/docs/setup#config-yml">参考：–文件解释–</a></p>
+<p>重点关注 <code>_config.yml</code>，这是博客的配置信息，可以配置大部分的参数，可以<a href="https://hexo.io/zh-cn/docs/configuration">参考：–配置详解–</a></p>
+<p><code>source</code>，是你存放文章的地方</p>
+<p><code>themes</code>，是主题文件夹，一般下载主题至该文件。<br>实例命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-theme</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p><a href="https://hexo.io/zh-cn/docs/commands">参考：–命令详解–</a></p>
+<ul>
+<li>new（新建文章）</li>
+</ul>
+<p>布局默认使用 _config.yml 中的 <code>default_layout: post</code>，默认在<code>source/_posts</code>创建文章，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new [布局] -p 文章路径 &lt;文章标题&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例，创建 source/_posts/python/dict.md</span></span><br><span class="line">hexo new -p python/dict <span class="string">&quot;Python dict使用&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>generate(生成静态文件并部署)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态文件，文件生成后立即部署网站</span></span><br><span class="line">hexo generate --deploy</span><br></pre></td></tr></table></figure>
+<p>常用简写来部署到 github</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line"></span><br><span class="line"><span class="comment">## 等效于</span></span><br><span class="line">hexo deploy -g 或 hexo d -g</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>server</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">启动服务器</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>常用简写</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>常跟清除缓存文件<code>hexo clean</code> 结合使用，来本地预览</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp; hexo server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>version</li>
+</ul>
+<p>显示 Hexo 版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><ul>
+<li><p>下载主题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> liuweijie1234.github.io/</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-theme</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改主题配置<br>打开 _config.yml 文件，将主题修改为 next-theme</p>
+</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next-theme</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>本地测试<br><code>hexo clean &amp;&amp; hexo server</code></li>
+</ul>
+<h2 id="部署至-github-pages"><a href="#部署至-github-pages" class="headerlink" title="部署至 github pages"></a>部署至 github pages</h2><ul>
+<li><p>安装 hexo-deployer-git</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置</p>
+</li>
+</ul>
+<p>修改根目录下的 <code>_config.yml</code>，配置 GitHub 相关信息</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/liuweijie1234/liuweijie1234.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">xxxxxxxxxxxxxxxxxxxxxx</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">liuweijie1234</span></span><br></pre></td></tr></table></figure>
+<p>其中 token 为 GitHub 的 <a href="https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal access tokens</a></p>
+<ul>
+<li>部署<br><code>hexo g -d</code></li>
+</ul>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p><a href="https://theme-next.js.org/">参考 theme-next 官方文档</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 集合 常用方法</title>
+    <url>/python/set/</url>
+    <content><![CDATA[<p>集合（set）是一个无序的不重复元素序列。</p>
+<blockquote>
+<p>集合一般用于去重，其他地方我很少用到，可能是我菜了</p>
+</blockquote>
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><h3 id="add"><a href="#add" class="headerlink" title="add()"></a>add()</h3><p>为集合添加元素</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h3><p>移除集合中的所有元素</p>
+<h3 id="copy"><a href="#copy" class="headerlink" title="copy()"></a>copy()</h3><p>拷贝一个集合</p>
+<h3 id="difference"><a href="#difference" class="headerlink" title="difference()"></a>difference()</h3><p>返回多个集合的差集</p>
+<h3 id="difference-update"><a href="#difference-update" class="headerlink" title="difference_update()"></a>difference_update()</h3><p>移除集合中的元素，该元素在指定的集合也存在。</p>
+<h3 id="discard"><a href="#discard" class="headerlink" title="discard()"></a>discard()</h3><p>删除集合中指定的元素</p>
+<h3 id="intersection"><a href="#intersection" class="headerlink" title="intersection()"></a>intersection()</h3><p>返回集合的交集</p>
+<h3 id="intersection-update"><a href="#intersection-update" class="headerlink" title="intersection_update()"></a>intersection_update()</h3><p>返回集合的交集。</p>
+<h3 id="isdisjoint"><a href="#isdisjoint" class="headerlink" title="isdisjoint()"></a>isdisjoint()</h3><p>判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。</p>
+<h3 id="issubset"><a href="#issubset" class="headerlink" title="issubset()"></a>issubset()</h3><p>判断指定集合是否为该方法参数集合的子集。</p>
+<h3 id="issuperset"><a href="#issuperset" class="headerlink" title="issuperset()"></a>issuperset()</h3><p>判断该方法的参数集合是否为指定集合的子集</p>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p>随机移除元素</p>
+<h3 id="remove"><a href="#remove" class="headerlink" title="remove()"></a>remove()</h3><p>移除指定元素</p>
+<h3 id="symmetric-difference"><a href="#symmetric-difference" class="headerlink" title="symmetric_difference()"></a>symmetric_difference()</h3><p>返回两个集合中不重复的元素集合。</p>
+<h3 id="symmetric-difference-update"><a href="#symmetric-difference-update" class="headerlink" title="symmetric_difference_update()"></a>symmetric_difference_update()</h3><p>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。</p>
+<h3 id="union"><a href="#union" class="headerlink" title="union()"></a>union()</h3><p>返回两个集合的并集</p>
+<h3 id="update"><a href="#update" class="headerlink" title="update()"></a>update()</h3><p>给集合添加元素</p>
+<p><a href="https://www.runoob.com/python3/python3-set.html">菜鸟教程-集合</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 集合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 文档入口</title>
+    <url>/python/python_summary/</url>
+    <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><a href="/python/number/" title="Python3 数字 常用方法">Python3 数字 常用方法</a><br>
+
+<a href="/python/string/" title="Python3 字符串 常用方法">Python3 字符串 常用方法</a><br>
+
+<a href="/python/list/" title="Python3 list 常用方法">Python3 list 常用方法</a><br>
+
+<a href="/python/dict/" title="Python3 dict 常用方法">Python3 dict 常用方法</a><br>
+
+<a href="/python/set/" title="Python3 集合 常用方法">Python3 集合 常用方法</a><br>
+
+<a href="/python/tuple/" title="Python3 元组 常用方法">Python3 元组 常用方法</a><br>
+
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><a href="/interview_questions/python/" title="Python 相关面试题">Python 相关面试题</a><br>
+
+<h2 id="工作问题"><a href="#工作问题" class="headerlink" title="工作问题"></a>工作问题</h2><a href="/python/shell_run_python_script/" title="在 shell 脚本中对 python 传递带有空格的字符串参数">在 shell 脚本中对 python 传递带有空格的字符串参数</a><br>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 字符串 常用方法</title>
+    <url>/python/string/</url>
+    <content><![CDATA[<h2 id="字符串介绍"><a href="#字符串介绍" class="headerlink" title="字符串介绍"></a>字符串介绍</h2><p>字符串是 Python 中最常用的数据类型</p>
+<p>字符串可以进行的操作包括 索引、切片、加、乘、检查成员。</p>
+<h2 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h2><table>
+<thead>
+<tr>
+<th>格式化符号</th>
+<th>替换内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%s</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>整数，%06d 表示输出的整数显示位数，不足的地方使用 0 补全</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>浮点数，%.02f 表示小数点后只显示两位</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>十六进制整数</td>
+</tr>
+</tbody></table>
+<p>推荐使用 f-string</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x+<span class="number">1</span>&#125;</span>&#x27;</span>)   <span class="comment"># Python 3.6</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x+<span class="number">1</span>=&#125;</span>&#x27;</span>)   <span class="comment"># Python 3.8</span></span><br><span class="line">x+<span class="number">1</span>=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="capitalize"><a href="#capitalize" class="headerlink" title="capitalize()"></a>capitalize()</h4><p>将字符串的第一个字符转换为大写</p>
+<h4 id="center-width-fillchar"><a href="#center-width-fillchar" class="headerlink" title="center(width, fillchar)"></a>center(width, fillchar)</h4><p>返回一个指定的宽度 width 居中的字符串，fillchar 为填充的字符，默认为空格。</p>
+<h4 id="count-str-beg-x3D-0-end-x3D-len-string"><a href="#count-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="count(str, beg&#x3D; 0,end&#x3D;len(string))"></a>count(str, beg&#x3D; 0,end&#x3D;len(string))</h4><p>返回 str 在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</p>
+<h4 id="bytes-decode-encoding-x3D-”utf-8”-errors-x3D-”strict”"><a href="#bytes-decode-encoding-x3D-”utf-8”-errors-x3D-”strict”" class="headerlink" title="bytes.decode(encoding&#x3D;”utf-8”, errors&#x3D;”strict”)"></a>bytes.decode(encoding&#x3D;”utf-8”, errors&#x3D;”strict”)</h4><p>Python3 中没有 decode 方法，但我们可以使用 bytes 对象的 decode() 方法来解码给定的 bytes 对象，这个 bytes 对象可以由 str.encode() 来编码返回。</p>
+<h4 id="encode-encoding-x3D-’UTF-8’-errors-x3D-’strict’"><a href="#encode-encoding-x3D-’UTF-8’-errors-x3D-’strict’" class="headerlink" title="encode(encoding&#x3D;’UTF-8’,errors&#x3D;’strict’)"></a>encode(encoding&#x3D;’UTF-8’,errors&#x3D;’strict’)</h4><p>以 encoding 指定的编码格式编码字符串，如果出错默认报一个ValueError 的异常，除非 errors 指定的是’ignore’或者’replace’</p>
+<h4 id="endswith-suffix-beg-x3D-0-end-x3D-len-string"><a href="#endswith-suffix-beg-x3D-0-end-x3D-len-string" class="headerlink" title="endswith(suffix, beg&#x3D;0, end&#x3D;len(string))"></a>endswith(suffix, beg&#x3D;0, end&#x3D;len(string))</h4><p>检查字符串是否以 obj 结束，如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束，如果是，返回 True,否则返回 False.</p>
+<h4 id="expandtabs-tabsize-x3D-8"><a href="#expandtabs-tabsize-x3D-8" class="headerlink" title="expandtabs(tabsize&#x3D;8)"></a>expandtabs(tabsize&#x3D;8)</h4><p>把字符串 string 中的 tab 符号转为空格，tab 符号默认的空格数是 8 。</p>
+<h4 id="find-str-beg-x3D-0-end-x3D-len-string"><a href="#find-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="find(str, beg&#x3D;0, end&#x3D;len(string))"></a>find(str, beg&#x3D;0, end&#x3D;len(string))</h4><p>检测 str 是否包含在字符串中，如果指定范围 beg 和 end ，则检查是否包含在指定范围内，如果包含返回开始的索引值，否则返回-1</p>
+<h4 id="index-str-beg-x3D-0-end-x3D-len-string"><a href="#index-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="index(str, beg&#x3D;0, end&#x3D;len(string))"></a>index(str, beg&#x3D;0, end&#x3D;len(string))</h4><p>跟find()方法一样，只不过如果str不在字符串中会报一个异常。</p>
+<h4 id="isalnum"><a href="#isalnum" class="headerlink" title="isalnum()"></a>isalnum()</h4><p>如果字符串至少有一个字符并且所有字符都是字母或数字则返 回 True，否则返回 False</p>
+<h4 id="isalpha"><a href="#isalpha" class="headerlink" title="isalpha()"></a>isalpha()</h4><p>如果字符串至少有一个字符并且所有字符都是字母或中文字则返回 True, 否则返回 False</p>
+<h4 id="isdigit"><a href="#isdigit" class="headerlink" title="isdigit()"></a>isdigit()</h4><p>如果字符串只包含数字则返回 True 否则返回 False..</p>
+<h4 id="islower"><a href="#islower" class="headerlink" title="islower()"></a>islower()</h4><p>如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True，否则返回 False</p>
+<h4 id="isnumeric"><a href="#isnumeric" class="headerlink" title="isnumeric()"></a>isnumeric()</h4><p>如果字符串中只包含数字字符，则返回 True，否则返回 False</p>
+<h4 id="isspace"><a href="#isspace" class="headerlink" title="isspace()"></a>isspace()</h4><p>如果字符串中只包含空白，则返回 True，否则返回 False.</p>
+<h4 id="istitle"><a href="#istitle" class="headerlink" title="istitle()"></a>istitle()</h4><p>如果字符串是标题化的(见 title())则返回 True，否则返回 False</p>
+<h4 id="isupper"><a href="#isupper" class="headerlink" title="isupper()"></a>isupper()</h4><p>如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True，否则返回 False</p>
+<h4 id="join-seq"><a href="#join-seq" class="headerlink" title="join(seq)"></a>join(seq)</h4><p>以指定字符串作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串</p>
+<h4 id="len-string"><a href="#len-string" class="headerlink" title="len(string)"></a>len(string)</h4><p>返回字符串长度</p>
+<h4 id="ljust-width-fillchar"><a href="#ljust-width-fillchar" class="headerlink" title="ljust(width[, fillchar])"></a>ljust(width[, fillchar])</h4><p>返回一个原字符串左对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。</p>
+<h4 id="lower"><a href="#lower" class="headerlink" title="lower()"></a>lower()</h4><p>转换字符串中所有大写字符为小写.</p>
+<h4 id="lstrip"><a href="#lstrip" class="headerlink" title="lstrip()"></a>lstrip()</h4><p>截掉字符串左边的空格或指定字符。</p>
+<h4 id="maketrans"><a href="#maketrans" class="headerlink" title="maketrans()"></a>maketrans()</h4><p>创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。</p>
+<h4 id="max-str"><a href="#max-str" class="headerlink" title="max(str)"></a>max(str)</h4><p>返回字符串 str 中最大的字母。</p>
+<h4 id="min-str"><a href="#min-str" class="headerlink" title="min(str)"></a>min(str)</h4><p>返回字符串 str 中最小的字母。</p>
+<h4 id="replace-old-new-max"><a href="#replace-old-new-max" class="headerlink" title="replace(old, new [, max])"></a>replace(old, new [, max])</h4><p>把 将字符串中的 old 替换成 new,如果 max 指定，则替换不超过 max 次。</p>
+<h4 id="rfind-str-beg-x3D-0-end-x3D-len-string"><a href="#rfind-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="rfind(str, beg&#x3D;0,end&#x3D;len(string))"></a>rfind(str, beg&#x3D;0,end&#x3D;len(string))</h4><p>类似于 find()函数，不过是从右边开始查找.</p>
+<h4 id="rindex-str-beg-x3D-0-end-x3D-len-string"><a href="#rindex-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="rindex( str, beg&#x3D;0, end&#x3D;len(string))"></a>rindex( str, beg&#x3D;0, end&#x3D;len(string))</h4><p>类似于 index()，不过是从右边开始.</p>
+<h4 id="rjust-width-fillchar"><a href="#rjust-width-fillchar" class="headerlink" title="rjust(width,[, fillchar])"></a>rjust(width,[, fillchar])</h4><p>返回一个原字符串右对齐,并使用fillchar(默认空格）填充至长度 width 的新字符串</p>
+<h4 id="rstrip"><a href="#rstrip" class="headerlink" title="rstrip()"></a>rstrip()</h4><p>删除字符串末尾的空格或指定字符。</p>
+<h4 id="split-str-x3D-””-num-x3D-string-count-str"><a href="#split-str-x3D-””-num-x3D-string-count-str" class="headerlink" title="split(str&#x3D;””, num&#x3D;string.count(str))"></a>split(str&#x3D;””, num&#x3D;string.count(str))</h4><p>以 str 为分隔符截取字符串，如果 num 有指定值，则仅截取 num+1 个子字符串</p>
+<h4 id="splitlines-keepends"><a href="#splitlines-keepends" class="headerlink" title="splitlines([keepends])"></a>splitlines([keepends])</h4><p>按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。</p>
+<h4 id="startswith-substr-beg-x3D-0-end-x3D-len-string"><a href="#startswith-substr-beg-x3D-0-end-x3D-len-string" class="headerlink" title="startswith(substr, beg&#x3D;0,end&#x3D;len(string))"></a>startswith(substr, beg&#x3D;0,end&#x3D;len(string))</h4><p>检查字符串是否是以指定子字符串 substr 开头，是则返回 True，否则返回 False。如果beg 和 end 指定值，则在指定范围内检查。</p>
+<h4 id="strip-chars"><a href="#strip-chars" class="headerlink" title="strip([chars])"></a>strip([chars])</h4><p>在字符串上执行 lstrip()和 rstrip()</p>
+<h4 id="swapcase"><a href="#swapcase" class="headerlink" title="swapcase()"></a>swapcase()</h4><p>将字符串中大写转换为小写，小写转换为大写</p>
+<h4 id="title"><a href="#title" class="headerlink" title="title()"></a>title()</h4><p>返回”标题化”的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())</p>
+<h4 id="translate-table-deletechars-x3D-””"><a href="#translate-table-deletechars-x3D-””" class="headerlink" title="translate(table, deletechars&#x3D;””)"></a>translate(table, deletechars&#x3D;””)</h4><p>根据 table 给出的表(包含 256 个字符)转换 string 的字符, 要过滤掉的字符放到 deletechars 参数中</p>
+<h4 id="upper"><a href="#upper" class="headerlink" title="upper()"></a>upper()</h4><p>转换字符串中的小写字母为大写</p>
+<h4 id="zfill-width"><a href="#zfill-width" class="headerlink" title="zfill (width)"></a>zfill (width)</h4><p>返回长度为 width 的字符串，原字符串右对齐，前面填充0</p>
+<h4 id="isdecimal"><a href="#isdecimal" class="headerlink" title="isdecimal()"></a>isdecimal()</h4><p>检查字符串是否只包含十进制字符，如果是返回 true，否则返回 false。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 元组 常用方法</title>
+    <url>/python/tuple/</url>
+    <content><![CDATA[<p>元组与列表类似，不同之处在于元组的元素不能修改，但是子元素是可以修改的</p>
+<p>元组使用小括号 <code>( )</code></p>
+<p>元组可以进行的操作包括 索引、切片、加(形成新的元组)、乘、删(删除整个元组)、检查成员(in)。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>python 元祖</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo next-theme 配置</title>
     <url>/hexo/next-theme/</url>
     <content><![CDATA[<h2 id="next-theme-配置"><a href="#next-theme-配置" class="headerlink" title="next-theme 配置"></a>next-theme 配置</h2><p>根目录下的 <code>_config.yml</code>，简称【站点配置文件】，例 <code>liuweijie1234.github.io\_config.yml</code><br>主题下的 <code>_config.yml</code>，简称【主题配置文件】，例 <code>liuweijie1234.github.io\themes\next-theme\_config.yml</code></p>
@@ -126,225 +672,16 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo 入门与使用</title>
-    <url>/hexo/install/</url>
-    <content><![CDATA[<h2 id="用-hexo-搭建博客"><a href="#用-hexo-搭建博客" class="headerlink" title="用 hexo 搭建博客"></a>用 hexo 搭建博客</h2><p>个人通过使用以下工具来实现个人博客搭建</p>
-<p>1、hexo（框架）： <a href="https://hexo.io/zh-cn/docs/">文档入口</a><br>2、next（主题）： <a href="https://theme-next.js.org/">文档入口</a><br>3、github pages（服务）： <a href="https://docs.github.com/cn/pages">文档入口</a></p>
-<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><ul>
-<li><p>安装框架依赖</p>
-<ul>
-<li><p>安装 git、node.js<br><a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">git 安装文档</a><br><a href="https://nodejs.org/zh-cn/">Node.js 安装文档</a><br>一般安装 node.js 默认安装 npm</p>
-</li>
-<li><p>查看版本</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>安装 框架</p>
-<ul>
-<li>安装 hexo（mac 需要切换权限 <code>sudo -s</code>） <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo</span><br></pre></td></tr></table></figure></li>
-<li>添加环境变量<br> 将 Hexo 所在的目录下的 node_modules 添加到环境变量之中即可直接使用 hexo <command>： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h3 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## hexo init &lt;folder&gt; 在指定文件夹中新建所需要的文件</span></span><br><span class="line">hexo init liuweijie1234.github.io</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> liuweijie1234.github.io/</span><br><span class="line"></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件，简写 hexo g</span></span><br><span class="line">hexo generate</span><br><span class="line"><span class="comment"># 启动服务器。默认情况下，访问网址为： http://localhost:4000/。简写 hexo s</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>这样本地一个 demo 博客就启动了，下面讲 【基本知识】 和 【hexo 使用】怎么修改主题、写文章 并部署到 gitHub。</p>
-<h2 id="基本知识和命令"><a href="#基本知识和命令" class="headerlink" title="基本知识和命令"></a>基本知识和命令</h2><h3 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h3><p>文件及其作用 可以<a href="https://hexo.io/zh-cn/docs/setup#config-yml">参考：–文件解释–</a></p>
-<p>重点关注 <code>_config.yml</code>，这是博客的配置信息，可以配置大部分的参数，可以<a href="https://hexo.io/zh-cn/docs/configuration">参考：–配置详解–</a></p>
-<p><code>source</code>，是你存放文章的地方</p>
-<p><code>themes</code>，是主题文件夹，一般下载主题至该文件。<br>实例命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-theme</span><br></pre></td></tr></table></figure>
-
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p><a href="https://hexo.io/zh-cn/docs/commands">参考：–命令详解–</a></p>
-<ul>
-<li>new（新建文章）</li>
-</ul>
-<p>布局默认使用 _config.yml 中的 <code>default_layout: post</code>，默认在<code>source/_posts</code>创建文章，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new [布局] -p 文章路径 &lt;文章标题&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例，创建 source/_posts/python/dict.md</span></span><br><span class="line">hexo new -p python/dict <span class="string">&quot;Python dict使用&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>generate(生成静态文件并部署)</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态文件，文件生成后立即部署网站</span></span><br><span class="line">hexo generate --deploy</span><br></pre></td></tr></table></figure>
-<p>常用简写来部署到 github</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line"></span><br><span class="line"><span class="comment">## 等效于</span></span><br><span class="line">hexo deploy -g 或 hexo d -g</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>server</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">启动服务器</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>常用简写</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>常跟清除缓存文件<code>hexo clean</code> 结合使用，来本地预览</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp; hexo server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>version</li>
-</ul>
-<p>显示 Hexo 版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><ul>
-<li><p>下载主题</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> liuweijie1234.github.io/</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-theme</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主题配置<br>打开 _config.yml 文件，将主题修改为 next-theme</p>
-</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next-theme</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>本地测试<br><code>hexo clean &amp;&amp; hexo server</code></li>
-</ul>
-<h2 id="部署至-github-pages"><a href="#部署至-github-pages" class="headerlink" title="部署至 github pages"></a>部署至 github pages</h2><ul>
-<li><p>安装 hexo-deployer-git</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置</p>
-</li>
-</ul>
-<p>修改根目录下的 <code>_config.yml</code>，配置 GitHub 相关信息</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/liuweijie1234/liuweijie1234.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">xxxxxxxxxxxxxxxxxxxxxx</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">liuweijie1234</span></span><br></pre></td></tr></table></figure>
-<p>其中 token 为 GitHub 的 <a href="https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal access tokens</a></p>
-<ul>
-<li>部署<br><code>hexo g -d</code></li>
-</ul>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p><a href="https://theme-next.js.org/">参考 theme-next 官方文档</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 list 常用方法</title>
-    <url>/python/list/</url>
-    <content><![CDATA[<h2 id="list-介绍"><a href="#list-介绍" class="headerlink" title="list 介绍"></a>list 介绍</h2><p>Python 中的数组叫做 list</p>
+    <title>Python3 性能优化</title>
+    <url>/python/optimization/</url>
+    <content><![CDATA[<p>1.数据结构一定要选对 能用字典就不用列表：字典在索引查找和排序方面远远高于列表。<br>2.多用python中封装好的模块库关键代码使用外部功能包（Cython，pylnlne，pypy，pyrex）<br>3.使用生成器<br>4.针对循环的优化 尽量避免在循环中访问变量的属性</p>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>python 列表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 dict 常用方法</title>
-    <url>/python/dict/</url>
-    <content><![CDATA[<p><a href="https://docs.python.org/zh-cn/3/">Python 官方文档</a></p>
-<p><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">官方文档-字典</a></p>
-<p>字典 &#x3D;&#x3D; 键值对的集合</p>
-<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
-<li><p>type()</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">type</span>(tel)</span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;dict&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>len()</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(tel)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>str()</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>(tel)</span><br><span class="line"><span class="string">&quot;&#123;&#x27;jack&#x27;: 4098, &#x27;sape&#x27;: 4139&#125;&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list()：返回该字典中所有键的列表</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(tel)</span><br><span class="line">[<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;sape&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><ul>
-<li>dict 推导式</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;x: x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> (<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>)&#125;</span><br><span class="line">&#123;<span class="number">2</span>: <span class="number">4</span>, <span class="number">4</span>: <span class="number">16</span>, <span class="number">6</span>: <span class="number">36</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="dict-get-key-value"><a href="#dict-get-key-value" class="headerlink" title="dict.get(key[, value])"></a>dict.get(key[, value])</h4><ul>
-<li>作用</li>
-</ul>
-<p>用于返回指定 key 的值</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>key – 字典中要查找的键。<br>value – 可选，如果指定键的值不存在时，返回该默认值。</p>
-<ul>
-<li><code>get()</code> 方法 与 <code>dict[key]</code> 访问元素 区别</li>
-</ul>
-<p>get(key) 方法在 key（键）不在字典中时，可以返回默认值 None 或者设置的默认值。</p>
-<p>dict[key] 在 key（键）不在字典中时，会触发 KeyError 异常。</p>
-<ul>
-<li>示例：嵌套字典使用</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line">testdict = &#123;<span class="string">&#x27;tencent&#x27;</span>: &#123;<span class="string">&#x27;url&#x27;</span>: <span class="string">&#x27;https://www.qq.com/&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">res = testdict.get(<span class="string">&#x27;tencent&#x27;</span>, &#123;&#125;).get(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;tencent url 为 : <span class="subst">&#123;<span class="built_in">str</span>(res)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>以上实例输出结果为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tencent url 为 : https://www.qq.com/</span><br></pre></td></tr></table></figure>
-<h4 id="dict-setdefault-key-default-x3D-None"><a href="#dict-setdefault-key-default-x3D-None" class="headerlink" title="dict.setdefault(key, default&#x3D;None)"></a>dict.setdefault(key, default&#x3D;None)</h4><ul>
-<li>作用</li>
-</ul>
-<p>setdefault() 方法和 get()方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值。</p>
-<h4 id="Key-in-dict"><a href="#Key-in-dict" class="headerlink" title="Key in dict"></a>Key in dict</h4><ul>
-<li>作用</li>
-</ul>
-<p>用于判断 key 是否存在字典中，返回值是布尔类型(true&#x2F;false)</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>常和 if 配合使用</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">not</span> <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="dict-items"><a href="#dict-items" class="headerlink" title="dict.items()"></a>dict.items()</h4><ul>
-<li>作用</li>
-</ul>
-<p>返回该字典的包含键值的列表作为字典的元组对</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>不接受任何参数，如果字典为空，则 dict.items() 方法返回一个空列表。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> knights.items():</span><br><span class="line">    <span class="built_in">print</span>(k, v)</span><br><span class="line"><span class="built_in">print</span>(knights.items())</span><br></pre></td></tr></table></figure>
-
-<p>返回</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dict_items([(<span class="string">&#x27;gallahad&#x27;</span>, <span class="string">&#x27;the pure&#x27;</span>), (<span class="string">&#x27;robin&#x27;</span>, <span class="string">&#x27;the brave&#x27;</span>)])</span><br></pre></td></tr></table></figure>
-<h4 id="dict-keys-dict-values"><a href="#dict-keys-dict-values" class="headerlink" title="dict.keys() + dict.values()"></a>dict.keys() + dict.values()</h4><ul>
-<li>作用</li>
-</ul>
-<p>返回字典的视图对象(只读)，可以使用 list() 转换成列表</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>不接受任何参数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> knights.keys():</span><br><span class="line">    <span class="built_in">print</span>(k)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> knights.values():</span><br><span class="line">    <span class="built_in">print</span>(v)</span><br><span class="line"><span class="built_in">print</span>(knights.keys())</span><br><span class="line"><span class="built_in">print</span>(knights.values())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="dict-update-dict2"><a href="#dict-update-dict2" class="headerlink" title="dict.update(dict2)"></a>dict.update(dict2)</h4><ul>
-<li>作用</li>
-</ul>
-<p>update() 函数把字典参数 dict2 的 key&#x2F;value(键&#x2F;值) 对更新到字典 dict 里。</p>
-<h3 id="其他方法-不常用"><a href="#其他方法-不常用" class="headerlink" title="其他方法(不常用)"></a>其他方法(不常用)</h3><h4 id="dict-clear"><a href="#dict-clear" class="headerlink" title="dict.clear()"></a>dict.clear()</h4><ul>
-<li>作用</li>
-</ul>
-<p>clear() 函数用于删除字典内所有元素。</p>
-<h4 id="dict-copy"><a href="#dict-copy" class="headerlink" title="dict.copy()"></a>dict.copy()</h4><ul>
-<li>作用</li>
-</ul>
-<p>copy() 函数返回一个字典的浅复制，子对象是引用</p>
-<p><a href="https://www.runoob.com/w3cnote/python-understanding-dict-copy-shallow-or-deep.html">Python 直接赋值、浅拷贝和深度拷贝解析</a></p>
-<h4 id="dict-fromkeys-seq-value"><a href="#dict-fromkeys-seq-value" class="headerlink" title="dict.fromkeys(seq[, value])"></a>dict.fromkeys(seq[, value])</h4><ul>
-<li>作用</li>
-</ul>
-<p>fromkeys() 函数用于创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值。</p>
-<h4 id="pop-key-default"><a href="#pop-key-default" class="headerlink" title="pop(key[, default])"></a>pop(key[, default])</h4><ul>
-<li>作用</li>
-</ul>
-<p>pop() 方法删除字典 key（键）所对应的值，返回被删除的值，当键 key 不存在时返回的值为 default</p>
-<h4 id="popitem"><a href="#popitem" class="headerlink" title="popitem()"></a>popitem()</h4><ul>
-<li>作用</li>
-</ul>
-<p>popitem() 方法随机返回并删除字典中的最后一对键和值，返回格式是元组。如果字典已经为空，却调用了此方法，就报出 KeyError 异常。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>python 字典</tag>
+        <tag>优化</tag>
       </tags>
   </entry>
   <entry>
@@ -364,104 +701,6 @@
       <tags>
         <tag>Python</tag>
         <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 相关面试题</title>
-    <url>/interview_questions/python/</url>
-    <content><![CDATA[<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3><ul>
-<li>思路</li>
-</ul>
-<p>字典本身是无序，排序可使用 <a href="https://www.runoob.com/python3/python3-func-sorted.html">sorted(iterable, key&#x3D;None, reverse&#x3D;False)</a></p>
-<ul>
-<li>排序：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">test_dict = &#123;<span class="number">6</span>: <span class="number">9</span>, <span class="number">10</span>: <span class="number">5</span>, <span class="number">3</span>: <span class="number">11</span>, <span class="number">8</span>: <span class="number">2</span>, <span class="number">7</span>: <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典的所有key进行排序</span></span><br><span class="line">test_data_0 = <span class="built_in">sorted</span>(test_dict.keys())</span><br><span class="line"><span class="built_in">print</span>(test_data_0)  <span class="comment"># [3, 6, 7, 8, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照key的大小升序排列</span></span><br><span class="line">test_data_1 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_1)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (8, 2), (10, 5)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小升序排列</span></span><br><span class="line">test_data_2 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_2)  <span class="comment"># [(8, 2), (10, 5), (7, 6), (6, 9), (3, 11)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小降序排列</span></span><br><span class="line">test_data_3 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(test_data_3)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (10, 5), (8, 2)]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>面试题</li>
-</ul>
-<p><code>m1 = &#123;&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 1&#125;</code> 将同样的 value 的 key 集合在 list 里，输出 <code>&#123;1: [&#39;a&#39;, &#39;c&#39;], 2: [&#39;b&#39;]&#125;</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">m1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">f = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> m1.items():</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> f:</span><br><span class="line">        f[value] = [key]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f[value].append(key)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-        <category>面试题</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 数字 常用方法</title>
-    <url>/python/number/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>python 数字</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 文档入口</title>
-    <url>/python/python_summary/</url>
-    <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><a href="/python/number/" title="Python3 数字 常用方法">Python3 数字 常用方法</a><br>
-
-<a href="/python/string/" title="Python3 字符串 常用方法">Python3 字符串 常用方法</a><br>
-
-<a href="/python/list/" title="Python3 list 常用方法">Python3 list 常用方法</a><br>
-
-<a href="/python/dict/" title="Python3 dict 常用方法">Python3 dict 常用方法</a><br>
-
-<a href="/python/set/" title="Python3 集合 常用方法">Python3 集合 常用方法</a><br>
-
-<a href="/python/tuple/" title="Python3 元组 常用方法">Python3 元组 常用方法</a><br>
-
-<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><a href="/interview_questions/python/" title="Python 相关面试题">Python 相关面试题</a><br>
-
-<h2 id="工作问题"><a href="#工作问题" class="headerlink" title="工作问题"></a>工作问题</h2><a href="/python/shell_run_python_script/" title="在 shell 脚本中对 python 传递带有空格的字符串参数">在 shell 脚本中对 python 传递带有空格的字符串参数</a><br>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 字符串 常用方法</title>
-    <url>/python/string/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>python 字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 集合 常用方法</title>
-    <url>/python/set/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>python 集合</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 元组 常用方法</title>
-    <url>/python/tuple/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>python 元祖</tag>
       </tags>
   </entry>
 </search>

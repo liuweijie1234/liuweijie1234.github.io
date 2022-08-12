@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuweijie1234.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="list 介绍Python 中的数组叫做 list">
+    <meta name="description" content="list 介绍列表是 Python 中最常用的数据类型 Python 中的数组叫做 list 列表可以进行的操作包括 索引、切片、加、乘、检查成员。 列表索引从 0 开始 内置函数 len(list)：列表元素个数 max(list)：返回列表元素最大值 min(list)：返回列表元素最小值 list(tuple)：将元组转换为列表  内置方法常用方法list.append(obj) 作用  在">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Python3 list 常用方法">
 <meta property="og:url" content="http://liuweijie1234.github.io/python/list/index.html">
 <meta property="og:site_name" content="刘伟杰的个人博客">
-<meta property="og:description" content="list 介绍Python 中的数组叫做 list">
+<meta property="og:description" content="list 介绍列表是 Python 中最常用的数据类型 Python 中的数组叫做 list 列表可以进行的操作包括 索引、切片、加、乘、检查成员。 列表索引从 0 开始 内置函数 len(list)：列表元素个数 max(list)：返回列表元素最大值 min(list)：返回列表元素最小值 list(tuple)：将元组转换为列表  内置方法常用方法list.append(obj) 作用  在">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-04T08:12:53.000Z">
-<meta property="article:modified_time" content="2022-08-10T07:58:50.698Z">
+<meta property="article:modified_time" content="2022-08-12T08:55:31.823Z">
 <meta property="article:author" content="liuweijie1234">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="python 列表">
@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -148,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#list-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">list 介绍</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#list-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">list 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">内置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">内置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#list-append-obj"><span class="nav-number">3.1.1.</span> <span class="nav-text">list.append(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-insert-index-obj"><span class="nav-number">3.1.2.</span> <span class="nav-text">list.insert(index, obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-extend-seq"><span class="nav-number">3.1.3.</span> <span class="nav-text">list.extend(seq)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-count-obj"><span class="nav-number">3.1.4.</span> <span class="nav-text">list.count(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-index-obj"><span class="nav-number">3.1.5.</span> <span class="nav-text">list.index(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-sort-key-x3D-None-reverse-x3D-False"><span class="nav-number">3.1.6.</span> <span class="nav-text">list.sort( key&#x3D;None, reverse&#x3D;False)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-reverse"><span class="nav-number">3.1.7.</span> <span class="nav-text">list.reverse()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">其他方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#list-pop-index-x3D-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">list.pop([index&#x3D;-1])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-remove-obj"><span class="nav-number">3.2.2.</span> <span class="nav-text">list.remove(obj)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-clear"><span class="nav-number">3.2.3.</span> <span class="nav-text">list.clear()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-copy"><span class="nav-number">3.2.4.</span> <span class="nav-text">list.copy()</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -163,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,7 +174,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -259,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-10 15:58:50" itemprop="dateModified" datetime="2022-08-10T15:58:50+08:00">2022-08-10</time>
+      <time title="修改时间：2022-08-12 16:55:31" itemprop="dateModified" datetime="2022-08-12T16:55:31+08:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -285,7 +285,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>22</span>
+      <span>770</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -303,7 +303,71 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="list-介绍"><a href="#list-介绍" class="headerlink" title="list 介绍"></a>list 介绍</h2><p>Python 中的数组叫做 list</p>
+        <h2 id="list-介绍"><a href="#list-介绍" class="headerlink" title="list 介绍"></a>list 介绍</h2><p>列表是 Python 中最常用的数据类型</p>
+<p>Python 中的数组叫做 list</p>
+<p>列表可以进行的操作包括 索引、切片、加、乘、检查成员。</p>
+<p>列表索引从 0 开始</p>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
+<li>len(list)：列表元素个数</li>
+<li>max(list)：返回列表元素最大值</li>
+<li>min(list)：返回列表元素最小值</li>
+<li>list(tuple)：将元组转换为列表</li>
+</ul>
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="list-append-obj"><a href="#list-append-obj" class="headerlink" title="list.append(obj)"></a>list.append(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>在列表末尾添加新的对象</p>
+<h4 id="list-insert-index-obj"><a href="#list-insert-index-obj" class="headerlink" title="list.insert(index, obj)"></a>list.insert(index, obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>将指定对象插入列表的指定位置。</p>
+<h4 id="list-extend-seq"><a href="#list-extend-seq" class="headerlink" title="list.extend(seq)"></a>list.extend(seq)</h4><ul>
+<li>作用</li>
+</ul>
+<p>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</p>
+<h4 id="list-count-obj"><a href="#list-count-obj" class="headerlink" title="list.count(obj)"></a>list.count(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>统计某个元素在列表中出现的次数</p>
+<h4 id="list-index-obj"><a href="#list-index-obj" class="headerlink" title="list.index(obj)"></a>list.index(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>从列表中找出某个值第一个匹配项的索引位置</p>
+<ul>
+<li>语法<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>.index(x[, start[, end]])</span><br></pre></td></tr></table></figure>
+x– 查找的对象。<br>start– 可选，查找的起始位置。<br>end– 可选，查找的结束位置。</li>
+</ul>
+<h4 id="list-sort-key-x3D-None-reverse-x3D-False"><a href="#list-sort-key-x3D-None-reverse-x3D-False" class="headerlink" title="list.sort( key&#x3D;None, reverse&#x3D;False)"></a>list.sort( key&#x3D;None, reverse&#x3D;False)</h4><ul>
+<li>作用</li>
+</ul>
+<p>对原列表进行排序</p>
+<ul>
+<li>语法</li>
+</ul>
+<p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。<br>reverse – 排序规则，reverse &#x3D; True 降序， reverse &#x3D; False 升序（默认）。</p>
+<blockquote>
+<p>注意：sort 和 sorted<br>sort 是列表独有的</p>
+</blockquote>
+<h4 id="list-reverse"><a href="#list-reverse" class="headerlink" title="list.reverse()"></a>list.reverse()</h4><ul>
+<li>作用</li>
+</ul>
+<p>反向列表中元素</p>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><h4 id="list-pop-index-x3D-1"><a href="#list-pop-index-x3D-1" class="headerlink" title="list.pop([index&#x3D;-1])"></a>list.pop([index&#x3D;-1])</h4><ul>
+<li>作用</li>
+</ul>
+<p>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</p>
+<h4 id="list-remove-obj"><a href="#list-remove-obj" class="headerlink" title="list.remove(obj)"></a>list.remove(obj)</h4><ul>
+<li>作用</li>
+</ul>
+<p>移除列表中某个值的第一个匹配项</p>
+<h4 id="list-clear"><a href="#list-clear" class="headerlink" title="list.clear()"></a>list.clear()</h4><ul>
+<li>作用</li>
+</ul>
+<p>清空列表</p>
+<h4 id="list-copy"><a href="#list-copy" class="headerlink" title="list.copy()"></a>list.copy()</h4><ul>
+<li>作用</li>
+</ul>
+<p>复制列表</p>
 
     </div>
 
@@ -333,8 +397,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/python/tuple/" rel="next" title="Python3 元组 常用方法">
-                  Python3 元组 常用方法 <i class="fa fa-chevron-right"></i>
+                <a href="/python/optimization/" rel="next" title="Python3 性能优化">
+                  Python3 性能优化 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -368,14 +432,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">17k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

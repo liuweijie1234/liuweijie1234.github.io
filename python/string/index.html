@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuweijie1234.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="刘伟杰的个人博客">
+    <meta name="description" content="字符串介绍字符串是 Python 中最常用的数据类型 字符串可以进行的操作包括 索引、切片、加、乘、检查成员。 字符串格式化   格式化符号 替换内容    %s 字符串   %d 整数，%06d 表示输出的整数显示位数，不足的地方使用 0 补全   %f 浮点数，%.02f 表示小数点后只显示两位   %x 十六进制整数   推荐使用 f-string 1234567&gt;&gt;&gt; x">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Python3 字符串 常用方法">
 <meta property="og:url" content="http://liuweijie1234.github.io/python/string/index.html">
 <meta property="og:site_name" content="刘伟杰的个人博客">
-<meta property="og:description" content="刘伟杰的个人博客">
+<meta property="og:description" content="字符串介绍字符串是 Python 中最常用的数据类型 字符串可以进行的操作包括 索引、切片、加、乘、检查成员。 字符串格式化   格式化符号 替换内容    %s 字符串   %d 整数，%06d 表示输出的整数显示位数，不足的地方使用 0 补全   %f 浮点数，%.02f 表示小数点后只显示两位   %x 十六进制整数   推荐使用 f-string 1234567&gt;&gt;&gt; x">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-04T08:14:00.000Z">
-<meta property="article:modified_time" content="2022-08-10T07:57:35.894Z">
+<meta property="article:modified_time" content="2022-08-12T09:14:02.117Z">
 <meta property="article:author" content="liuweijie1234">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="python 字符串">
@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -132,7 +132,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
     <div id="music">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1394963332&auto=1&height=66"></iframe>
     </div>
@@ -148,6 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">字符串介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">字符串格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">内置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#capitalize"><span class="nav-number">3.1.1.</span> <span class="nav-text">capitalize()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#center-width-fillchar"><span class="nav-number">3.1.2.</span> <span class="nav-text">center(width, fillchar)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#count-str-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.3.</span> <span class="nav-text">count(str, beg&#x3D; 0,end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bytes-decode-encoding-x3D-%E2%80%9Dutf-8%E2%80%9D-errors-x3D-%E2%80%9Dstrict%E2%80%9D"><span class="nav-number">3.1.4.</span> <span class="nav-text">bytes.decode(encoding&#x3D;”utf-8”, errors&#x3D;”strict”)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#encode-encoding-x3D-%E2%80%99UTF-8%E2%80%99-errors-x3D-%E2%80%99strict%E2%80%99"><span class="nav-number">3.1.5.</span> <span class="nav-text">encode(encoding&#x3D;’UTF-8’,errors&#x3D;’strict’)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#endswith-suffix-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.6.</span> <span class="nav-text">endswith(suffix, beg&#x3D;0, end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#expandtabs-tabsize-x3D-8"><span class="nav-number">3.1.7.</span> <span class="nav-text">expandtabs(tabsize&#x3D;8)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find-str-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.8.</span> <span class="nav-text">find(str, beg&#x3D;0, end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#index-str-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.9.</span> <span class="nav-text">index(str, beg&#x3D;0, end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isalnum"><span class="nav-number">3.1.10.</span> <span class="nav-text">isalnum()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isalpha"><span class="nav-number">3.1.11.</span> <span class="nav-text">isalpha()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isdigit"><span class="nav-number">3.1.12.</span> <span class="nav-text">isdigit()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#islower"><span class="nav-number">3.1.13.</span> <span class="nav-text">islower()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isnumeric"><span class="nav-number">3.1.14.</span> <span class="nav-text">isnumeric()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isspace"><span class="nav-number">3.1.15.</span> <span class="nav-text">isspace()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#istitle"><span class="nav-number">3.1.16.</span> <span class="nav-text">istitle()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isupper"><span class="nav-number">3.1.17.</span> <span class="nav-text">isupper()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#join-seq"><span class="nav-number">3.1.18.</span> <span class="nav-text">join(seq)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#len-string"><span class="nav-number">3.1.19.</span> <span class="nav-text">len(string)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ljust-width-fillchar"><span class="nav-number">3.1.20.</span> <span class="nav-text">ljust(width[, fillchar])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lower"><span class="nav-number">3.1.21.</span> <span class="nav-text">lower()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lstrip"><span class="nav-number">3.1.22.</span> <span class="nav-text">lstrip()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maketrans"><span class="nav-number">3.1.23.</span> <span class="nav-text">maketrans()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-str"><span class="nav-number">3.1.24.</span> <span class="nav-text">max(str)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-str"><span class="nav-number">3.1.25.</span> <span class="nav-text">min(str)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#replace-old-new-max"><span class="nav-number">3.1.26.</span> <span class="nav-text">replace(old, new [, max])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rfind-str-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.27.</span> <span class="nav-text">rfind(str, beg&#x3D;0,end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rindex-str-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.28.</span> <span class="nav-text">rindex( str, beg&#x3D;0, end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rjust-width-fillchar"><span class="nav-number">3.1.29.</span> <span class="nav-text">rjust(width,[, fillchar])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rstrip"><span class="nav-number">3.1.30.</span> <span class="nav-text">rstrip()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#split-str-x3D-%E2%80%9D%E2%80%9D-num-x3D-string-count-str"><span class="nav-number">3.1.31.</span> <span class="nav-text">split(str&#x3D;””, num&#x3D;string.count(str))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#splitlines-keepends"><span class="nav-number">3.1.32.</span> <span class="nav-text">splitlines([keepends])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#startswith-substr-beg-x3D-0-end-x3D-len-string"><span class="nav-number">3.1.33.</span> <span class="nav-text">startswith(substr, beg&#x3D;0,end&#x3D;len(string))</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strip-chars"><span class="nav-number">3.1.34.</span> <span class="nav-text">strip([chars])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#swapcase"><span class="nav-number">3.1.35.</span> <span class="nav-text">swapcase()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#title"><span class="nav-number">3.1.36.</span> <span class="nav-text">title()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#translate-table-deletechars-x3D-%E2%80%9D%E2%80%9D"><span class="nav-number">3.1.37.</span> <span class="nav-text">translate(table, deletechars&#x3D;””)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#upper"><span class="nav-number">3.1.38.</span> <span class="nav-text">upper()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zfill-width"><span class="nav-number">3.1.39.</span> <span class="nav-text">zfill (width)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isdecimal"><span class="nav-number">3.1.40.</span> <span class="nav-text">isdecimal()</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -173,7 +174,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -258,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-10 15:57:35" itemprop="dateModified" datetime="2022-08-10T15:57:35+08:00">2022-08-10</time>
+      <time title="修改时间：2022-08-12 17:14:02" itemprop="dateModified" datetime="2022-08-12T17:14:02+08:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -284,14 +285,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>2.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -302,7 +303,76 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <h2 id="字符串介绍"><a href="#字符串介绍" class="headerlink" title="字符串介绍"></a>字符串介绍</h2><p>字符串是 Python 中最常用的数据类型</p>
+<p>字符串可以进行的操作包括 索引、切片、加、乘、检查成员。</p>
+<h2 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h2><table>
+<thead>
+<tr>
+<th>格式化符号</th>
+<th>替换内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%s</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>整数，%06d 表示输出的整数显示位数，不足的地方使用 0 补全</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>浮点数，%.02f 表示小数点后只显示两位</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>十六进制整数</td>
+</tr>
+</tbody></table>
+<p>推荐使用 f-string</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x+<span class="number">1</span>&#125;</span>&#x27;</span>)   <span class="comment"># Python 3.6</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x+<span class="number">1</span>=&#125;</span>&#x27;</span>)   <span class="comment"># Python 3.8</span></span><br><span class="line">x+<span class="number">1</span>=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="capitalize"><a href="#capitalize" class="headerlink" title="capitalize()"></a>capitalize()</h4><p>将字符串的第一个字符转换为大写</p>
+<h4 id="center-width-fillchar"><a href="#center-width-fillchar" class="headerlink" title="center(width, fillchar)"></a>center(width, fillchar)</h4><p>返回一个指定的宽度 width 居中的字符串，fillchar 为填充的字符，默认为空格。</p>
+<h4 id="count-str-beg-x3D-0-end-x3D-len-string"><a href="#count-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="count(str, beg&#x3D; 0,end&#x3D;len(string))"></a>count(str, beg&#x3D; 0,end&#x3D;len(string))</h4><p>返回 str 在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</p>
+<h4 id="bytes-decode-encoding-x3D-”utf-8”-errors-x3D-”strict”"><a href="#bytes-decode-encoding-x3D-”utf-8”-errors-x3D-”strict”" class="headerlink" title="bytes.decode(encoding&#x3D;”utf-8”, errors&#x3D;”strict”)"></a>bytes.decode(encoding&#x3D;”utf-8”, errors&#x3D;”strict”)</h4><p>Python3 中没有 decode 方法，但我们可以使用 bytes 对象的 decode() 方法来解码给定的 bytes 对象，这个 bytes 对象可以由 str.encode() 来编码返回。</p>
+<h4 id="encode-encoding-x3D-’UTF-8’-errors-x3D-’strict’"><a href="#encode-encoding-x3D-’UTF-8’-errors-x3D-’strict’" class="headerlink" title="encode(encoding&#x3D;’UTF-8’,errors&#x3D;’strict’)"></a>encode(encoding&#x3D;’UTF-8’,errors&#x3D;’strict’)</h4><p>以 encoding 指定的编码格式编码字符串，如果出错默认报一个ValueError 的异常，除非 errors 指定的是’ignore’或者’replace’</p>
+<h4 id="endswith-suffix-beg-x3D-0-end-x3D-len-string"><a href="#endswith-suffix-beg-x3D-0-end-x3D-len-string" class="headerlink" title="endswith(suffix, beg&#x3D;0, end&#x3D;len(string))"></a>endswith(suffix, beg&#x3D;0, end&#x3D;len(string))</h4><p>检查字符串是否以 obj 结束，如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束，如果是，返回 True,否则返回 False.</p>
+<h4 id="expandtabs-tabsize-x3D-8"><a href="#expandtabs-tabsize-x3D-8" class="headerlink" title="expandtabs(tabsize&#x3D;8)"></a>expandtabs(tabsize&#x3D;8)</h4><p>把字符串 string 中的 tab 符号转为空格，tab 符号默认的空格数是 8 。</p>
+<h4 id="find-str-beg-x3D-0-end-x3D-len-string"><a href="#find-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="find(str, beg&#x3D;0, end&#x3D;len(string))"></a>find(str, beg&#x3D;0, end&#x3D;len(string))</h4><p>检测 str 是否包含在字符串中，如果指定范围 beg 和 end ，则检查是否包含在指定范围内，如果包含返回开始的索引值，否则返回-1</p>
+<h4 id="index-str-beg-x3D-0-end-x3D-len-string"><a href="#index-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="index(str, beg&#x3D;0, end&#x3D;len(string))"></a>index(str, beg&#x3D;0, end&#x3D;len(string))</h4><p>跟find()方法一样，只不过如果str不在字符串中会报一个异常。</p>
+<h4 id="isalnum"><a href="#isalnum" class="headerlink" title="isalnum()"></a>isalnum()</h4><p>如果字符串至少有一个字符并且所有字符都是字母或数字则返 回 True，否则返回 False</p>
+<h4 id="isalpha"><a href="#isalpha" class="headerlink" title="isalpha()"></a>isalpha()</h4><p>如果字符串至少有一个字符并且所有字符都是字母或中文字则返回 True, 否则返回 False</p>
+<h4 id="isdigit"><a href="#isdigit" class="headerlink" title="isdigit()"></a>isdigit()</h4><p>如果字符串只包含数字则返回 True 否则返回 False..</p>
+<h4 id="islower"><a href="#islower" class="headerlink" title="islower()"></a>islower()</h4><p>如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True，否则返回 False</p>
+<h4 id="isnumeric"><a href="#isnumeric" class="headerlink" title="isnumeric()"></a>isnumeric()</h4><p>如果字符串中只包含数字字符，则返回 True，否则返回 False</p>
+<h4 id="isspace"><a href="#isspace" class="headerlink" title="isspace()"></a>isspace()</h4><p>如果字符串中只包含空白，则返回 True，否则返回 False.</p>
+<h4 id="istitle"><a href="#istitle" class="headerlink" title="istitle()"></a>istitle()</h4><p>如果字符串是标题化的(见 title())则返回 True，否则返回 False</p>
+<h4 id="isupper"><a href="#isupper" class="headerlink" title="isupper()"></a>isupper()</h4><p>如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True，否则返回 False</p>
+<h4 id="join-seq"><a href="#join-seq" class="headerlink" title="join(seq)"></a>join(seq)</h4><p>以指定字符串作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串</p>
+<h4 id="len-string"><a href="#len-string" class="headerlink" title="len(string)"></a>len(string)</h4><p>返回字符串长度</p>
+<h4 id="ljust-width-fillchar"><a href="#ljust-width-fillchar" class="headerlink" title="ljust(width[, fillchar])"></a>ljust(width[, fillchar])</h4><p>返回一个原字符串左对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。</p>
+<h4 id="lower"><a href="#lower" class="headerlink" title="lower()"></a>lower()</h4><p>转换字符串中所有大写字符为小写.</p>
+<h4 id="lstrip"><a href="#lstrip" class="headerlink" title="lstrip()"></a>lstrip()</h4><p>截掉字符串左边的空格或指定字符。</p>
+<h4 id="maketrans"><a href="#maketrans" class="headerlink" title="maketrans()"></a>maketrans()</h4><p>创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。</p>
+<h4 id="max-str"><a href="#max-str" class="headerlink" title="max(str)"></a>max(str)</h4><p>返回字符串 str 中最大的字母。</p>
+<h4 id="min-str"><a href="#min-str" class="headerlink" title="min(str)"></a>min(str)</h4><p>返回字符串 str 中最小的字母。</p>
+<h4 id="replace-old-new-max"><a href="#replace-old-new-max" class="headerlink" title="replace(old, new [, max])"></a>replace(old, new [, max])</h4><p>把 将字符串中的 old 替换成 new,如果 max 指定，则替换不超过 max 次。</p>
+<h4 id="rfind-str-beg-x3D-0-end-x3D-len-string"><a href="#rfind-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="rfind(str, beg&#x3D;0,end&#x3D;len(string))"></a>rfind(str, beg&#x3D;0,end&#x3D;len(string))</h4><p>类似于 find()函数，不过是从右边开始查找.</p>
+<h4 id="rindex-str-beg-x3D-0-end-x3D-len-string"><a href="#rindex-str-beg-x3D-0-end-x3D-len-string" class="headerlink" title="rindex( str, beg&#x3D;0, end&#x3D;len(string))"></a>rindex( str, beg&#x3D;0, end&#x3D;len(string))</h4><p>类似于 index()，不过是从右边开始.</p>
+<h4 id="rjust-width-fillchar"><a href="#rjust-width-fillchar" class="headerlink" title="rjust(width,[, fillchar])"></a>rjust(width,[, fillchar])</h4><p>返回一个原字符串右对齐,并使用fillchar(默认空格）填充至长度 width 的新字符串</p>
+<h4 id="rstrip"><a href="#rstrip" class="headerlink" title="rstrip()"></a>rstrip()</h4><p>删除字符串末尾的空格或指定字符。</p>
+<h4 id="split-str-x3D-””-num-x3D-string-count-str"><a href="#split-str-x3D-””-num-x3D-string-count-str" class="headerlink" title="split(str&#x3D;””, num&#x3D;string.count(str))"></a>split(str&#x3D;””, num&#x3D;string.count(str))</h4><p>以 str 为分隔符截取字符串，如果 num 有指定值，则仅截取 num+1 个子字符串</p>
+<h4 id="splitlines-keepends"><a href="#splitlines-keepends" class="headerlink" title="splitlines([keepends])"></a>splitlines([keepends])</h4><p>按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。</p>
+<h4 id="startswith-substr-beg-x3D-0-end-x3D-len-string"><a href="#startswith-substr-beg-x3D-0-end-x3D-len-string" class="headerlink" title="startswith(substr, beg&#x3D;0,end&#x3D;len(string))"></a>startswith(substr, beg&#x3D;0,end&#x3D;len(string))</h4><p>检查字符串是否是以指定子字符串 substr 开头，是则返回 True，否则返回 False。如果beg 和 end 指定值，则在指定范围内检查。</p>
+<h4 id="strip-chars"><a href="#strip-chars" class="headerlink" title="strip([chars])"></a>strip([chars])</h4><p>在字符串上执行 lstrip()和 rstrip()</p>
+<h4 id="swapcase"><a href="#swapcase" class="headerlink" title="swapcase()"></a>swapcase()</h4><p>将字符串中大写转换为小写，小写转换为大写</p>
+<h4 id="title"><a href="#title" class="headerlink" title="title()"></a>title()</h4><p>返回”标题化”的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())</p>
+<h4 id="translate-table-deletechars-x3D-””"><a href="#translate-table-deletechars-x3D-””" class="headerlink" title="translate(table, deletechars&#x3D;””)"></a>translate(table, deletechars&#x3D;””)</h4><p>根据 table 给出的表(包含 256 个字符)转换 string 的字符, 要过滤掉的字符放到 deletechars 参数中</p>
+<h4 id="upper"><a href="#upper" class="headerlink" title="upper()"></a>upper()</h4><p>转换字符串中的小写字母为大写</p>
+<h4 id="zfill-width"><a href="#zfill-width" class="headerlink" title="zfill (width)"></a>zfill (width)</h4><p>返回长度为 width 的字符串，原字符串右对齐，前面填充0</p>
+<h4 id="isdecimal"><a href="#isdecimal" class="headerlink" title="isdecimal()"></a>isdecimal()</h4><p>检查字符串是否只包含十进制字符，如果是返回 true，否则返回 false。</p>
+
     </div>
 
     
@@ -326,13 +396,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/python/set/" rel="prev" title="Python3 集合 常用方法">
-                  <i class="fa fa-chevron-left"></i> Python3 集合 常用方法
+                <a href="/python/tuple/" rel="prev" title="Python3 元组 常用方法">
+                  <i class="fa fa-chevron-left"></i> Python3 元组 常用方法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/python/number/" rel="next" title="Python3 数字 常用方法">
-                  Python3 数字 常用方法 <i class="fa fa-chevron-right"></i>
+                <a href="/python/set/" rel="next" title="Python3 集合 常用方法">
+                  Python3 集合 常用方法 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -366,14 +436,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">17k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

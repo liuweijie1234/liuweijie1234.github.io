@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuweijie1234.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="知乎：110 道 Python 面试题（真题） 字典Python 如何对字典排序 思路  字典本身是无序，排序可使用 sorted(iterable, key&#x3D;None, reverse&#x3D;False)  排序：  1234567891011121314151617181920test_dict &#x3D; &amp;#123;6: 9, 10: 5, 3: 11, 8: 2, 7: 6&amp;#12">
+    <meta name="description" content="知乎：110 道 Python 面试题（真题） 1、谈下 python 的 GIL x2、简述面向对象中 new 和 _init 区别3、python2和 python3区别?请列举几个4、list和 tuple的区别5、range和xrange6、深浅copy的区别7、session和 cookle 分别是什么，有什么区别?8、请写一个装饰器9、谈下你对restfulapi的理解10、跨域有哪些">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Python 相关面试题">
 <meta property="og:url" content="http://liuweijie1234.github.io/interview_questions/python/index.html">
 <meta property="og:site_name" content="刘伟杰的个人博客">
-<meta property="og:description" content="知乎：110 道 Python 面试题（真题） 字典Python 如何对字典排序 思路  字典本身是无序，排序可使用 sorted(iterable, key&#x3D;None, reverse&#x3D;False)  排序：  1234567891011121314151617181920test_dict &#x3D; &amp;#123;6: 9, 10: 5, 3: 11, 8: 2, 7: 6&amp;#12">
+<meta property="og:description" content="知乎：110 道 Python 面试题（真题） 1、谈下 python 的 GIL x2、简述面向对象中 new 和 _init 区别3、python2和 python3区别?请列举几个4、list和 tuple的区别5、range和xrange6、深浅copy的区别7、session和 cookle 分别是什么，有什么区别?8、请写一个装饰器9、谈下你对restfulapi的理解10、跨域有哪些">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-11T06:14:00.000Z">
-<meta property="article:modified_time" content="2022-08-13T06:40:35.601Z">
+<meta property="article:modified_time" content="2022-08-15T07:36:04.989Z">
 <meta property="article:author" content="liuweijie1234">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">26</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">31</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">13</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">49</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-number">1.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E5%A6%82%E4%BD%95%E5%AF%B9%E5%AD%97%E5%85%B8%E6%8E%92%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">Python 如何对字典排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="nav-number">2.1.</span> <span class="nav-text">斐波那契数列</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-number">1.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E5%A6%82%E4%BD%95%E5%AF%B9%E5%AD%97%E5%85%B8%E6%8E%92%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">Python 如何对字典排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E2%80%9Dhello-world%E2%80%9D%E8%BD%AC%E6%8D%A2%E4%B8%BA%E9%A6%96%E5%AD%97%E6%AF%8D%E5%A4%A7%E5%86%99%E2%80%9DHello-World%E2%80%9D-%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">将”hello world”转换为首字母大写”Hello World”(相互转换)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E5%8F%AA%E5%90%AB%E6%9C%89%E6%95%B0%E5%AD%97"><span class="nav-number">2.2.</span> <span class="nav-text">如何检测字符串中只含有数字?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%80%9Dilovechina%E2%80%9D%E8%BF%9B%E8%A1%8C%E5%8F%8D%E8%BD%AC"><span class="nav-number">2.3.</span> <span class="nav-text">将字符串”ilovechina”进行反转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%B9%E5%BC%8F%E4%BD%A0%E7%9F%A5%E9%81%93%E5%93%AA%E4%BA%9B"><span class="nav-number">2.4.</span> <span class="nav-text">Python 中的字符串格式化方式你知道哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BC%80%E5%A4%B4%E5%92%8C%E6%9C%AB%E5%B0%BE%E9%83%BD%E6%9C%89%E7%A9%BA%E6%A0%BC%EF%BC%8C%E6%AF%94%E5%A6%82%E2%80%9C-adabdw-%E2%80%9D%EF%BC%8C%E8%A6%81%E6%B1%82%E5%86%99%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E6%8A%8A%E8%BF%99%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%89%8D%E5%90%8E%E7%A9%BA%E6%A0%BC%E9%83%BD%E5%8E%BB%E6%8E%89%E3%80%82"><span class="nav-number">2.5.</span> <span class="nav-text">有一个字符串开头和末尾都有空格，比如“ adabdw ”，要求写一个函数把这个字符串的前后空格都去掉。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%80%9D123456%E2%80%9C%E6%9C%80%E5%90%8E%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6"><span class="nav-number">2.6.</span> <span class="nav-text">获取字符串”123456“最后的两个字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bytes-%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81"><span class="nav-number">2.7.</span> <span class="nav-text">bytes 编码解码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#s-x3D-%E2%80%9Cinfo%EF%BC%9AxiaoZhang-33-shandong%E2%80%9D%EF%BC%8C%E7%94%A8%E6%AD%A3%E5%88%99%E5%88%87%E5%88%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%87%BA-%E2%80%98info%E2%80%99-%E2%80%98xiaoZhang%E2%80%99-%E2%80%9833%E2%80%99-%E2%80%98shandong%E2%80%99"><span class="nav-number">2.8.</span> <span class="nav-text">s&#x3D;“info：xiaoZhang 33 shandong”，用正则切分字符串输出[‘info’, ‘xiaoZhang’, ‘33’, ‘shandong’]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a-x3D-%E2%80%9C%E4%BD%A0%E5%A5%BD-%E4%B8%AD%E5%9B%BD-%E2%80%9C%EF%BC%8C%E5%8E%BB%E9%99%A4%E5%A4%9A%E4%BD%99%E7%A9%BA%E6%A0%BC%E5%8F%AA%E7%95%99%E4%B8%80%E4%B8%AA%E7%A9%BA%E6%A0%BC"><span class="nav-number">2.9.</span> <span class="nav-text">a &#x3D; “你好 中国 “，去除多余空格只留一个空格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="nav-number">3.1.</span> <span class="nav-text">斐波那契数列</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,18 +162,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -258,7 +258,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-13 14:40:35" itemprop="dateModified" datetime="2022-08-13T14:40:35+08:00">2022-08-13</time>
+      <time title="修改时间：2022-08-15 15:36:04" itemprop="dateModified" datetime="2022-08-15T15:36:04+08:00">2022-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -270,7 +270,7 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a>
+          <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a>
         </span>
     </span>
 
@@ -288,14 +288,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>3.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -307,6 +307,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54430650">知乎：110 道 Python 面试题（真题）</a></p>
+<p>1、谈下 python 的 GIL x<br>2、简述面向对象中 <strong>new</strong> 和 _<strong>init</strong> 区别<br>3、python2和 python3区别?请列举几个<br>4、list和 tuple的区别<br>5、range和xrange<br>6、深浅copy的区别<br>7、session和 cookle 分别是什么，有什么区别?<br>8、请写一个装饰器<br>9、谈下你对restfulapi的理解<br>10、跨域有哪些解决方案(至少列举3种）<br>Nginx同进同出、后端框架准许跨域、在请求头加alloworigin</p>
+<p>11、简述多进程、多线程、协程</p>
 <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3><ul>
 <li>思路</li>
 </ul>
@@ -323,6 +325,29 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">m1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">f = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> m1.items():</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> f:</span><br><span class="line">        f[value] = [key]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f[value].append(key)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br></pre></td></tr></table></figure>
 
 
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="将”hello-world”转换为首字母大写”Hello-World”-相互转换"><a href="#将”hello-world”转换为首字母大写”Hello-World”-相互转换" class="headerlink" title="将”hello world”转换为首字母大写”Hello World”(相互转换)"></a>将”hello world”转换为首字母大写”Hello World”(相互转换)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;hello world&#x27;</span>.title() <span class="comment"># 返回&quot;标题化&quot;的字符串</span></span><br><span class="line"><span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;hello world&#x27;</span>.capitalize() <span class="comment"># 将字符串的第一个字符转换为大写</span></span><br><span class="line"><span class="string">&#x27;Hello world&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;hello world&#x27;</span>.upper() <span class="comment"># 转换字符串中所有小写字母为大写</span></span><br><span class="line"><span class="string">&#x27;HELLO WORLD&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;HELLO WORLD&#x27;</span>.lower() <span class="comment"># 转换字符串中所有大写字符为小写.</span></span><br><span class="line"><span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;hello world&#x27;</span>.swapcase() <span class="comment"># 将字符串中大写转换为小写，小写转换为大写</span></span><br><span class="line"><span class="string">&#x27;HELLO WORLD&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;HELLO WORLD&#x27;</span>.swapcase()</span><br><span class="line"><span class="string">&#x27;hello world&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="如何检测字符串中只含有数字"><a href="#如何检测字符串中只含有数字" class="headerlink" title="如何检测字符串中只含有数字?"></a>如何检测字符串中只含有数字?</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;123bp&#x27;</span>.isdigit() <span class="comment"># 如果字符串只包含数字则返回 True 否则返回 False..</span></span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者使用正则：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bool</span>(re.search(<span class="string">r&#x27;\d&#x27;</span>,<span class="string">&#x27;qw123&#x27;</span>))</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者使用Unicode码：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>uchar = <span class="string">&#x27;123&#x27;</span></span><br><span class="line"><span class="meta">... </span><span class="keyword">if</span> uchar &gt;= <span class="string">u&#x27;\u0030&#x27;</span> <span class="keyword">and</span> uchar &lt;= <span class="string">u&#x27;\u0039&#x27;</span>:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&#x27;True&#x27;</span>)</span><br><span class="line"><span class="meta">... </span><span class="keyword">else</span>:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&#x27;False&#x27;</span>)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="将字符串”ilovechina”进行反转"><a href="#将字符串”ilovechina”进行反转" class="headerlink" title="将字符串”ilovechina”进行反转"></a>将字符串”ilovechina”进行反转</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&quot;ilovechina&quot;</span>[::-<span class="number">1</span>]</span><br><span class="line"><span class="string">&#x27;anihcevoli&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Python-中的字符串格式化方式你知道哪些"><a href="#Python-中的字符串格式化方式你知道哪些" class="headerlink" title="Python 中的字符串格式化方式你知道哪些"></a>Python 中的字符串格式化方式你知道哪些</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;I %s her %s&#x27;</span>%(<span class="string">&#x27;love&#x27;</span>,<span class="string">&#x27;cat&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;I &#123;a&#125; her &#123;b&#125;&#x27;</span>.<span class="built_in">format</span>(a=<span class="string">&#x27;love&#x27;</span>,b=<span class="string">&#x27;cat&#x27;</span>)</span><br><span class="line"><span class="string">f&#x27;I <span class="subst">&#123;a&#125;</span> her <span class="subst">&#123;b&#125;</span>&#x27;</span> <span class="comment">#【Python3.6推荐写法】</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="有一个字符串开头和末尾都有空格，比如“-adabdw-”，要求写一个函数把这个字符串的前后空格都去掉。"><a href="#有一个字符串开头和末尾都有空格，比如“-adabdw-”，要求写一个函数把这个字符串的前后空格都去掉。" class="headerlink" title="有一个字符串开头和末尾都有空格，比如“ adabdw ”，要求写一个函数把这个字符串的前后空格都去掉。"></a>有一个字符串开头和末尾都有空格，比如“ adabdw ”，要求写一个函数把这个字符串的前后空格都去掉。</h3><p>lstrip() 截掉字符串左边的空格或指定字符。</p>
+<p>rstrip() 删除字符串字符串末尾的空格。</p>
+<p>strip([chars]) 在字符串上执行 lstrip()和 rstrip()</p>
+<ul>
+<li>chars – 移除字符串头尾指定的字符序列。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27; adabdw &#x27;</span>.lstrip()</span><br><span class="line"><span class="string">&#x27;adabdw &#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27; adabdw &#x27;</span>.rstrip()</span><br><span class="line"><span class="string">&#x27; adabdw&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27; adabdw &#x27;</span>.lstrip().rstrip()</span><br><span class="line"><span class="string">&#x27;adabdw&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27; adabdw &#x27;</span>.strip()</span><br><span class="line"><span class="string">&#x27;adabdw&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">strip_function</span>(<span class="params">str_</span>):</span><br><span class="line">    <span class="keyword">return</span> str_.strip()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="获取字符串”123456“最后的两个字符"><a href="#获取字符串”123456“最后的两个字符" class="headerlink" title="获取字符串”123456“最后的两个字符"></a>获取字符串”123456“最后的两个字符</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Str[-<span class="number">2</span>: ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="bytes-编码解码"><a href="#bytes-编码解码" class="headerlink" title="bytes 编码解码"></a>bytes 编码解码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">&quot;蓝鲸&quot;</span>;</span><br><span class="line">str_utf8 = <span class="built_in">str</span>.encode(<span class="string">&quot;UTF-8&quot;</span>)</span><br><span class="line">str_gbk = <span class="built_in">str</span>.encode(<span class="string">&quot;GBK&quot;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;UTF-8 编码：&quot;</span>, str_utf8)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;GBK 编码：&quot;</span>, str_gbk)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;UTF-8 解码：&quot;</span>, str_utf8.decode(<span class="string">&#x27;UTF-8&#x27;</span>,<span class="string">&#x27;strict&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;GBK 解码：&quot;</span>, str_gbk.decode(<span class="string">&#x27;GBK&#x27;</span>,<span class="string">&#x27;strict&#x27;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">蓝鲸</span><br><span class="line">UTF-<span class="number">8</span> 编码： <span class="string">b&#x27;\xe8\x93\x9d\xe9\xb2\xb8&#x27;</span></span><br><span class="line">GBK 编码： <span class="string">b&#x27;\xc0\xb6\xbe\xa8&#x27;</span></span><br><span class="line">UTF-<span class="number">8</span> 解码： 蓝鲸</span><br><span class="line">GBK 解码： 蓝鲸</span><br></pre></td></tr></table></figure>
+
+<h3 id="s-x3D-“info：xiaoZhang-33-shandong”，用正则切分字符串输出-‘info’-‘xiaoZhang’-‘33’-‘shandong’"><a href="#s-x3D-“info：xiaoZhang-33-shandong”，用正则切分字符串输出-‘info’-‘xiaoZhang’-‘33’-‘shandong’" class="headerlink" title="s&#x3D;“info：xiaoZhang 33 shandong”，用正则切分字符串输出[‘info’, ‘xiaoZhang’, ‘33’, ‘shandong’]"></a>s&#x3D;“info：xiaoZhang 33 shandong”，用正则切分字符串输出[‘info’, ‘xiaoZhang’, ‘33’, ‘shandong’]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;info：xiaoZhang 33 shandong&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(re.split(<span class="string">r&quot;：| &quot;</span>, s))</span><br><span class="line">[<span class="string">&#x27;info&#x27;</span>, <span class="string">&#x27;xiaoZhang&#x27;</span>, <span class="string">&#x27;33&#x27;</span>, <span class="string">&#x27;shandong&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="a-x3D-“你好-中国-“，去除多余空格只留一个空格"><a href="#a-x3D-“你好-中国-“，去除多余空格只留一个空格" class="headerlink" title="a &#x3D; “你好 中国 “，去除多余空格只留一个空格"></a>a &#x3D; “你好 中国 “，去除多余空格只留一个空格</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">&quot;你好 中国 &quot;</span>      <span class="comment"># split() 通过指定分隔符对字符串进行切片，如果第二个参数 num 有指定值，则分割为 num+1 个子字符串。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&#x27;&#x27;</span>.join(a.split())   <span class="comment">#join() 方法用于将序列中的元素以指定的字符连接生成一个新的字符串。</span></span><br><span class="line"><span class="string">&#x27;你好中国&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><p><a target="_blank" rel="noopener" href="https://bk.tencent.com/s-mart/community/question/891?type=answer">Python 实现 斐波那契数列</a></p>
 
@@ -348,8 +373,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/python/python_summary/" rel="prev" title="Python 文档入口">
-                  <i class="fa fa-chevron-left"></i> Python 文档入口
+                <a href="/interview_questions/linux/" rel="prev" title="linux 相关面试题">
+                  <i class="fa fa-chevron-left"></i> linux 相关面试题
                 </a>
             </div>
             <div class="post-nav-item">
@@ -388,14 +413,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">66k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">34 分钟</span>
+    <span title="站点阅读时长">1:01</span>
   </span>
 </div>
 <div class="busuanzi-count">

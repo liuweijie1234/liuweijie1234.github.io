@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">26</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">31</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">13</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">49</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -159,18 +159,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -218,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/multi-Progress/">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/django/celery/broker/rabbitmq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
@@ -236,7 +236,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/python/multi-Progress/" class="post-title-link" itemprop="url">Python3 多进程</a>
+          <a href="/django/celery/broker/rabbitmq/" class="post-title-link" itemprop="url">django celery broker rabbitmq</a>
         </h2>
 
         <div class="post-meta-container">
@@ -248,7 +248,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-08-15 10:14:00 / 修改时间：10:22:40" itemprop="dateCreated datePublished" datetime="2022-08-15T10:14:00+08:00">2022-08-15</time>
+      <time title="创建时间：2022-08-15 15:52:00 / 修改时间：16:23:10" itemprop="dateCreated datePublished" datetime="2022-08-15T15:52:00+08:00">2022-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -256,475 +256,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>651</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="多进程"><a href="#多进程" class="headerlink" title="多进程"></a>多进程</h3><p>在 Unix&#x2F;Linux 下，我们可以通过使用 fork()来实现多进程，<code>fork()</code>调用一次，返回两次，因为操作系统自动把当前进程（称为父进程）复制了一份（称为子进程），然后，分别在父进程和子进程内返回。子进程永远返回<code>0</code>，而父进程返回子进程的 ID。这样做的理由是，<strong>一个父进程可以 fork 出很多子进程</strong>，所以，父进程要记下每个子进程的 ID，而子进程只需要调用<code>getppid()</code>就可以拿到父进程的 ID。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Process &#123;&#125; start...&#x27;</span>.<span class="built_in">format</span>(os.getpid()))</span><br><span class="line">pid = os.fork()</span><br><span class="line"><span class="keyword">if</span> pid == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;I am child process &#123;&#125; and my parent is &#123;&#125;.&#x27;</span>.<span class="built_in">format</span>(os.getpid(), os.getppid()))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;I &#123;&#125; just created a child process &#123;&#125;.&#x27;</span>.<span class="built_in">format</span>(os.getpid(), pid))</span><br><span class="line">    </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Process 37031 start...</span></span><br><span class="line"><span class="string">I 37031 just created a child process 37032.</span></span><br><span class="line"><span class="string">I am child process 37032 and my parent is 37031.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/file-method/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/file-method/" class="post-title-link" itemprop="url">Python3 文件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-13 16:14:00" itemprop="dateCreated datePublished" datetime="2022-08-13T16:14:00+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-15 10:50:11" itemprop="dateModified" datetime="2022-08-15T10:50:11+08:00">2022-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="数据类型-文件"><a href="#数据类型-文件" class="headerlink" title="数据类型 - 文件"></a>数据类型 - 文件</h1><h2 id="文件对象"><a href="#文件对象" class="headerlink" title="文件对象"></a>文件对象</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;/Users/liuweijie/Python/python-study/md5&#x27;</span>, mode=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br><span class="line"><span class="comment">#&lt;_io.TextIOWrapper name=&#x27;/Users/liuweijie/Python/python-study/md5&#x27; mode=&#x27;r&#x27; encoding=&#x27;UTF-8&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;md5.txt&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">        <span class="built_in">print</span>(line)</span><br></pre></td></tr></table></figure>
-<h2 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f.name <span class="comment">#文件名</span></span><br><span class="line">f.mode <span class="comment">#modes: r,w,a,x</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="读取文件内容"><a href="#读取文件内容" class="headerlink" title="读取文件内容"></a>读取文件内容</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f.read(n)     <span class="comment">#从文件读取指定的字节数</span></span><br><span class="line">f.readline(n) <span class="comment">#读取一整行，包括 &quot;\n&quot; 字符</span></span><br><span class="line">f.readlines() <span class="comment">#读取所有行并返回列表</span></span><br><span class="line">f.seek(<span class="number">0</span>)     <span class="comment">#移动文件读取指针到指定位置</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="写入文件"><a href="#写入文件" class="headerlink" title="写入文件"></a>写入文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.write(<span class="string">&quot;str&quot;</span>) <span class="comment">#将字符串写入文件，返回的是写入的字符长度。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f.flush() <span class="comment">#刷新文件内部缓冲，直接把内部缓冲区的数据立刻写入文件, 而不是被动的等待输出缓冲区写入。</span></span><br><span class="line">f.close() <span class="comment">#关闭文件</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h3><p>读写文件是最常见的 IO 操作，Python 内置了读写文件的函数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;/users/a/abc.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>)    <span class="comment"># r表示读</span></span><br><span class="line">file.read()     <span class="comment"># 会读取出文件的内容并加载到内存</span></span><br><span class="line">file.close()    <span class="comment"># 关闭文件，否则会占用资源，操作系统同一时间能打开的文件数量也是有限的</span></span><br></pre></td></tr></table></figure>
-
-<p>由于文件读写时可能产生 IOError，所以我们需要进行处理：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = <span class="built_in">open</span>(<span class="string">&#x27;/path/to/file&#x27;</span>, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 使用with语句  </span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;/path/to/file&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="built_in">print</span>(f.read())        </span><br></pre></td></tr></table></figure>
-
-<p>写文件：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;/users/a/abc.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">file.write(<span class="string">&#x27;Hello world&#x27;</span>)</span><br><span class="line">file.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用with, 如果以w模式则会进行覆盖，如果是追加则以&#x27;a&#x27;模式写入</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;/Users/a/abc.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">&#x27;Hello, world!&#x27;</span>)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-<h3 id="操作文件和目录"><a href="#操作文件和目录" class="headerlink" title="操作文件和目录"></a>操作文件和目录</h3><p>操作文件和目录的函数一部分放在 os 模块中，一部分放在 os.path 中：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前目录的绝对路径:</span></span><br><span class="line">os.path.abspath(<span class="string">&#x27;.&#x27;</span>)   <span class="comment"># &#x27;/Users/a&#x27;</span></span><br><span class="line"><span class="comment"># 在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:</span></span><br><span class="line">os.path.join(<span class="string">&#x27;/Users/a&#x27;</span>, <span class="string">&#x27;testdir&#x27;</span>)  <span class="comment"># &#x27;/Users/a/testdir&#x27;</span></span><br><span class="line"><span class="comment"># 然后创建一个目录:</span></span><br><span class="line">os.mkdir(<span class="string">&#x27;/Users/a/testdir&#x27;</span>)</span><br><span class="line"><span class="comment"># 删掉一个目录:</span></span><br><span class="line">os.rmdir(<span class="string">&#x27;/Users/a/testdir&#x27;</span>)</span><br><span class="line"><span class="comment"># 对文件重命名</span></span><br><span class="line">os.rename(<span class="string">&#x27;test.txt&#x27;</span>, <span class="string">&#x27;test.py&#x27;</span>)</span><br><span class="line"><span class="comment"># 删除文件</span></span><br><span class="line">os.remove(<span class="string">&#x27;test.py&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h3><p>把变量从内存中编程可存储或传输的过程称之为序列化，在 Python 中叫 pickling，Python 提供了 pickle 模块来实现序列化。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">d = <span class="built_in">dict</span>(name=<span class="string">&#x27;Bob&#x27;</span>, age=<span class="number">20</span>, score=<span class="number">88</span>)</span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;/users/a/desktop/as.txt&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">pickle.dump(d, file)</span><br><span class="line">pickle.close()</span><br><span class="line"><span class="comment"># ü&#125;q (X   nameqX   BobqX   ageqKX   scoreqKXu.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 反序列化, 注意序列化后一定要close，否则会报错EOFError</span></span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;/users/a/desktop/as.txt&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">d = pickle.load(file)</span><br><span class="line">file.close()</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h3><p><a target="_blank" rel="noopener" href="https://bk.tencent.com/s-mart/community/question/1121?type=answer">https://bk.tencent.com/s-mart/community/question/1121?type=answer</a></p>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/Higher_order_functions/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/Higher_order_functions/" class="post-title-link" itemprop="url">Python3 常用函数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-08-13 16:14:00 / 修改时间：18:41:18" itemprop="dateCreated datePublished" datetime="2022-08-13T16:14:00+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h5 id="map"><a href="#map" class="headerlink" title="map"></a>map</h5><p>map()接收两个参数，一个是函数，一个是 Iterable，map 将传入的函数依次作用到序列的每个元素，并把结果作为新的 Iterator 返回。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>):</span><br><span class="line">  <span class="keyword">return</span> x * x</span><br><span class="line"></span><br><span class="line">r = <span class="built_in">map</span>(f, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, ..., <span class="number">9</span>])</span><br><span class="line"><span class="built_in">list</span>(r)        <span class="comment"># [1, 4, 9, 16, ..., 81]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, ..., <span class="number">9</span>])) [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, ..., <span class="string">&#x27;9&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<h5 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h5><p>reduce 把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce 把结果继续和序列的下一个元素做累积计算：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x, y</span>):</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">reduce(add, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])         <span class="comment"># 25</span></span><br><span class="line"><span class="string">&#x27;--------------------------------------------&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fn</span>(<span class="params">x, y</span>):</span><br><span class="line">  <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line"></span><br><span class="line">reduce(fn, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])          <span class="comment"># 13579</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h4><p>Python 内建的 filter()函数用于过滤序列，filter 也接收一个函数和一个序列，filter 把传入的函数依次作用于每个元素，然后根据返回值是 True 还是 False 决定。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在一个list中，删掉偶数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_odd</span>(<span class="params">n</span>):</span><br><span class="line">  <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">filter</span>(is_odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, ..., <span class="number">10</span>])) <span class="comment"># [1, 3, 5, 7, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 把序列中的空字符串删掉</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">not_empty</span>(<span class="params">s</span>):</span><br><span class="line">  <span class="keyword">return</span> s <span class="keyword">and</span> s.trip()</span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">filter</span>(not_empty, [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="literal">None</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27; &#x27;</span>]))  <span class="comment"># [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h4><p>Python 内置的 sorted()函数可以对 list 进行排序。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sorted</span>([<span class="number">35</span>, <span class="number">2</span>, <span class="number">3</span>, -<span class="number">2</span>, <span class="number">0</span>])              <span class="comment"># [-2, 0, 2, 3, 35]</span></span><br><span class="line"><span class="comment"># 可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序</span></span><br><span class="line"><span class="built_in">sorted</span>([<span class="number">36</span>, <span class="number">5</span>, -<span class="number">12</span>, <span class="number">9</span>, -<span class="number">21</span>], key=<span class="built_in">abs</span>)  <span class="comment"># [5, 9, -12, -21, 36]</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="返回函数"><a href="#返回函数" class="headerlink" title="返回函数"></a>返回函数</h3><p>高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sum_lazy</span>(<span class="params">*args</span>):</span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">sum</span>():</span><br><span class="line">    res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        res = res + arg</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这样调用</span></span><br><span class="line"><span class="built_in">sum</span> = sum_lazy(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>)</span><br><span class="line"><span class="built_in">sum</span>()      <span class="comment"># 9</span></span><br></pre></td></tr></table></figure>
-
-<p>这种形式也被称为闭包，即保存函数的状态信息，使函数的局部变量信息可以保存下来，不被回收。</p>
-<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>关键字 lambda 表示匿名函数，好处在于因为函数没有名字，不必担心函数名冲突：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="keyword">lambda</span> x: x * x</span><br><span class="line">f(<span class="number">5</span>)         <span class="comment"># 25</span></span><br></pre></td></tr></table></figure>
-
-<p>也可以将匿名函数作为返回值返回：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">build</span>(<span class="params">x, y</span>):</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span>: x * x + y * y</span><br></pre></td></tr></table></figure>
-<h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><p>在代码运行期间动态增加功能的方式，称之为“装饰器”，即返回添加功能后的函数再调用。装饰器的本质就是闭包，即函数的嵌套定义。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不带参数 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">deco</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;debug -- &quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> func()</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@deco</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">say_hello</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;hello!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@deco</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">say_bye</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;bye!&#x27;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># say_hello_boss = deco(say_hello)</span></span><br><span class="line">    <span class="comment"># say_hello_boss()</span></span><br><span class="line">    say_hello()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 带参数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">logging</span>(<span class="params">level</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">func</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">inner_wrapper</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[&#123;level&#125;]: enter function &#123;func&#125;()&#x27;</span>.<span class="built_in">format</span>(</span><br><span class="line">                level=level,</span><br><span class="line">                func=func.__name__</span><br><span class="line">            ))</span><br><span class="line">            <span class="keyword">return</span> func(*args, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> inner_wrapper</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@logging(<span class="params">level=<span class="string">&#x27;INFO&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">say</span>(<span class="params">something</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;say &#123;&#125;!&quot;</span>.<span class="built_in">format</span>(something))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">say(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line"><span class="meta">    @functools.wraps(<span class="params">func</span>)</span></span><br><span class="line">    <span class="comment"># python提供的装饰器，它能把原函数d的元信息拷贝到装饰器里面的func函数中，</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;call %s(): &#x27;</span> % func.__name__)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;args = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(*args))</span><br><span class="line">        <span class="keyword">return</span> func(*args, **kwargs)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">p</span>):</span><br><span class="line">    <span class="built_in">print</span>(test.__name__ + <span class="string">&quot; param: &quot;</span> + p)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h3><p>偏函数的作用就是把一个函数的部分参数给固定住（设置默认值），返回一个新的函数，调用这个新函数会更简单。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(<span class="string">&#x27;12345&#x27;</span>, base=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 封装后只需传入字符串</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">int2</span>(<span class="params">x, base=<span class="number">2</span></span>):</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">int</span>(x, base)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 另一种写法</span></span><br><span class="line">int2 = functools.partial(<span class="built_in">int</span>, base=<span class="number">2</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/iterator-generator/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/iterator-generator/" class="post-title-link" itemprop="url">Python3 迭代器与生成器</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-08-13 16:14:00 / 修改时间：16:33:21" itemprop="dateCreated datePublished" datetime="2022-08-13T16:14:00+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>602</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h3><p>在 Python 中，一边循环一边计算的机制，称为生成器：generator。只需要将列表生成式的[]改成()，就生成了 generator，并且通过 next()函数获得 generator 的下一个返回值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g = (x * x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))  <span class="comment"># [0, 1, 4, 9, ..., 81]</span></span><br><span class="line"><span class="built_in">next</span>(g)  <span class="comment"># 0</span></span><br><span class="line"><span class="built_in">next</span>(g)  <span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是计算到最后一个元素，没有更多元素时，会抛出 StopIteration 的错误，所以一般使用 for 循环来迭代。</p>
-<h3 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h3><p>可以被 next 函数调用并不断返回下一个值得对象称为迭代器：Iterator，生成器都是 Iterator 对象，但 list、dict、str 虽然是 Iterable，却不是 Iterator，使用 iter()函数则可以把它们变成 Iterator。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断是否是Iterator对象</span></span><br><span class="line"><span class="built_in">isinstance</span>([], Iterator)    <span class="comment"># False</span></span><br><span class="line"><span class="built_in">isinstance</span>(&#123;&#125;, Iterator)    <span class="comment"># False</span></span><br><span class="line"><span class="built_in">isinstance</span>(<span class="string">&#x27;ab&#x27;</span>, Iterator)  <span class="comment"># False</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">isinstance</span>(<span class="built_in">iter</span>([]), Iterator)    <span class="comment"># True</span></span><br><span class="line"><span class="built_in">isinstance</span>(<span class="built_in">iter</span>(&#123;&#125;), Iterator)    <span class="comment"># False</span></span><br><span class="line"><span class="built_in">isinstance</span>(<span class="built_in">iter</span>(<span class="string">&#x27;ab&#x27;</span>), Iterator)  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/interview_questions/python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/interview_questions/python/" class="post-title-link" itemprop="url">Python 相关面试题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-11 14:14:00" itemprop="dateCreated datePublished" datetime="2022-08-11T14:14:00+08:00">2022-08-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-13 14:40:35" itemprop="dateModified" datetime="2022-08-13T14:40:35+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a>
+          <a href="/categories/django/" itemprop="url" rel="index"><span itemprop="name">django</span></a>
         </span>
     </span>
 
@@ -753,574 +285,56 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54430650">知乎：110 道 Python 面试题（真题）</a></p>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="Python-如何对字典排序"><a href="#Python-如何对字典排序" class="headerlink" title="Python 如何对字典排序"></a>Python 如何对字典排序</h3><ul>
-<li>思路</li>
-</ul>
-<p>字典本身是无序，排序可使用 <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-func-sorted.html">sorted(iterable, key&#x3D;None, reverse&#x3D;False)</a></p>
-<ul>
-<li>排序：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">test_dict = &#123;<span class="number">6</span>: <span class="number">9</span>, <span class="number">10</span>: <span class="number">5</span>, <span class="number">3</span>: <span class="number">11</span>, <span class="number">8</span>: <span class="number">2</span>, <span class="number">7</span>: <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典的所有key进行排序</span></span><br><span class="line">test_data_0 = <span class="built_in">sorted</span>(test_dict.keys())</span><br><span class="line"><span class="built_in">print</span>(test_data_0)  <span class="comment"># [3, 6, 7, 8, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照key的大小升序排列</span></span><br><span class="line">test_data_1 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_1)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (8, 2), (10, 5)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小升序排列</span></span><br><span class="line">test_data_2 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(test_data_2)  <span class="comment"># [(8, 2), (10, 5), (7, 6), (6, 9), (3, 11)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对字典（key，value）按照value的大小降序排列</span></span><br><span class="line">test_data_3 = <span class="built_in">sorted</span>(test_dict.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(test_data_3)  <span class="comment"># [(3, 11), (6, 9), (7, 6), (10, 5), (8, 2)]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>面试题</li>
-</ul>
-<p><code>m1 = &#123;&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 1&#125;</code> 将同样的 value 的 key 集合在 list 里，输出 <code>&#123;1: [&#39;a&#39;, &#39;c&#39;], 2: [&#39;b&#39;]&#125;</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">m1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">f = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> m1.items():</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> f:</span><br><span class="line">        f[value] = [key]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f[value].append(key)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><p><a target="_blank" rel="noopener" href="https://bk.tencent.com/s-mart/community/question/891?type=answer">Python 实现 斐波那契数列</a></p>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/python_summary/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/python_summary/" class="post-title-link" itemprop="url">Python 文档入口</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-10 16:14:00" itemprop="dateCreated datePublished" datetime="2022-08-10T16:14:00+08:00">2022-08-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-15 11:04:31" itemprop="dateModified" datetime="2022-08-15T11:04:31+08:00">2022-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>256</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><a href="/python/type_of_data/number/" title="Python3 数字 常用方法">Python3 数字 常用方法</a><br>
-<a href="/python/type_of_data/string/" title="Python3 字符串 常用方法">Python3 字符串 常用方法</a><br>
-<a href="/python/type_of_data/list/" title="Python3 list 常用方法">Python3 list 常用方法</a><br>
-<a href="/python/type_of_data/dict/" title="Python3 dict 常用方法">Python3 dict 常用方法</a><br>
-<a href="/python/type_of_data/set/" title="Python3 集合 常用方法">Python3 集合 常用方法</a><br>
-<a href="/python/type_of_data/tuple/" title="Python3 元组 常用方法">Python3 元组 常用方法</a><br>
-
-<h2 id="模块用法"><a href="#模块用法" class="headerlink" title="模块用法"></a>模块用法</h2><a href="/python/module/base64/" title="Python3 模块 base64">Python3 模块 base64</a><br>
-<a href="/python/module/datetime/" title="Python3 模块 datetime">Python3 模块 datetime</a><br>
-<a href="/python/module/logging/" title="Python3 模块 logging">Python3 模块 logging</a><br>
-<a href="/python/module/os/" title="Python3 模块 os">Python3 模块 os</a><br>
-<a href="/python/module/requests/" title="Python3 模块 requests">Python3 模块 requests</a><br>
-<a href="/python/module/sys/" title="Python3 模块 sys">Python3 模块 sys</a><br>
-<a href="/python/module/xlrd+xlwt/" title="Python3 模块 xlrd 和 xlwt">Python3 模块 xlrd 和 xlwt</a><br>
-<a href="/python/module/other/" title="Python3 常用模块介绍">Python3 常用模块介绍</a><br>
-
-
-<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><a href="/interview_questions/python/" title="Python 相关面试题">Python 相关面试题</a><br>
-
-<h2 id="工作问题"><a href="#工作问题" class="headerlink" title="工作问题"></a>工作问题</h2><a href="/python/shell_run_python_script/" title="在 shell 脚本中对 python 传递带有空格的字符串参数">在 shell 脚本中对 python 传递带有空格的字符串参数</a><br>
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/shell_run_python_script/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/shell_run_python_script/" class="post-title-link" itemprop="url">在 shell 脚本中对 python 传递带有空格的字符串参数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-08-10 16:14:00 / 修改时间：15:40:27" itemprop="dateCreated datePublished" datetime="2022-08-10T16:14:00+08:00">2022-08-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>431</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="发现问题-linux"><a href="#发现问题-linux" class="headerlink" title="发现问题(linux)"></a>发现问题(linux)</h2><p>linux 机器使用 shell 调用一个 python 脚本，并向 shell 中传入带有空格参数，导致脚本不能实现原有的功能，并报错参数不对</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parameter=&#x27;IEG straget test&#x27; </span><br><span class="line"></span><br><span class="line">python3 xxx.py $&#123;xxx&#125; $&#123;parameter&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="本地复现-windows"><a href="#本地复现-windows" class="headerlink" title="本地复现(windows)"></a>本地复现(windows)</h2><p><img data-src="/images/20220810_python_script.png"></p>
-<p>发现双引号不会导致参数移位</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>对于<code>有空格的变量</code>加上双引号，如果为了省事，可以全部都加上双引号</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 xxx.py $&#123;xxx&#125; &quot;$&#123;parameter&#125;&quot; &quot;$&#123;xxx&#125;&quot; $&#123;xxx&#125; $&#123;xxx&#125; $&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/optimization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/optimization/" class="post-title-link" itemprop="url">Python3 性能优化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-07-04 16:14:00" itemprop="dateCreated datePublished" datetime="2022-07-04T16:14:00+08:00">2022-07-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-13 16:26:38" itemprop="dateModified" datetime="2022-08-13T16:26:38+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>591</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>1.数据结构一定要选对 能用字典就不用列表：字典在索引查找和排序方面远远高于列表。<br>2.多用python中封装好的模块库关键代码使用外部功能包（Cython，pylnlne，pypy，pyrex）<br>3.使用生成器<br>4.针对循环的优化 尽量避免在循环中访问变量的属性</p>
-<h3 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h3><p>先看一个简单的 demo：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fac</span>(<span class="params">n</span>):</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">求阶乘</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">  <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> n</span><br><span class="line">  <span class="keyword">return</span> n * fac(n-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<p>使用递归函数需要注意防止栈溢出，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回就会减一层栈帧，栈的大小不是无限的，所以当递归调用次数过多，就会导致栈溢出(maximum recursion depth exceeded in comparison)。</p>
-<p>解决溢出的办法是通过尾递归优化，尾递归是指在函数返回的时候，调用自身本身，并且 return 语句不能包含表达式。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fac</span>(<span class="params">n</span>):</span><br><span class="line">  <span class="keyword">return</span> fac_iter(n, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fac_iter</span>(<span class="params">n, res</span>):</span><br><span class="line">  <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">  <span class="keyword">return</span> fac_iter(n - <span class="number">1</span>, n * res)</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是 Pyhon 标准的解释器没有针对尾递归做优化，任何递归函数都存在栈溢出的问题。</p>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/type_of_data/dict/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="liuweijie1234">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘伟杰的个人博客">
-      <meta itemprop="description" content="刘伟杰的个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/type_of_data/dict/" class="post-title-link" itemprop="url">Python3 dict 常用方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-07-04 16:14:00" itemprop="dateCreated datePublished" datetime="2022-07-04T16:14:00+08:00">2022-07-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-13 16:21:59" itemprop="dateModified" datetime="2022-08-13T16:21:59+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/">Python 官方文档</a></p>
-<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">官方文档-字典</a></p>
-<p><code>字典名 == &#123; 键值对 &#125;</code></p>
-<h2 id="字典特性"><a href="#字典特性" class="headerlink" title="字典特性"></a>字典特性</h2><ol>
-<li>不允许同一个键出现两次。创建时如果同一个键被赋值两次，后一个值会被记住。</li>
-<li>键必须不可变，所以可以用数字，字符串或元组充当</li>
+          <p>一、rabbitmq的安装</p>
+<p>   rabbitmq是celery常用的broker之一，它的角色是消息队列。</p>
+<ol>
+<li>安装依赖的erlang语言开发包</li>
 </ol>
-<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
-<li><p>type()：返回输入的变量类型，如果变量是字典就返回字典类型。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">type</span>(tel)</span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;dict&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>len()：计算字典元素个数，即键的总数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(tel)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>str()：输出字典，可以打印的字符串表示。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>(tel)</span><br><span class="line"><span class="string">&quot;&#123;&#x27;jack&#x27;: 4098, &#x27;sape&#x27;: 4139&#125;&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list()：返回该字典中所有键的列表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">&#x27;jack&#x27;</span>: <span class="number">4098</span>, <span class="string">&#x27;sape&#x27;</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(tel)</span><br><span class="line">[<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;sape&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h2><ul>
-<li>dict 推导式</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;x: x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> (<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>)&#125;</span><br><span class="line">&#123;<span class="number">2</span>: <span class="number">4</span>, <span class="number">4</span>: <span class="number">16</span>, <span class="number">6</span>: <span class="number">36</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>   安装程序：otp_win32_R16B03-1.exe</p>
+<p>   安装说明：在win7下建议默认安装，安装完后，</p>
+<pre><code>         设置环境变量，例如ERLANG_HOME=C:\Program Files\erl5.10.4，
+     
+     添加到PATH中，PATH=%ERLANG_HOME%\bin
+</code></pre>
+<ol start="2">
+<li>安装rabbitmq</li>
+</ol>
+<p>   安装程序：rabbitmq-server-3.2.4.exe</p>
+<p>   安装说明：安装成功后设置环境变量，例如RABBITMQ_SERVER&#x3D;C:\Program Files\RabbitMQ Server\rabbitmq_server-3.2.4</p>
+<pre><code>     添加到PATH中， PATH=%RABBITMQ_SERVER%\sbin 
 
-<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="dict-get-key-value"><a href="#dict-get-key-value" class="headerlink" title="dict.get(key[, value])"></a>dict.get(key[, value])</h4><ul>
-<li>作用</li>
-</ul>
-<p>用于返回指定 key 的值，如果值不在字典中返回默认值</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>key – 字典中要查找的键。<br>value – 可选，如果指定键的值不存在时，返回该默认值。</p>
-<ul>
-<li><code>get()</code> 方法 与 <code>dict[key]</code> 访问元素 区别</li>
-</ul>
-<p>get(key) 方法在 key（键）不在字典中时，可以返回默认值 None 或者设置的默认值。</p>
-<p>dict[key] 在 key（键）不在字典中时，会触发 KeyError 异常。</p>
-<ul>
-<li>示例：嵌套字典使用</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line">testdict = &#123;<span class="string">&#x27;tencent&#x27;</span>: &#123;<span class="string">&#x27;url&#x27;</span>: <span class="string">&#x27;https://www.qq.com/&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">res = testdict.get(<span class="string">&#x27;tencent&#x27;</span>, &#123;&#125;).get(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;tencent url 为 : <span class="subst">&#123;<span class="built_in">str</span>(res)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+     进入%RABBITMQ_SERVER%\sbin目录，执行rabbitmq-plugins enable rabbitmq_management
+     
+         最后执行下面3行命令
+      
+     rabbitmq-service.bat stop
 
-<p>以上实例输出结果为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tencent url 为 : https://www.qq.com/</span><br></pre></td></tr></table></figure>
-<h4 id="dict-setdefault-key-default-x3D-None"><a href="#dict-setdefault-key-default-x3D-None" class="headerlink" title="dict.setdefault(key, default&#x3D;None)"></a>dict.setdefault(key, default&#x3D;None)</h4><ul>
-<li>作用</li>
-</ul>
-<p>setdefault() 方法和 get()方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值。</p>
-<h4 id="Key-in-dict"><a href="#Key-in-dict" class="headerlink" title="Key in dict"></a>Key in dict</h4><ul>
-<li>作用</li>
-</ul>
-<p>用于判断 key 是否存在字典中，返回值是布尔类型(true&#x2F;false)</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>常和 if 配合使用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">dict</span>.key <span class="keyword">not</span> <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br></pre></td></tr></table></figure>
+     rabbitmq-service.bat install
 
+     rabbitmq-service.bat start
+</code></pre>
+<ol start="3">
+<li>测试安装</li>
+</ol>
+<p>   浏览器中输入<a target="_blank" rel="noopener" href="http://localhost:15672/#/">http://localhost:15672/#/</a> 默认账号：guest, 密码guest。登陆成功后，表示rabbitmq安装成功。</p>
+<p>二、celery的包安装</p>
+<pre><code>celery是一个异步任务队列/基于分布式消息传递的作业队列，以python语言实现，正在被广泛应用，每天处理数以百万计的任务。
 
-<h4 id="dict-items"><a href="#dict-items" class="headerlink" title="dict.items()"></a>dict.items()</h4><ul>
-<li>作用</li>
-</ul>
-<p>返回该字典的包含键值的列表作为字典的元组对</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>不接受任何参数，如果字典为空，则 dict.items() 方法返回一个空列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> knights.items():</span><br><span class="line">    <span class="built_in">print</span>(k, v)</span><br><span class="line"><span class="built_in">print</span>(knights.items())</span><br></pre></td></tr></table></figure>
+结合django，需要安装两个包：celery和django-celery。命令python setup.py install.
 
-<p>返回</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dict_items([(<span class="string">&#x27;gallahad&#x27;</span>, <span class="string">&#x27;the pure&#x27;</span>), (<span class="string">&#x27;robin&#x27;</span>, <span class="string">&#x27;the brave&#x27;</span>)])</span><br></pre></td></tr></table></figure>
-<h4 id="dict-keys-dict-values"><a href="#dict-keys-dict-values" class="headerlink" title="dict.keys() + dict.values()"></a>dict.keys() + dict.values()</h4><ul>
-<li>作用</li>
-</ul>
-<p>返回字典的视图对象(只读)，可以使用 list() 转换成列表</p>
-<ul>
-<li>语法</li>
-</ul>
-<p>不接受任何参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">knights = &#123;<span class="string">&#x27;gallahad&#x27;</span>: <span class="string">&#x27;the pure&#x27;</span>, <span class="string">&#x27;robin&#x27;</span>: <span class="string">&#x27;the brave&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> knights.keys():</span><br><span class="line">    <span class="built_in">print</span>(k)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> knights.values():</span><br><span class="line">    <span class="built_in">print</span>(v)</span><br><span class="line"><span class="built_in">print</span>(knights.keys())</span><br><span class="line"><span class="built_in">print</span>(knights.values())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+1. celery安装(依赖包见&quot;celery安装依赖包.rar&quot;中)
 
-<h4 id="dict-update-dict2"><a href="#dict-update-dict2" class="headerlink" title="dict.update(dict2)"></a>dict.update(dict2)</h4><ul>
-<li>作用</li>
-</ul>
-<p>update() 函数把字典参数 dict2 的 key&#x2F;value(键&#x2F;值) 对更新到字典 dict 里。</p>
-<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><h4 id="dict-clear"><a href="#dict-clear" class="headerlink" title="dict.clear()"></a>dict.clear()</h4><ul>
-<li>作用</li>
-</ul>
-<p>clear() 函数用于删除字典内所有元素。</p>
-<h4 id="dict-copy"><a href="#dict-copy" class="headerlink" title="dict.copy()"></a>dict.copy()</h4><ul>
-<li>作用</li>
-</ul>
-<p>copy() 函数返回一个字典的浅复制，子对象是引用</p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/python-understanding-dict-copy-shallow-or-deep.html">Python 直接赋值、浅拷贝和深度拷贝解析</a></p>
-<h4 id="dict-fromkeys-seq-value"><a href="#dict-fromkeys-seq-value" class="headerlink" title="dict.fromkeys(seq[, value])"></a>dict.fromkeys(seq[, value])</h4><ul>
-<li>作用</li>
-</ul>
-<p>fromkeys() 函数用于创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值。</p>
-<h4 id="pop-key-default"><a href="#pop-key-default" class="headerlink" title="pop(key[, default])"></a>pop(key[, default])</h4><ul>
-<li>作用</li>
-</ul>
-<p>pop() 方法删除字典 key（键）所对应的值，返回被删除的值，当键 key 不存在时返回的值为 default</p>
-<h4 id="popitem"><a href="#popitem" class="headerlink" title="popitem()"></a>popitem()</h4><ul>
-<li>作用</li>
-</ul>
-<p>popitem() 方法随机返回并删除字典中的最后一对键和值，返回格式是元组。如果字典已经为空，却调用了此方法，就报出 KeyError 异常。</p>
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="字典转列表"><a href="#字典转列表" class="headerlink" title="字典转列表"></a>字典转列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dit = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zxf&#x27;</span>,</span><br><span class="line">       <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;22&#x27;</span>,</span><br><span class="line">       <span class="string">&#x27;gender&#x27;</span>:<span class="string">&#x27;male&#x27;</span>,</span><br><span class="line">       <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;shanghai&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字典的key转换成列表</span></span><br><span class="line">lst = <span class="built_in">list</span>(dit.keys()) <span class="comment"># lst = list(dit)</span></span><br><span class="line"><span class="built_in">print</span>(lst)  <span class="comment"># [&#x27;name&#x27;, &#x27;age&#x27;, &#x27;gender&#x27;, &#x27;address&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字典的value转换成列表</span></span><br><span class="line">lst2 = <span class="built_in">list</span>(dit.values())</span><br><span class="line"><span class="built_in">print</span>(lst2)  <span class="comment"># [&#x27;zxf&#x27;, &#x27;22&#x27;, &#x27;male&#x27;, &#x27;shanghai&#x27;]</span></span><br></pre></td></tr></table></figure>
+ 首先安装依赖包，顺序为anyjson-0.3.3-&gt;py-amqp-3.3.0.30-&gt;kombu-3.0.26-&gt;billiard-3.3.0.30-&gt;pytz-2015.4
+ 
+ 最后安装celery-3.1.25
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dit = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zxf&#x27;</span>,</span><br><span class="line">       <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;22&#x27;</span>,</span><br><span class="line">       <span class="string">&#x27;gender&#x27;</span>:<span class="string">&#x27;male&#x27;</span>,</span><br><span class="line">       <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;shanghai&#x27;</span>&#125;</span><br><span class="line">lst, lst2 = [], []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> dit.items():</span><br><span class="line">    lst.append(key)</span><br><span class="line">    lst2.append(value)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(lst, lst2)</span><br></pre></td></tr></table></figure>
+2. djcelery安装
+  
+ 直接安装django-celery-3.2.1
+</code></pre>
+<p>ps:由于安装了新的python包，如果以eclipse开发的话，记得在eclipse下重新配置下python环境。如果遇到问题，请联系蓝鲸助手！！</p>
+<p>具体的celery使用请参考《django+celery的使用介绍》</p>
 
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line">z = collections.OrderedDict()</span><br><span class="line">z[<span class="string">&#x27;b&#x27;</span>] = <span class="number">2</span></span><br><span class="line">z[<span class="string">&#x27;a&#x27;</span>] = <span class="number">1</span></span><br><span class="line">z[<span class="string">&#x27;c&#x27;</span>] = <span class="number">3</span></span><br><span class="line">z[<span class="string">&#x27;r&#x27;</span>] = <span class="number">5</span></span><br><span class="line">z[<span class="string">&#x27;j&#x27;</span>] = <span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字典中的key转换为列表</span></span><br><span class="line">key_value = <span class="built_in">list</span>(z.keys())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;字典中的key转换为列表：&#x27;</span>, key_value)</span><br><span class="line"></span><br><span class="line"><span class="comment">#字典中的value转换为列表</span></span><br><span class="line">value_list = <span class="built_in">list</span>(z.values())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;字典中的value转换为列表：&#x27;</span>, value_list)</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1349,7 +363,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/python/type_of_data/number/">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/research/InformationTechnologyProjectManagementProfessional/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
@@ -1367,7 +381,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/python/type_of_data/number/" class="post-title-link" itemprop="url">Python3 数字 常用方法</a>
+          <a href="/research/InformationTechnologyProjectManagementProfessional/" class="post-title-link" itemprop="url">信息系统项目管理师(高级)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1377,15 +391,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-07-04 16:14:00" itemprop="dateCreated datePublished" datetime="2022-07-04T16:14:00+08:00">2022-07-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-15 10:18:47" itemprop="dateModified" datetime="2022-08-15T10:18:47+08:00">2022-08-15</time>
+      <time title="创建时间：2022-08-15 15:42:00 / 修改时间：15:09:43" itemprop="dateCreated datePublished" datetime="2022-08-15T15:42:00+08:00">2022-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1393,7 +401,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+          <a href="/categories/%E8%BD%AF%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">软考</span></a>
         </span>
     </span>
 
@@ -1404,7 +412,429 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
+      <span>49</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>有空准备考这个证</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28579194">https://zhuanlan.zhihu.com/p/28579194</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnitpm.com/rkb/shenzhen.html">深圳软考</a></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/Ops/es/command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Ops/es/command/" class="post-title-link" itemprop="url">Elasticsearch 常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 15:11:00 / 修改时间：15:11:13" itemprop="dateCreated datePublished" datetime="2022-08-15T15:11:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Elasticsearch/" itemprop="url" rel="index"><span itemprop="name">Elasticsearch</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>727</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="查询和分析"><a href="#查询和分析" class="headerlink" title="查询和分析"></a>查询和分析</h3><ul>
+<li><p><strong>定义您自己的搜索方式</strong></p>
+<p>  通过 Elasticsearch，您能够执行及合并多种类型的搜索（结构化数据、非结构化数据、地理位置、指标），搜索方式随心而变。先从一个简单的问题出发，试试看能够从中发现些什么。</p>
+</li>
+<li><p><strong>分析大规模数据</strong></p>
+<p>  找到与查询最匹配的 10 个文档并不困难。但如果面对的是十亿行日志，又该如何解读呢？Elasticsearch 聚合让您能够从大处着眼，探索数据的趋势和规律。</p>
+</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#如果有账号密码验证需要加： -u esuser:espassword</span></span><br><span class="line">例如：curl -v  -u esuser:espassword  http://esip:esport/_cluster/health |jq  <span class="comment">#其他请求同理</span></span><br><span class="line"></span><br><span class="line">健康状态：curl -v http://esip:esport/_cluster/health |jq</span><br><span class="line"></span><br><span class="line">列出所有索引:curl -s http://esip:esport/_cat/indices?v</span><br><span class="line"></span><br><span class="line">列出所有索引详情:curl -v  http://esip:esport/_cluster/health?level=indices</span><br><span class="line"></span><br><span class="line">新建索引：curl  -XPUT    http://esip:esport/indexname</span><br><span class="line"></span><br><span class="line">查询索引：curl   http://esip:esport/indexname</span><br><span class="line"></span><br><span class="line">删除索引：curl -XDELETE  http://esip:esport/indexname</span><br><span class="line"></span><br><span class="line">修改索引：</span><br><span class="line"></span><br><span class="line">关闭索引：curl   -XPOST  -s http://esuser:espassword/indexname/_close</span><br><span class="line"></span><br><span class="line">开启索引:curl   -XPOST  -s http://esuser:espassword/indexname/_open</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/Ops/linux/command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Ops/linux/command/" class="post-title-link" itemprop="url">linux 常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 15:11:00 / 修改时间：15:17:20" itemprop="dateCreated datePublished" datetime="2022-08-15T15:11:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>142</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li><p>提取当前所有文件内容带有相关 ip 的行<br>grep -n -ri “10.0.0.1” .&#x2F;  &gt;&gt; ..&#x2F;10.0.0.1.txt</p>
+</li>
+<li><p>批量给当前目录下的日志文件增加前缀<br>for name in <code>ls *.log</code>;do mv $name 10.0.0.1_${name%.html};done</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/Ops/kibana/command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Ops/kibana/command/" class="post-title-link" itemprop="url">Kibana 常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 15:11:00 / 修改时间：15:16:26" itemprop="dateCreated datePublished" datetime="2022-08-15T15:11:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">运维工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Kibana-详细入门教程"><a href="#Kibana-详细入门教程" class="headerlink" title="Kibana 详细入门教程"></a>Kibana 详细入门教程</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenqionghe/p/12503181.html">https://www.cnblogs.com/chenqionghe/p/12503181.html</a></p>
+<h1 id="Lucene-查询语法汇总"><a href="#Lucene-查询语法汇总" class="headerlink" title="Lucene 查询语法汇总"></a>Lucene 查询语法汇总</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenqionghe/p/12501218.html">https://www.cnblogs.com/chenqionghe/p/12501218.html</a></p>
+<p>board<br>req_system_name<br>req_app_code<br>req_component_name 接口名<br>request_id<br>req_client_ip</p>
+<p>board: ieod </p>
+<p>AND req_system_name: CC<br>AND req_system_name: JOB<br>AND req_system_name: IJOBS<br>AND req_system_name: IJOBS2<br>AND req_system_name: GCLOUD </p>
+<p>board: ieod_clouds</p>
+<p>AND req_system_name: CC<br>AND req_system_name: JOB<br>AND req_system_name: JOBV3<br>AND req_system_name: SOPS</p>
+<p>AND req_app_code: octopus</p>
+<p>AND req_client_ip: 9.140.128.13</p>
+<p>AND req_component_name: execute_job</p>
+<p>board: ieod AND req_system_name: JOB</p>
+<p>board: ieod AND req_system_name: CC AND req_app_code: icm AND req_client_ip: 10.0.0.1</p>
+<p>board: ieod_clouds AND req_system_name: CC AND req_app_code: bksops AND req_component_name: get_query_info</p>
+<p>Field req_app_code</p>
+<p>order by  metirc: Count</p>
+<p>Descending 降序</p>
+<p>trust_advisor</p>
+<p>board: ieod_clouds AND req_system_name: CC AND req_app_code: icm AND req_component_name: get_biz_location </p>
+<p>board: ieod_clouds AND req_system_name: CC AND req_component_name: get_host_location AND req_app_code: icm</p>
+<p>get_biz_location<br>get_host_location</p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/git/githubissues/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git/githubissues/" class="post-title-link" itemprop="url">github issues 管理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 14:47:00 / 修改时间：15:01:54" itemprop="dateCreated datePublished" datetime="2022-08-15T14:47:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1422,112 +852,540 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul>
-<li>整型(int) </li>
-<li>浮点型(float)</li>
-<li>复数(complex)</li>
+          <h2 id="一、背景及需求"><a href="#一、背景及需求" class="headerlink" title="一、背景及需求"></a>一、背景及需求</h2><p>当公司的开源项目比较多，公司需要一个 label 系统来管理 issues。</p>
+<p>若开源项目人气高，也会有外部开发者的参与建设</p>
+<h2 id="二、思考"><a href="#二、思考" class="headerlink" title="二、思考"></a>二、思考</h2><p>1、怎样才能达到最好 管理 issue 效果 (完善的 label)<br>2、怎样让用户提出高质量的 issue （个人想法是 通过 issue 模板）</p>
+<h2 id="三、个人思路"><a href="#三、个人思路" class="headerlink" title="三、个人思路"></a>三、个人思路</h2><h3 id="3-1-创建-Label-分组"><a href="#3-1-创建-Label-分组" class="headerlink" title="3.1 创建 Label 分组"></a>3.1 创建 Label 分组</h3><p>在 label 分组上，除了项目进度和功能优先级的标识，还需要有适用于外部开发者的 label，以及项目组回应 label。</p>
+<p>ps: 不确定标签是要 全英文、全中文 还是 中英文</p>
+<ul>
+<li>具体 label</li>
 </ul>
-<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><table>
+<table>
 <thead>
 <tr>
-<th>函数</th>
-<th>描述</th>
+<th>分类</th>
+<th>具体 label</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>abs(x)</td>
-<td>返回数字的绝对值。</td>
+<td>功能分类</td>
+<td>新功能(new function)，功能增强(function enhancement)，漏洞缺陷(BUG)，文档改进(Documentation improvements)，用法疑问(Usage Questions)</td>
 </tr>
 <tr>
-<td>max(x1, x2,…)</td>
-<td>返回给定参数的最大值，参数可以为序列。</td>
+<td>外部 label</td>
+<td>第三方开发(third-party dev)</td>
 </tr>
 <tr>
-<td>min(x1, x2,…)</td>
-<td>返回给定参数的最小值，参数可以为序列。</td>
+<td>项目组回复</td>
+<td>项目组:需求 get(get requirement)，项目组:已加入计划(join plan)，项目组:忽略此需求(neglect requirement)</td>
 </tr>
 <tr>
-<td>round(x [,n])</td>
-<td>返回浮点数 x 的四舍五入值，如给出 n 值，则代表舍入到小数点后的位数。<br>其实准确的说是保留值将保留到离上一位更近的一端。</td>
+<td>优先级</td>
+<td>优先级:低(low priority)，优先级:高(high priority)，优先级:紧急(urgent priority)</td>
+</tr>
+<tr>
+<td>项目进度</td>
+<td>开发中(in dev)，测试中(testing)，已上线(online)</td>
 </tr>
 </tbody></table>
-<h2 id="随机数函数"><a href="#随机数函数" class="headerlink" title="随机数函数"></a>随机数函数</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>random()</td>
-<td>随机生成下一个实数，它在[0,1)范围内。</td>
-</tr>
-<tr>
-<td>randrange()</td>
-<td>返回指定递增基数集合中的一个随机数，基数默认值为 1。</td>
-</tr>
-<tr>
-<td>choice(seq)</td>
-<td>从序列的元素中随机挑选一个元素，比如 random.choice(range(10))，从 0 到 9 中随机挑选一个整数。</td>
-</tr>
-</tbody></table>
-<h2 id="数学常量"><a href="#数学常量" class="headerlink" title="数学常量"></a>数学常量</h2><table>
-<thead>
-<tr>
-<th>常量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>pi</td>
-<td>数学常量 pi（圆周率，一般以π来表示）</td>
-</tr>
-<tr>
-<td>e</td>
-<td>数学常量 e，e 即自然常数（自然常数）。</td>
-</tr>
-<tr>
-<td>inf</td>
-<td>正无穷</td>
-</tr>
-</tbody></table>
-<h2 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h2><h3 id="type"><a href="#type" class="headerlink" title="type()"></a>type()</h3><p>type() 函数返回对象的类型</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>(<span class="number">123</span>) == <span class="built_in">type</span>(<span class="number">456</span>)       <span class="comment"># True</span></span><br><span class="line"><span class="built_in">type</span>(<span class="number">123</span>) == <span class="built_in">int</span>             <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/typing.html">类型注解支持</a></p>
-<h3 id="isinstance"><a href="#isinstance" class="headerlink" title="isinstance()"></a>isinstance()</h3><p>isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type()。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">isinstance</span> (a,<span class="built_in">int</span>)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">isinstance</span> (a,<span class="built_in">str</span>)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">isinstance</span> (a,(<span class="built_in">str</span>,<span class="built_in">int</span>,<span class="built_in">list</span>))    <span class="comment"># 是元组中的一个返回 True</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>新建 label</li>
+</ul>
+<p><img data-src="/images/image2022-7-14_10-46-41.png"></p>
+<p><img data-src="/images/image2022-7-14_10-47-6.png"></p>
+<h3 id="3-2-配置-Issues-模板"><a href="#3-2-配置-Issues-模板" class="headerlink" title="3.2 配置 Issues 模板"></a>3.2 配置 Issues 模板</h3><p>普通用户提 issue 是不能选择 label，所以可以根据 issue 模板绑定 label 来解决最初的接入</p>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository</a></p>
+<ul>
+<li>BUG 模板例子</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;--创建 Issues 时需要检查已经存在的 Issues 列表中是否有类似的问题，如果有则不需要重新创建新的 Issue，请在已有的 Issue 下加入讨论，详细描述您出现的问题，Issue 的状态更改后会收到邮件通知。--&gt;</span><br><span class="line"></span><br><span class="line">&lt;--Whether there is a similar problem in the existing problem when creating the problem, there is no need to create a new problem, if you need to check the description of the existing problem and add it to the list, detail the problem you have, and the status of the problem will be changed. to email notification--&gt;</span><br><span class="line"></span><br><span class="line"><span class="strong">**发生了什么(What happened)**</span>:</span><br><span class="line"></span><br><span class="line"><span class="strong">**你希望发生什么事情(What you expected to happen)**</span>:</span><br><span class="line"></span><br><span class="line"><span class="strong">**如何复现这个问题,尽可能描述下相关信息(How to reproduce it ,as minimally and precisely as possible)**</span>:</span><br><span class="line"></span><br><span class="line"><span class="strong">**还有什么需要让我们了解的(Anything else we need to know?)**</span>:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>isinstance() 与 type() 区别：</li>
+<li>配置模板</li>
 </ul>
-<p>type() 不会认为子类是一种父类类型，不考虑继承关系。</p>
-<p>isinstance() 会认为子类是一种父类类型，考虑继承关系。</p>
-<p>如果要判断两个类型是否相同推荐使用 isinstance()。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>(<span class="title class_ inherited__">A</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">isinstance</span>(A(), A)    <span class="comment"># returns True</span></span><br><span class="line"><span class="built_in">type</span>(A()) == A        <span class="comment"># returns True</span></span><br><span class="line"><span class="built_in">isinstance</span>(B(), A)    <span class="comment"># returns True</span></span><br><span class="line"><span class="built_in">type</span>(B()) == A        <span class="comment"># returns False</span></span><br></pre></td></tr></table></figure>
+<p>步骤一：找到配置 issues 模板入口</p>
+<p><img data-src="/images/image2022-7-14_11-17-47.png"></p>
+<p><img data-src="/images/image2022-7-14_11-18-10.png"></p>
+<p>步骤二：新增模板</p>
+<p><img data-src="/images/image2022-7-14_11-18-31.png"></p>
+<p>步骤三：编辑模板，将模板标题、关于、内容、标题前缀、标签 填写完成</p>
+<p><img data-src="/images/image2022-7-14_11-19-8.png"></p>
+<p><img data-src="/images/image2022-7-14_11-22-24.png"></p>
+<p>步骤四：提交 commit changes</p>
+<p><img data-src="/images/image2022-7-14_11-38-5.png"></p>
+<p>步骤五：验证</p>
+<p><img data-src="/images/image2022-7-14_11-35-15.png"></p>
+<h2 id="四、看板"><a href="#四、看板" class="headerlink" title="四、看板"></a>四、看板</h2><h3 id="4-1-单产品看板"><a href="#4-1-单产品看板" class="headerlink" title="4.1 单产品看板"></a>4.1 单产品看板</h3><p>通过 github 的 projects 来实现单个仓库的看板</p>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/issues/trying-out-the-new-projects-experience">https://docs.github.com/cn/issues/trying-out-the-new-projects-experience</a></p>
+<p><img data-src="/images/image2022-7-14_10-50-6.png"></p>
+<h3 id="4-2-多产品看板"><a href="#4-2-多产品看板" class="headerlink" title="4.2 多产品看板"></a>4.2 多产品看板</h3><p>需要开发将数据存入数据库，然后在展示</p>
+<h1 id="github-接口调用说明"><a href="#github-接口调用说明" class="headerlink" title="github 接口调用说明"></a>github 接口调用说明</h1><p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/rest/overview/resources-in-the-rest-api#authentication">参考官方文档</a></p>
+<ul>
+<li>url<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.github.com</span><br></pre></td></tr></table></figure>
+<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000015144126">一篇文章搞定 Github API 调用 (v3）</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
-<p>使用 dir 可以获得一个对象的所有属性和方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span>(<span class="string">&#x27;ABC&#x27;</span>)</span><br><span class="line"><span class="comment"># [&#x27;__add__&#x27;, &#x27;__class__&#x27;,..., &#x27;__subclasshook__&#x27;, &#x27;capitalize&#x27;, &#x27;casefold&#x27;,..., &#x27;zfill&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="string-–-gt-int-x2F-float"><a href="#string-–-gt-int-x2F-float" class="headerlink" title="string –&gt; int&#x2F;float"></a>string –&gt; int&#x2F;float</h3><p>int() 函数用于将一个字符串或数字转换为整型，不能直接转换浮点型字符串<br>float() 函数用于将整数和字符串转换成浮点数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 10进制string 转化为int</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;12&#x27;</span>)</span><br><span class="line"><span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 16进制string 转化为int</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;12&#x27;</span>, <span class="number">16</span>)</span><br><span class="line"><span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">float</span>(<span class="string">&#x27;12&#x27;</span>)</span><br><span class="line"><span class="number">12.0</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="int-–-gt-string"><a href="#int-–-gt-string" class="headerlink" title="int –&gt; string"></a>int –&gt; string</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># int转化为 10进制string</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>(<span class="number">18</span>)</span><br><span class="line"><span class="string">&#x27;18&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># int转化为 16进制string</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">18</span>)</span><br><span class="line"><span class="string">&#x27;0x12&#x27;</span></span><br></pre></td></tr></table></figure>
-<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><p><img data-src="/images/image-20210220.png"></p>
-<p>int() 函数用于将一个字符串或数字转换为整型（十进制）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 十六进制 到 十进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;0xf&#x27;</span>,<span class="number">16</span>) </span><br><span class="line"><span class="number">15</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 二进制 到 十进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;10100111110&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"><span class="number">1342</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 八进制 到 十进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="string">&#x27;17&#x27;</span>,<span class="number">8</span>)</span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
-<p>bin() 返回一个整数 int 或者长整数 long int 的二进制表示。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 十进制转二进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="number">10</span>)</span><br><span class="line"><span class="string">&#x27;0b1010&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 十六进制转 二进制</span></span><br><span class="line"><span class="comment"># 十六进制-&gt;十进制-&gt;二进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="built_in">int</span>(<span class="string">&#x27;ff&#x27;</span>,<span class="number">16</span>))</span><br><span class="line"><span class="string">&#x27;0b11111111&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 八进制 到 二进制</span></span><br><span class="line"><span class="comment"># 八进制先到十进制，再到二进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="built_in">int</span>(<span class="string">&#x27;17&#x27;</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">&#x27;0b1111&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>oct() 函数将一个整数转换成 8 进制字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 二进制 到 八进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0b1010</span>)</span><br><span class="line"><span class="string">&#x27;012&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制到八进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">11</span>)</span><br><span class="line"><span class="string">&#x27;013&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 十六进制到八进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0xf</span>) </span><br><span class="line"><span class="string">&#x27;017&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>hex() 函数用于将 10 进制整数转换成 16 进制，以字符串形式表示。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 十进制 转 十六进制</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">1033</span>)</span><br><span class="line"><span class="string">&#x27;0x409&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 二进制 转 十六进制</span></span><br><span class="line"><span class="comment"># 就是 二进制先转成 十进制， 再转成 十六进制。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="built_in">int</span>(<span class="string">&#x27;101010&#x27;</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">&#x27;0x2a&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 八进制到 十六进制</span></span><br><span class="line"><span class="comment"># 就是 八进制先转成 十进制， 再转成 十六进制。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="built_in">int</span>(<span class="string">&#x27;17&#x27;</span>,<span class="number">8</span>))</span><br><span class="line"><span class="string">&#x27;0xf&#x27;</span></span><br></pre></td></tr></table></figure>
 
 
+    
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/git/command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git/command/" class="post-title-link" itemprop="url">git 常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 11:42:00 / 修改时间：11:43:30" itemprop="dateCreated datePublished" datetime="2022-08-15T11:42:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>682</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>git init - 初始化仓库。<br>git add . - 添加文件到暂存区。<br>git commit - 将暂存区内容添加到仓库中。<br>git config –list 查看当前配置, 在当前项目下面查看的配置是全局配置+当前项目的配置, 使用的时候会优先使用当前项目的配置</p>
+<p>$ git config user.name “gitlab’s Name”</p>
+<p>$ git config user.email “<a href="mailto:&#103;&#x69;&#116;&#108;&#x61;&#x62;&#64;&#120;&#x78;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#108;&#x61;&#x62;&#64;&#120;&#x78;&#46;&#99;&#111;&#109;</a>“</p>
+<p>$ git config –list</p>
+<p>Git全局设置</p>
+<p>git config –global user.name  “xxx”<br>git config –global user.email “<a href="mailto:&#x78;&#x78;&#x78;&#120;&#64;&#x74;&#x65;&#110;&#x63;&#101;&#x6e;&#116;&#46;&#99;&#111;&#109;">&#x78;&#x78;&#x78;&#120;&#64;&#x74;&#x65;&#110;&#x63;&#101;&#x6e;&#116;&#46;&#99;&#111;&#109;</a>“</p>
+<p>创建一个新的版本库</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/xxxxx/xxxx.git">https://github.com/xxxxx/xxxx.git</a><br>cd xxxx<br>touch README.md<br>git add README.md<br>git commit -m “add README”<br>git push -u origin master</p>
+<p>现有的文件夹或Git版本库</p>
+<p>cd existing_folder<br>git init<br>git remote add origin <a target="_blank" rel="noopener" href="https://github.com/xxxxx/xxxx.git">https://github.com/xxxxx/xxxx.git</a><br>git add .<br>git commit -m “init”<br>git push -u origin master</p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/mysql/command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql/command/" class="post-title-link" itemprop="url">mysql 常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 11:42:00 / 修改时间：11:44:40" itemprop="dateCreated datePublished" datetime="2022-08-15T11:42:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>source &#x2F;data&#x2F;install&#x2F;utils.fc<br>ssh $BK_MYSQL_IP<br>mysql –login-path&#x3D;mysql-default</p>
+<p>ssh $BK_APPO_IP<br>vim &#x2F;data&#x2F;bkee&#x2F;etc&#x2F;paas_agent_config.yaml</p>
+<p>MySQL 运行状态<br>show status</p>
+<p>创建数据库<br>CREATE DATABASE <code>&#123;APP_CODE&#125;</code> default charset utf8 COLLATE utf8_general_ci;</p>
+<p>CREATE DATABASE <code>bk-bug-report</code> default charset utf8 COLLATE utf8_general_ci;</p>
+<p>show databases;</p>
+<p>选择数据库<br>use bk_demo;</p>
+<p>查看表<br>show tables;</p>
+<p>设置使用的字符集<br>set names utf8;</p>
+<p>读取数据表的信息<br>SELECT * FROM Websites;</p>
+<h1 id="SQL-SELECT"><a href="#SQL-SELECT" class="headerlink" title="SQL SELECT"></a>SQL SELECT</h1><p>mysql -uroot -p123456 bk_core –default-character-set&#x3D;utf8 &lt; d:\bk_core.202111181443.sql</p>
+<p>CREATE DATABASE <code>bk_paas</code> default charset utf8 COLLATE utf8_general_ci;<br>CREATE DATABASE <code>bk_core</code> default charset utf8 COLLATE utf8_general_ci;<br>CREATE DATABASE <code>bk_data</code> default charset utf8 COLLATE utf8_general_ci;<br>CREATE DATABASE <code>bk_component</code> default charset utf8 COLLATE utf8_general_ci;</p>
+<p>mysql –defaults-extra-file&#x3D;config.cnf bk_paas –default-character-set&#x3D;utf8 &lt; d:\bk_paas.202111181445.sql<br>mysql –defaults-extra-file&#x3D;config.cnf bk_core –default-character-set&#x3D;utf8 &lt; d:\bk_core.202111181443.sql<br>mysql –defaults-extra-file&#x3D;config.cnf bk_data –default-character-set&#x3D;utf8 &lt; d:\bk_data.202111181444.sql<br>mysql –defaults-extra-file&#x3D;config.cnf bk_component –default-character-set&#x3D;utf8 &lt; d:\bk_component.202111181443.sql</p>
+<p>MySQL常用命令(基础)<br><a target="_blank" rel="noopener" href="https://bk.tencent.com/s-mart/community/question/919?type=answer">https://bk.tencent.com/s-mart/community/question/919?type=answer</a></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/mysql/date_and_string_conversion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql/date_and_string_conversion/" class="post-title-link" itemprop="url">mysql 日期和字符串转换、日期查询</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 11:42:00 / 修改时间：11:46:34" itemprop="dateCreated datePublished" datetime="2022-08-15T11:42:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33157666/article/details/78385115">mysql 日期和字符串相互转化</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/allWords/article/details/78357307">sql 语句查询今天、昨天、近 7 天、近 30 天、一个月内、上一月 数据</a></p>
+<p><a target="_blank" rel="noopener" href="https://geek-docs.com/sql/sql-examples/sql-calculation-on-the-first-day-of-a-month-and-the-last-day.html">SQL 计算一个月的第一天和最后一天</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1698429">【Mysql-3】条件判断函数-CASE WHEN、IF、IFNULL 详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/llwan/article/details/40345349">MySQL 通过 sql 语句获取当前日期|时间|时间戳</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/fdipzone/article/details/51018930">mysql 时间戳格式化函数 from_unixtime 使用说明</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_dates.asp">SQL Date 函数</a><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/func_date_sub.asp">MySQL DATE_SUB() 函数</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">NOW()	返回当前的日期和时间</span><br><span class="line">CURDATE()	返回当前的日期</span><br><span class="line">CURTIME()	返回当前的时间</span><br><span class="line"><span class="type">DATE</span>()	提取日期或日期<span class="operator">/</span>时间表达式的日期部分</span><br><span class="line"><span class="built_in">EXTRACT</span>()	返回日期<span class="operator">/</span>时间按的单独部分</span><br><span class="line">DATE_ADD()	给日期添加指定的时间间隔</span><br><span class="line">DATE_SUB()	从日期减去指定的时间间隔</span><br><span class="line">DATEDIFF()	返回两个日期之间的天数</span><br><span class="line">DATE_FORMAT()	用不同的格式显示日期<span class="operator">/</span>时间</span><br><span class="line">PERIOD_DIFF()   函数返回两日期之间的差异。结果以月份计算。</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> NOW();</span><br><span class="line"><span class="keyword">SELECT</span> CURDATE();</span><br><span class="line"><span class="keyword">SELECT</span> CURTIME();</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DATE_SUB(NOW(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>);</span><br><span class="line"><span class="keyword">SELECT</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">0</span> <span class="keyword">DAY</span>);</span><br><span class="line"><span class="keyword">SELECT</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">7</span> <span class="keyword">DAY</span>);</span><br><span class="line"><span class="keyword">SELECT</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>);</span><br><span class="line"><span class="keyword">SELECT</span> DATE_SUB(now(),<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">MONTH</span>);</span><br><span class="line"><span class="keyword">SELECT</span> DATE_SUB(now(),<span class="type">INTERVAL</span> <span class="number">2</span> <span class="keyword">MONTH</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> PERIOD_DIFF( date_format( now( ) , <span class="string">&#x27;%Y%m%d&#x27;</span> ) , date_format( <span class="string">&#x27;2022-05-13 19:26:29&#x27;</span>, <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">where</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">7</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> <span class="type">date</span>();</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 近<span class="number">30</span>天时间返回</span><br><span class="line"></span><br><span class="line"># 当前一个月时间范围</span><br><span class="line"><span class="keyword">select</span> DATE_FORMAT(date_add(<span class="built_in">current_date</span>, <span class="type">interval</span> <span class="operator">-</span><span class="keyword">day</span>(<span class="built_in">current_date</span>)<span class="operator">+</span><span class="number">1</span> <span class="keyword">day</span> ), <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) firstday, CONCAT (last_day(<span class="built_in">current_date</span>), <span class="string">&#x27; 23:59:59&#x27;</span>) lastday;</span><br><span class="line"></span><br><span class="line"># 上一个月的时间范围</span><br><span class="line"><span class="keyword">select</span> DATE_FORMAT(date_add(date_sub(<span class="built_in">current_date</span>, <span class="type">interval</span> <span class="number">1</span> <span class="keyword">month</span>), <span class="type">interval</span> <span class="operator">-</span><span class="keyword">day</span>(<span class="built_in">current_date</span>)<span class="operator">+</span><span class="number">1</span> <span class="keyword">day</span>), <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) firstday, CONCAT (last_day(date_sub(<span class="built_in">current_date</span>, <span class="type">interval</span> <span class="number">1</span> <span class="keyword">month</span>)), <span class="string">&#x27; 23:59:59&#x27;</span>) lastday;</span><br><span class="line"></span><br><span class="line"># 近一月的单据</span><br><span class="line"><span class="keyword">SELECT</span> title,<span class="keyword">module</span>,created,status,version_report <span class="keyword">FROM</span> static_tapd_bug_tapdbug <span class="keyword">WHERE</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span>;</span><br><span class="line"><span class="keyword">SELECT</span> title,<span class="keyword">module</span>,created,status,version_report <span class="keyword">FROM</span> static_tapd_bug_tapdbug <span class="keyword">WHERE</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>)  <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span>;</span><br><span class="line"></span><br><span class="line"># 近一个月各产品出现的次数</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">module</span>,<span class="built_in">COUNT</span>(<span class="keyword">module</span>) <span class="keyword">FROM</span> static_tapd_bug_tapdbug <span class="keyword">WHERE</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span>;</span><br><span class="line"></span><br><span class="line"># 上个月的单据</span><br><span class="line"><span class="keyword">SELECT</span> bug_id,title,<span class="keyword">module</span>,created <span class="keyword">FROM</span> static_tapd_bug_tapdbug <span class="keyword">WHERE</span> PERIOD_DIFF( date_format( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , date_format( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span>;</span><br><span class="line"></span><br><span class="line"># 上个月各产品出现的次数</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">module</span>,<span class="built_in">COUNT</span>(<span class="keyword">module</span>) <span class="keyword">FROM</span> static_tapd_bug_tapdbug <span class="keyword">WHERE</span> PERIOD_DIFF( date_format( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , date_format( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span>;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/LY_Dengle/article/details/78027398">mysql 之 any，in，some，all 的区别</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.jikexueyuan.com/project/sql/useful-functions/concat-function.html">SQL CONCAT 函数</a><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_func_count.asp">SQL CONCAT 函数-w3school</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">module</span>,<span class="number">30</span>days_count,<span class="number">30</span>days_news_count,last_month_count,last_month_news_count,now,<span class="number">30</span>days,last_month_firstday,last_month_lastday</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> <span class="keyword">module</span>,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_news_count,</span><br><span class="line">    DATE_FORMAT(now(), <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">as</span> now,</span><br><span class="line">    DATE_FORMAT(DATE_SUB(now(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>), <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">as</span> <span class="number">30</span>days,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( DATE_FORMAT( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , DATE_FORMAT( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( DATE_FORMAT( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , DATE_FORMAT( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_news_count,</span><br><span class="line">    DATE_FORMAT(date_add(date_sub(<span class="built_in">current_date</span>, <span class="type">interval</span> <span class="number">1</span> <span class="keyword">month</span>), <span class="type">interval</span> <span class="operator">-</span><span class="keyword">day</span>(<span class="built_in">current_date</span>)<span class="operator">+</span><span class="number">1</span> <span class="keyword">day</span>), <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) last_month_firstday,</span><br><span class="line">    CONCAT (last_day(date_sub(<span class="built_in">current_date</span>, <span class="type">interval</span> <span class="number">1</span> <span class="keyword">month</span>)), <span class="string">&#x27; 23:59:59&#x27;</span>) last_month_lastday</span><br><span class="line">    <span class="keyword">FROM</span> static_tapd_bug_tapdbug </span><br><span class="line">    <span class="keyword">WHERE</span> version_report <span class="keyword">like</span> <span class="string">&#x27;%社区版%&#x27;</span> <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span></span><br><span class="line">    <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span></span><br><span class="line">) a</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">30</span>days_count <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">module</span>,<span class="number">30</span>days_count,<span class="number">30</span>days_news_count,last_month_count,last_month_news_count <span class="keyword">FROM</span> ( <span class="keyword">SELECT</span> <span class="keyword">module</span>, <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_count, <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_news_count, <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( date_format( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , date_format( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_count, <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( date_format( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , date_format( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_news_count <span class="keyword">FROM</span> static_tapd_bug_tapdbug  <span class="keyword">WHERE</span> version_report <span class="keyword">like</span> <span class="string">&#x27;%社区版%&#x27;</span> <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span>) a <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span> <span class="keyword">order</span> <span class="keyword">by</span> <span class="number">30</span>days_count <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/sql/sql-having.html">SQL HAVING 子句</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">module</span>,<span class="number">30</span>days_count,<span class="number">30</span>days_news_count,<span class="number">30</span>days_solved_count,last_month_count,last_month_news_count,last_month_solved_count</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> <span class="keyword">module</span>,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_news_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">30</span> <span class="keyword">DAY</span>) <span class="operator">&lt;=</span> str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>) <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;resolved&#x27;</span>,<span class="string">&#x27;assigned&#x27;</span>,<span class="string">&#x27;verified&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_solved_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( DATE_FORMAT( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , DATE_FORMAT( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( DATE_FORMAT( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , DATE_FORMAT( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;new&#x27;</span>,<span class="string">&#x27;in_progress&#x27;</span>,<span class="string">&#x27;reopened&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_news_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> PERIOD_DIFF( DATE_FORMAT( now( ) , <span class="string">&#x27;%Y%m&#x27;</span> ) , DATE_FORMAT( str_to_date(created, <span class="string">&#x27;%Y-%m-%d %H:%i:%S&#x27;</span>), <span class="string">&#x27;%Y%m&#x27;</span> ) ) <span class="operator">=</span><span class="number">1</span> <span class="keyword">AND</span> status <span class="keyword">in</span> (<span class="string">&#x27;resolved&#x27;</span>,<span class="string">&#x27;assigned&#x27;</span>,<span class="string">&#x27;verified&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> last_month_solved_count</span><br><span class="line">    <span class="keyword">FROM</span> static_tapd_bug_tapdbug </span><br><span class="line">    <span class="keyword">WHERE</span> version_report <span class="keyword">like</span> <span class="string">&#x27;%社区版%&#x27;</span> <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span></span><br><span class="line">    <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span></span><br><span class="line">) a</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span></span><br><span class="line"><span class="keyword">having</span> (<span class="number">30</span>days_count <span class="operator">&gt;</span> <span class="number">0</span>) <span class="keyword">or</span> (<span class="number">30</span>days_news_count <span class="operator">&gt;</span> <span class="number">0</span>) <span class="keyword">or</span> (<span class="number">30</span>days_solved_count <span class="operator">&gt;</span> <span class="number">0</span>) <span class="keyword">or</span> (last_month_count <span class="operator">&gt;</span> <span class="number">0</span>) <span class="keyword">or</span> (last_month_news_count <span class="operator">&gt;</span> <span class="number">0</span>) <span class="keyword">or</span> (last_month_solved_count <span class="operator">&gt;</span> <span class="number">0</span>)</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">30</span>days_count <span class="keyword">desc</span> </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">module</span>, <span class="number">7</span>days_count, <span class="number">30</span>days_count, <span class="number">7</span>days_news_count, <span class="number">30</span>days_news_count</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> <span class="keyword">module</span>, </span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> status<span class="operator">=</span><span class="string">&#x27;new&#x27;</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">7</span>days_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> status<span class="operator">=</span><span class="string">&#x27;in_progress&#x27;</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> status<span class="operator">=</span><span class="string">&#x27;reopened&#x27;</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">7</span>days_news_count,</span><br><span class="line">    <span class="built_in">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> status <span class="keyword">in</span> (<span class="string">&#x27;resolved&#x27;</span>, <span class="string">&#x27;assigned&#x27;</span>) <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">as</span> <span class="number">30</span>days_news_count</span><br><span class="line">    <span class="keyword">FROM</span> static_tapd_bug_tapdbug</span><br><span class="line">    <span class="keyword">WHERE</span> version_report <span class="keyword">like</span> <span class="string">&#x27;%社区版%&#x27;</span> <span class="keyword">AND</span> workspace_id<span class="operator">=</span><span class="number">20415412</span> </span><br><span class="line">    <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span></span><br><span class="line">) a</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">module</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">30</span>days_count <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h1><p>不要使用子查询，尽量使用链表查询</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/68136613">SQL 多表查询：SQL JOIN 连接查询各种用法总结</a></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://liuweijie1234.github.io/vue/install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="liuweijie1234">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘伟杰的个人博客">
+      <meta itemprop="description" content="刘伟杰的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 刘伟杰的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/vue/install/" class="post-title-link" itemprop="url">Vue 安装基本命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-15 11:42:00 / 修改时间：15:37:09" itemprop="dateCreated datePublished" datetime="2022-08-15T11:42:00+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>823</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="npm-设置和取消代理"><a href="#npm-设置和取消代理" class="headerlink" title="npm 设置和取消代理"></a>npm 设置和取消代理</h2><p>npm config set proxy&#x3D;<a target="_blank" rel="noopener" href="http://127.0.0.1:8087/">http://127.0.0.1:8087</a><br>npm config set registry&#x3D;<a target="_blank" rel="noopener" href="http://registry.npmjs.org/">http://registry.npmjs.org</a></p>
+<p>export http_proxy&#x3D;<a target="_blank" rel="noopener" href="http://127.0.0.1:12639/">http://127.0.0.1:12639</a><br>export https_proxy&#x3D;<a target="_blank" rel="noopener" href="http://127.0.0.1:12639/">http://127.0.0.1:12639</a></p>
+<p>npm config set http_proxy&#x3D;<a target="_blank" rel="noopener" href="http://127.0.0.1:12639/">http://127.0.0.1:12639</a><br>npm config set https_proxy&#x3D;<a target="_blank" rel="noopener" href="http://127.0.0.1:12639/">http://127.0.0.1:12639</a></p>
+<ul>
+<li>查看配置</li>
+</ul>
+<p>npm config list </p>
+<ul>
+<li>删除代理</li>
+</ul>
+<p>npm config delete proxy<br>npm config delete https-proxy</p>
+<p>npm config set registry <a target="_blank" rel="noopener" href="http://r.npm.taobao.org/">http://r.npm.taobao.org/</a><br>npm config set registry <a target="_blank" rel="noopener" href="https://mirrors.tencent.com/npm/">https://mirrors.tencent.com/npm/</a></p>
+<p>npm config delete registry</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>npm install –registry&#x3D;<a target="_blank" rel="noopener" href="https://mirrors.tencent.com/npm/">https://mirrors.tencent.com/npm/</a></p>
+<p>npm install -g @vue&#x2F;cli<br>npm install -g @vue&#x2F;cli-init</p>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>npm uninstall -g @vue&#x2F;cli</p>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><ul>
+<li>查看源版本</li>
+</ul>
+<p>npm info jquery</p>
+<ul>
+<li>查看安装版本</li>
+</ul>
+<p>npm ls jquery</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>vue init webpack vue_test</p>
+<p>vue init webpack vue_demo</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>cd vue_test&#x2F;</p>
+<p>npm install </p>
+<h2 id="运行启动"><a href="#运行启动" class="headerlink" title="运行启动"></a>运行启动</h2><p>npm run dev</p>
+<p>npm install –save axios vue-axios</p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000010570125">https://segmentfault.com/q/1010000010570125</a></p>
 
       
     </div>
@@ -1550,7 +1408,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1574,14 +1432,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">66k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">34 分钟</span>
+    <span title="站点阅读时长">1:01</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">53</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">46</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">18</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">71</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0-%E5%AE%89%E8%A3%85-celery"><span class="nav-number">1.</span> <span class="nav-text">本地 安装 celery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">安装消息中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-celery-%E4%BE%9D%E8%B5%96"><span class="nav-number">3.</span> <span class="nav-text">开发框架 celery 依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-number">4.</span> <span class="nav-text">config 配置项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-config-x2F-default-py-%E4%B8%AD%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">在 config&#x2F;default.py 中修改配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-config-x2F-dev-py-%E6%96%87%E4%BB%B6%E4%B8%AD%E4%BF%AE%E6%94%B9%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%85%8D%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text">在 config&#x2F;dev.py 文件中修改消息队列配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-Celery-%E4%BB%BB%E5%8A%A1"><span class="nav-number">5.</span> <span class="nav-text">添加 Celery 任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-Celery-%E4%BB%BB%E5%8A%A1"><span class="nav-number">6.</span> <span class="nav-text">调用 Celery 任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#celery-%E6%97%A5%E5%BF%97"><span class="nav-number">7.</span> <span class="nav-text">celery 日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%BC%82%E6%AD%A5-worker"><span class="nav-number">8.</span> <span class="nav-text">启动异步 worker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%AE%9A%E6%97%B6-beat"><span class="nav-number">9.</span> <span class="nav-text">启动定时 beat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-PaaS-%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2%E6%97%B6%EF%BC%8C%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8-celery-%E8%BF%9B%E7%A8%8B"><span class="nav-number">9.1.</span> <span class="nav-text">如何在 PaaS 平台部署时，自动启动 celery 进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%97%AD-celery"><span class="nav-number">10.</span> <span class="nav-text">关闭 celery</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0-%E5%AE%89%E8%A3%85-celery"><span class="nav-text">本地 安装 celery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-text">安装消息中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-celery-%E4%BE%9D%E8%B5%96"><span class="nav-text">开发框架 celery 依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-text">config 配置项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-config-x2F-default-py-%E4%B8%AD%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="nav-text">在 config&#x2F;default.py 中修改配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-config-x2F-dev-py-%E6%96%87%E4%BB%B6%E4%B8%AD%E4%BF%AE%E6%94%B9%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%85%8D%E7%BD%AE"><span class="nav-text">在 config&#x2F;dev.py 文件中修改消息队列配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-Celery-%E4%BB%BB%E5%8A%A1"><span class="nav-text">添加 Celery 任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-Celery-%E4%BB%BB%E5%8A%A1"><span class="nav-text">调用 Celery 任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#celery-%E6%97%A5%E5%BF%97"><span class="nav-text">celery 日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%BC%82%E6%AD%A5-worker"><span class="nav-text">启动异步 worker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%AE%9A%E6%97%B6-beat"><span class="nav-text">启动定时 beat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-PaaS-%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2%E6%97%B6%EF%BC%8C%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8-celery-%E8%BF%9B%E7%A8%8B"><span class="nav-text">如何在 PaaS 平台部署时，自动启动 celery 进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%97%AD-celery"><span class="nav-text">关闭 celery</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,18 +162,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -408,8 +408,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/django/tutorial/" rel="next" title="django 教程">
-                  django 教程 <i class="fa fa-chevron-right"></i>
+                <a href="/django/celery/periodic_task/" rel="next" title="django celery Periodic Task">
+                  django celery Periodic Task <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -443,14 +443,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">71k</span>
+    <span title="站点总字数">139k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:05</span>
+    <span title="站点阅读时长">2:06</span>
   </span>
 </div>
 <div class="busuanzi-count">

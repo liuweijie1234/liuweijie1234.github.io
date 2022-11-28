@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -28,12 +28,14 @@
 <meta property="og:site_name" content="刘伟杰的个人博客">
 <meta property="og:description" content="123456789import rea &#x3D; &amp;#x27;* [White Paper](.&#x2F;test.md)&amp;#x27;chapter_path &#x3D; re.findall(r&amp;#x27;[(](.*?)[)]&amp;#x27;, a, re.S)chapter_name &#x3D; re.findall(r&amp;#x27;[\[](.*?)[\]]&amp;#x27;, a, re.S)print(chapter_name">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuweijie1234.github.io/images/641.jfif">
 <meta property="article:published_time" content="2022-08-15T02:22:00.000Z">
-<meta property="article:modified_time" content="2022-08-16T07:34:18.481Z">
+<meta property="article:modified_time" content="2022-10-17T08:20:01.302Z">
 <meta property="article:author" content="liuweijie1234">
 <meta property="article:tag" content="Python module">
 <meta property="article:tag" content="re">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuweijie1234.github.io/images/641.jfif">
 
 
 <link rel="canonical" href="http://liuweijie1234.github.io/python/module/re/">
@@ -88,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">53</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">46</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">18</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">71</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -132,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
     <div id="music">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1394963332&auto=1&height=66"></iframe>
     </div>
@@ -148,6 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E7%B4%A2%E5%92%8C%E6%9B%BF%E6%8D%A2"><span class="nav-text">检索和替换</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,18 +165,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -258,7 +261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-16 15:34:18" itemprop="dateModified" datetime="2022-08-16T15:34:18+08:00">2022-08-16</time>
+      <time title="修改时间：2022-10-17 16:20:01" itemprop="dateModified" datetime="2022-10-17T16:20:01+08:00">2022-10-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -284,7 +287,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>251</span>
+      <span>452</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -303,6 +306,14 @@
     
     <div class="post-body" itemprop="articleBody">
         <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">a = <span class="string">&#x27;* [White Paper](./test.md)&#x27;</span></span><br><span class="line"></span><br><span class="line">chapter_path = re.findall(<span class="string">r&#x27;[(](.*?)[)]&#x27;</span>, a, re.S)</span><br><span class="line">chapter_name = re.findall(<span class="string">r&#x27;[\[](.*?)[\]]&#x27;</span>, a, re.S)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(chapter_name, chapter_path)</span><br><span class="line"><span class="comment"># 返回 [&#x27;White Paper&#x27;] [&#x27;./test.md&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="检索和替换"><a href="#检索和替换" class="headerlink" title="检索和替换"></a>检索和替换</h2><p>re模块提供了re.sub用于替换字符串中的匹配项。</p>
+<p>语法：</p>
+<p>re.sub(pattern, repl, string, count&#x3D;0, flags&#x3D;0)</p>
+<p>参数：</p>
+<p>pattern : 正则中的模式字符串。<br>repl : 替换的字符串，也可为一个函数。<br>string : 要被查找替换的原始字符串。<br>count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。<br>flags : 编译时用的匹配模式，数字形式。</p>
+<p><img data-src="/images/641.jfif"></p>
+
     </div>
 
     
@@ -326,13 +337,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/python/error/" rel="prev" title="Python3 错误和异常">
-                  <i class="fa fa-chevron-left"></i> Python3 错误和异常
+                <a href="/python/module/turtle/" rel="prev" title="Python3 模块 turtle">
+                  <i class="fa fa-chevron-left"></i> Python3 模块 turtle
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/python/module/turtle/" rel="next" title="Python3 模块 turtle">
-                  Python3 模块 turtle <i class="fa fa-chevron-right"></i>
+                <a href="/python/module/Queue/" rel="next" title="Python3 Queue">
+                  Python3 Queue <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -366,14 +377,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">71k</span>
+    <span title="站点总字数">139k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:05</span>
+    <span title="站点阅读时长">2:06</span>
   </span>
 </div>
 <div class="busuanzi-count">

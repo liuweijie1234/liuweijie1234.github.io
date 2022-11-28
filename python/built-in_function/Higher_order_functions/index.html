@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -29,7 +29,7 @@
 <meta property="og:description" content="mapmap()接收两个参数，一个是函数，一个是 Iterable，map 将传入的函数依次作用到序列的每个元素，并把结果作为新的 Iterator 返回。 1234567def f(x):  return x * xr &#x3D; map(f, [1, 2, 3, 4, ..., 9])list(r)        # [1, 4, 9, 16, ..., 81]list(map(str, [1, 2,">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-13T08:14:00.000Z">
-<meta property="article:modified_time" content="2022-08-13T10:41:18.556Z">
+<meta property="article:modified_time" content="2022-08-17T03:09:10.908Z">
 <meta property="article:author" content="liuweijie1234">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">53</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">46</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">18</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">71</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#map"><span class="nav-number">1.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#reduce"><span class="nav-number">2.</span> <span class="nav-text">reduce</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#filter"><span class="nav-number"></span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sorted"><span class="nav-number"></span> <span class="nav-text">sorted</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%87%BD%E6%95%B0"><span class="nav-number"></span> <span class="nav-text">返回函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-number"></span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="nav-number"></span> <span class="nav-text">装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E5%87%BD%E6%95%B0"><span class="nav-number"></span> <span class="nav-text">偏函数</span></a></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#map"><span class="nav-text">map</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#reduce"><span class="nav-text">reduce</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#filter"><span class="nav-text">filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sorted"><span class="nav-text">sorted</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%87%BD%E6%95%B0"><span class="nav-text">返回函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="nav-text">装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E5%87%BD%E6%95%B0"><span class="nav-text">偏函数</span></a></div>
         </div>
         <!--/noindex-->
 
@@ -162,18 +162,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -250,9 +250,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-08-13 16:14:00 / 修改时间：18:41:18" itemprop="dateCreated datePublished" datetime="2022-08-13T16:14:00+08:00">2022-08-13</time>
+      <time title="创建时间：2022-08-13 16:14:00" itemprop="dateCreated datePublished" datetime="2022-08-13T16:14:00+08:00">2022-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-17 11:09:10" itemprop="dateModified" datetime="2022-08-17T11:09:10+08:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -278,7 +284,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>2.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -306,7 +312,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在一个list中，删掉偶数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_odd</span>(<span class="params">n</span>):</span><br><span class="line">  <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">filter</span>(is_odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, ..., <span class="number">10</span>])) <span class="comment"># [1, 3, 5, 7, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 把序列中的空字符串删掉</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">not_empty</span>(<span class="params">s</span>):</span><br><span class="line">  <span class="keyword">return</span> s <span class="keyword">and</span> s.trip()</span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">filter</span>(not_empty, [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="literal">None</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27; &#x27;</span>]))  <span class="comment"># [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;]</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h4><p>Python 内置的 sorted()函数可以对 list 进行排序。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sorted</span>([<span class="number">35</span>, <span class="number">2</span>, <span class="number">3</span>, -<span class="number">2</span>, <span class="number">0</span>])              <span class="comment"># [-2, 0, 2, 3, 35]</span></span><br><span class="line"><span class="comment"># 可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序</span></span><br><span class="line"><span class="built_in">sorted</span>([<span class="number">36</span>, <span class="number">5</span>, -<span class="number">12</span>, <span class="number">9</span>, -<span class="number">21</span>], key=<span class="built_in">abs</span>)  <span class="comment"># [5, 9, -12, -21, 36]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sorted</span>([<span class="number">35</span>, <span class="number">2</span>, <span class="number">3</span>, -<span class="number">2</span>, <span class="number">0</span>])              <span class="comment"># [-2, 0, 2, 3, 35]</span></span><br><span class="line"><span class="comment"># 可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序</span></span><br><span class="line"><span class="built_in">sorted</span>([<span class="number">36</span>, <span class="number">5</span>, -<span class="number">12</span>, <span class="number">9</span>, -<span class="number">21</span>], key=<span class="built_in">abs</span>)  <span class="comment"># [5, 9, -12, -21, 36]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sorted</span>(list_test,key = <span class="keyword">lambda</span> i:i[<span class="string">&#x27;bk_world_id&#x27;</span>])</span><br></pre></td></tr></table></figure>
 
 <h3 id="返回函数"><a href="#返回函数" class="headerlink" title="返回函数"></a>返回函数</h3><p>高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sum_lazy</span>(<span class="params">*args</span>):</span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">sum</span>():</span><br><span class="line">    res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        res = res + arg</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这样调用</span></span><br><span class="line"><span class="built_in">sum</span> = sum_lazy(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>)</span><br><span class="line"><span class="built_in">sum</span>()      <span class="comment"># 9</span></span><br></pre></td></tr></table></figure>
@@ -350,13 +356,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/interview_questions/python/" rel="prev" title="Python 相关面试题">
-                  <i class="fa fa-chevron-left"></i> Python 相关面试题
+                <a href="/python/built-in_function/lambda/" rel="prev" title="Python3 lambda">
+                  <i class="fa fa-chevron-left"></i> Python3 lambda
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/python/built-in_function/lambda/" rel="next" title="Python3 lambda">
-                  Python3 lambda <i class="fa fa-chevron-right"></i>
+                <a href="/python/iterator-generator/" rel="next" title="Python3 迭代器与生成器">
+                  Python3 迭代器与生成器 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -390,14 +396,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">71k</span>
+    <span title="站点总字数">139k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:05</span>
+    <span title="站点阅读时长">2:06</span>
   </span>
 </div>
 <div class="busuanzi-count">

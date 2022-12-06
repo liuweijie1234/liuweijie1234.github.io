@@ -3603,10 +3603,6 @@ x– 查找的对象。<br>start– 可选，查找的起始位置。<br>end– 
 <p>source&#x3D;”数据库字段名”， 定义字段名称必须喝数据库中字段名称相同</p>
 <p>source&#x3D;”get_数据库字段名_display”</p>
 <p>source&#x3D;外键字段名.字段名</p>
-<ul>
-<li>many</li>
-</ul>
-<p>可以接收一个列表，那么应该将 many&#x3D;True 标志传递给嵌套的序列化器</p>
 <h3 id="配置元类Meta"><a href="#配置元类Meta" class="headerlink" title="配置元类Meta"></a>配置元类Meta</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">    model = User</span><br><span class="line">    fields = (<span class="string">&#x27;email&#x27;</span>, <span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;password&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -3643,7 +3639,6 @@ x– 查找的对象。<br>start– 可选，查找的起始位置。<br>end– 
 </ul>
 </li>
 </ul>
-<h3 id="序列化关系"><a href="#序列化关系" class="headerlink" title="序列化关系"></a>序列化关系</h3><p><a href="https://q1mi.github.io/Django-REST-framework-documentation/api-guide/relations/">https://q1mi.github.io/Django-REST-framework-documentation/api-guide/relations/</a></p>
 <h3 id="Validators-验证器"><a href="#Validators-验证器" class="headerlink" title="Validators(验证器)"></a>Validators(验证器)</h3><p>serializers.CurrentUserDefault()</p>
 <h4 id="自定义验证函数"><a href="#自定义验证函数" class="headerlink" title="自定义验证函数"></a>自定义验证函数</h4><p>方法一：需要在序列化器类以外定义，通常会单独创建一个validators.py文件 从其引入函数</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">is_contains_keyword</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;项目&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> value:</span><br><span class="line">        <span class="keyword">raise</span> serializers.ValidationError(<span class="string">&#x27;项目名称中必须得包含“项目”关键字&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_not_contain_x</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">if</span><span class="string">&#x27;X&#x27;</span><span class="keyword">in</span> value.upper():</span><br><span class="line">        <span class="keyword">raise</span> serializers.ValidationError(<span class="string">&quot;项⽬名字段name不能包含x的⼤⼩写字符&quot;</span>)</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">name = serializers.CharField(max_length=<span class="number">20</span>, validators=[is_contains_keyword, is_not_contain_x])</span><br></pre></td></tr></table></figure>

@@ -3595,10 +3595,7 @@ x– 查找的对象。<br>start– 可选，查找的起始位置。<br>end– 
 </tr>
 </tbody></table>
 <ul>
-<li><p>error_messages </p>
-</li>
-<li><p>source(适用于自定义字段)</p>
-</li>
+<li>source(适用于自定义字段)</li>
 </ul>
 <p>source&#x3D;”数据库字段名”， 定义字段名称必须喝数据库中字段名称相同</p>
 <p>source&#x3D;”get_数据库字段名_display”</p>
@@ -3639,17 +3636,61 @@ x– 查找的对象。<br>start– 可选，查找的起始位置。<br>end– 
 </ul>
 </li>
 </ul>
-<h3 id="Validators-验证器"><a href="#Validators-验证器" class="headerlink" title="Validators(验证器)"></a>Validators(验证器)</h3><p>serializers.CurrentUserDefault()</p>
-<h4 id="自定义验证函数"><a href="#自定义验证函数" class="headerlink" title="自定义验证函数"></a>自定义验证函数</h4><p>方法一：需要在序列化器类以外定义，通常会单独创建一个validators.py文件 从其引入函数</p>
+<h3 id="Validators-验证器"><a href="#Validators-验证器" class="headerlink" title="Validators(验证器)"></a>Validators(验证器)</h3><h4 id="validators模块"><a href="#validators模块" class="headerlink" title="validators模块"></a>validators模块</h4><p>自带的validators模块中的校验函数，根据不同的场景选择使⽤不同的校验函数</p>
+<h5 id="唯一检验器-UniqueValidator"><a href="#唯一检验器-UniqueValidator" class="headerlink" title="唯一检验器 UniqueValidator"></a>唯一检验器 UniqueValidator</h5><p>用来强制执行模型字段的<code>unqieru=True</code>约束。</p>
+<ul>
+<li>queryset <strong>必要参数</strong> - 这是应该对其强制执行唯一性检查的结果集。</li>
+<li>message - 当验证器失败时应该使用的错误信息。</li>
+<li>lookup - 用于查找现存的实例中有验证值的查询。默认是’exact’。</li>
+</ul>
+<p>验证器应该使用在序列化器类中</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> rest_framework.validators <span class="keyword">import</span> UniqueValidator</span><br><span class="line"></span><br><span class="line">extra_kwargs = &#123;</span><br><span class="line">            <span class="string">&#x27;username&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;min_length&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">&#x27;max_length&#x27;</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="string">&#x27;error_messages&#x27;</span>: &#123;</span><br><span class="line">                    <span class="string">&#x27;min_length&#x27;</span>: <span class="string">&#x27;仅允许5-20个字符的用户名&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;max_length&#x27;</span>: <span class="string">&#x27;仅允许5-20个字符的用户名&#x27;</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">&#x27;validators&#x27;</span>: [UniqueValidator(queryset=User.objects.<span class="built_in">all</span>(), message=<span class="string">&#x27;此用户名已注册&#x27;</span>)],</span><br><span class="line">​</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="条件验证器-UniqueTogether"><a href="#条件验证器-UniqueTogether" class="headerlink" title="条件验证器 UniqueTogether"></a>条件验证器 UniqueTogether</h6><p>用来强制执行模型实例的unqieru&#x3D;True约束。</p>
+<ul>
+<li>queryset <strong>必要参数</strong> - 这是应该对其强制执行唯一性检查的结果集。</li>
+<li>fields <strong>必要参数</strong> - 一个需要联合唯一字段的列表或者元组。他们必须是序列化类中的字段。</li>
+<li>message - 当验证器失败时应该使用的错误信息。</li>
+</ul>
+<p>验证器应该使用在序列化器类中</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework.validators <span class="keyword">import</span> UniqueTogetherValidator</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ExampleSerializer</span>(serializers.Serializer):</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        <span class="comment"># ToDo项目属于一个父列表，并且被一个定义的`position`字段排序。</span></span><br><span class="line">        <span class="comment"># 同一个列表中不能共有同一个位置。</span></span><br><span class="line">        validators = [</span><br><span class="line">            UniqueTogetherValidator(</span><br><span class="line">                queryset=ToDoItem.objects.<span class="built_in">all</span>(),</span><br><span class="line">                fields=[<span class="string">&#x27;list&#x27;</span>, <span class="string">&#x27;position&#x27;</span>]</span><br><span class="line">            )</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>提示: UniqueTogetherValidator类始终施加一个隐式约束，即它应用的所有字段始终被视为必需的。具有default值的字段是个例外，因为即使在用户输入中省略了这些字段，它们也总是提供一个默认值。</p>
+</blockquote>
+<h6 id="时间唯一验证器"><a href="#时间唯一验证器" class="headerlink" title="时间唯一验证器"></a>时间唯一验证器</h6><p>UniqueForDateValidator<br>UniqueForMonthValidator<br>UniqueForYearValidator</p>
+<p>用来对模型实例强制执行unique_for_date，unique_for_month和unique_for_year约束</p>
+<ul>
+<li>queryset <strong>必要参数</strong> - 这是应该对其强制执行唯一性检查的结果集。</li>
+<li>field <strong>必要参数</strong> - 将根据其验证给定日期范围中的唯一性的字段名。这必须是序列化类中的字段。</li>
+<li>date_field <strong>必要参数</strong> - 将用于确定唯一性约束的日期范围的字段名称这必须是序列化类中的字段。</li>
+<li>message - 当验证器失败时应该使用的错误信息。</li>
+</ul>
+<p>验证器应该使用在序列化器类中</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework.validators <span class="keyword">import</span> UniqueForYearValidator</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ExampleSerializer</span>(serializers.Serializer):</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        <span class="comment"># 博客发布应该有一个当前年份唯一的别名</span></span><br><span class="line">        validators = [</span><br><span class="line">            UniqueForYearValidator(</span><br><span class="line">                queryset=BlogPostItem.objects.<span class="built_in">all</span>(),</span><br><span class="line">                field=<span class="string">&#x27;slug&#x27;</span>,</span><br><span class="line">                date_field=<span class="string">&#x27;published&#x27;</span></span><br><span class="line">            )</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
+<h4 id="高级字段默认值"><a href="#高级字段默认值" class="headerlink" title="高级字段默认值"></a>高级字段默认值</h4><ul>
+<li>使用 <code>HiddenField</code>。这个字段会在<code>validated_data</code>中体现，但是不会在序列化器输出时使用。</li>
+<li>使用设置了<code>read_only=True</code>的标准字段，同时包含<code>default=…</code>参数。这个字段将会在序列化器输出中使用，但是不会被用户直接设置。</li>
+</ul>
+<h5 id="CurrentUserDefault"><a href="#CurrentUserDefault" class="headerlink" title="CurrentUserDefault"></a>CurrentUserDefault</h5><p>当前用户默认，用来代表当前用户的默认类。为了使用他，在实例化序列化器时，’request’必须包含在上下文(context)的字典中</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">owner = serializers.HiddenField(</span><br><span class="line">    default=serializers.CurrentUserDefault()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h5 id="CreateOnlyDefault"><a href="#CreateOnlyDefault" class="headerlink" title="CreateOnlyDefault()"></a>CreateOnlyDefault()</h5><p>仅创建默认</p>
+<p>一个仅在创建操作中设置默认值的默认类。在更新操作中会被省略。</p>
+<p>他只接收一个参数，可以是一个默认值或者在创建操作中可调用。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">created_at = serializers.DateTimeField(</span><br><span class="line">    default=serializers.CreateOnlyDefault(timezone.now)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义验证器"><a href="#自定义验证器" class="headerlink" title="自定义验证器"></a>自定义验证器</h4><h5 id="基于函数"><a href="#基于函数" class="headerlink" title="基于函数"></a>基于函数</h5><p>需要在序列化器类以外定义，通常会单独创建一个validators.py文件 从其引入函数</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">is_contains_keyword</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;项目&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> value:</span><br><span class="line">        <span class="keyword">raise</span> serializers.ValidationError(<span class="string">&#x27;项目名称中必须得包含“项目”关键字&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_not_contain_x</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">if</span><span class="string">&#x27;X&#x27;</span><span class="keyword">in</span> value.upper():</span><br><span class="line">        <span class="keyword">raise</span> serializers.ValidationError(<span class="string">&quot;项⽬名字段name不能包含x的⼤⼩写字符&quot;</span>)</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">name = serializers.CharField(max_length=<span class="number">20</span>, validators=[is_contains_keyword, is_not_contain_x])</span><br></pre></td></tr></table></figure>
 
-<p>方法二：自带的validators模块中的校验函数</p>
-<p>根据不同的场景选择使⽤不同的校验函数</p>
-<p>唯一检验UniqueValidator需要指定查询集和错误提示信息，即传queryset和message两个参数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">extra_kwargs = &#123;</span><br><span class="line">            <span class="string">&#x27;username&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;min_length&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">&#x27;max_length&#x27;</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="string">&#x27;error_messages&#x27;</span>: &#123;</span><br><span class="line">                    <span class="string">&#x27;min_length&#x27;</span>: <span class="string">&#x27;仅允许5-20个字符的用户名&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;max_length&#x27;</span>: <span class="string">&#x27;仅允许5-20个字符的用户名&#x27;</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">&#x27;validators&#x27;</span>: [UniqueValidator(queryset=User.objects.<span class="built_in">all</span>(), message=<span class="string">&#x27;此用户名已注册&#x27;</span>)],</span><br><span class="line">​</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="基于类"><a href="#基于类" class="headerlink" title="基于类"></a>基于类</h5><p>使用<code>__call__</code>方法来些基于类的验证器。基于类的验证器可以让你参数化并且可以重复使用。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MultipleOf</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, base</span>):</span><br><span class="line">        self.base = base</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self, value</span>):</span><br><span class="line">        <span class="keyword">if</span> value % self.base != <span class="number">0</span>:</span><br><span class="line">            message = <span class="string">&#x27;This field must be a multiple of %d.&#x27;</span> % self.base</span><br><span class="line">            <span class="keyword">raise</span> serializers.ValidationError(message)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>访问上下文</li>
+</ul>
+<p>在一些高级的案例中，你可能希望验证器将序列化器字段作为附加上下文使用。<br>你可以通过在验证器上设置 <code>requires_context = True</code> 属性来实现。<br><code>_call_</code> 方法将使用 <code>serializer_field</code> 或 <code>serializer</code> 作为附加参数被调用。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">requires_context = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self, value, serializer_field</span>):</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
 
-
-<h4 id="局部钩子"><a href="#局部钩子" class="headerlink" title="局部钩子"></a>局部钩子</h4><p>自定义校验方法</p>
+<h4 id="局部钩子"><a href="#局部钩子" class="headerlink" title="局部钩子"></a>局部钩子</h4><p>自定义校验方法，字段级别的验证器</p>
 <p>使用方法：<code>validate_字段名</code></p>
 <p>注意事项：</p>
 <ul>

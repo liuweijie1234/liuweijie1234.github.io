@@ -21,17 +21,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuweijie1234.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="source &#x2F;data&#x2F;install&#x2F;utils.fcssh $BK_MYSQL_IPmysql –login-path&#x3D;mysql-default ssh $BK_APPO_IPvim &#x2F;data&#x2F;bkee&#x2F;etc&#x2F;paas_agent_config.yaml MySQL 运行状态show status 创建数据">
+    <meta name="description" content="基本命令MySQL 检查运行状态 12show status;show status like &amp;#x27;uptime&amp;#x27;;  创建数据库 123CREATE DATABASE &#96;&amp;#123;APP_CODE&amp;#125;&#96; default charset utf8 COLLATE utf8_general_ci;CREATE DATABASE &#96;test&#96; default charset">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="mysql 常用命令">
+<meta property="og:title" content="MySQL 常用命令">
 <meta property="og:url" content="http://liuweijie1234.github.io/sql/command/index.html">
 <meta property="og:site_name" content="刘伟杰的个人博客">
-<meta property="og:description" content="source &#x2F;data&#x2F;install&#x2F;utils.fcssh $BK_MYSQL_IPmysql –login-path&#x3D;mysql-default ssh $BK_APPO_IPvim &#x2F;data&#x2F;bkee&#x2F;etc&#x2F;paas_agent_config.yaml MySQL 运行状态show status 创建数据">
+<meta property="og:description" content="基本命令MySQL 检查运行状态 12show status;show status like &amp;#x27;uptime&amp;#x27;;  创建数据库 123CREATE DATABASE &#96;&amp;#123;APP_CODE&amp;#125;&#96; default charset utf8 COLLATE utf8_general_ci;CREATE DATABASE &#96;test&#96; default charset">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-15T03:42:00.000Z">
-<meta property="article:modified_time" content="2022-12-03T06:14:25.576Z">
+<meta property="article:modified_time" content="2023-01-11T02:54:44.902Z">
 <meta property="article:author" content="liuweijie1234">
-<meta property="article:tag" content="mysql">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 
 
@@ -39,10 +39,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://liuweijie1234.github.io/sql/command/","path":"sql/command/","title":"mysql 常用命令"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://liuweijie1234.github.io/sql/command/","path":"sql/command/","title":"MySQL 常用命令"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>mysql 常用命令 | 刘伟杰的个人博客</title>
+<title>MySQL 常用命令 | 刘伟杰的个人博客</title>
   
 
 
@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">46</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">18</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">71</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/navigation/" rel="section"><i class="fa fa-sitemap fa-fw"></i>导航</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">51</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">21</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">80</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-SELECT"><span class="nav-text">SQL SELECT</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-text">基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LEFT-JOIN"><span class="nav-text">LEFT JOIN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RIGHT-JOIN"><span class="nav-text">RIGHT JOIN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%A1%88%E4%BE%8B"><span class="nav-text">工作案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86"><span class="nav-text">数据库管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-x2F-%E5%81%9C%E6%AD%A2"><span class="nav-text">启动&#x2F;停止</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7"><span class="nav-text">查看用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%88%E6%9D%83"><span class="nav-text">授权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%A1%A8"><span class="nav-text">删除表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA"><span class="nav-text">导出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">导出指定数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8C%87%E5%AE%9A%E8%A1%A8"><span class="nav-text">导出指定数据库指定表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8E%92%E9%99%A4%E6%9F%90%E4%BA%9B%E8%A1%A8"><span class="nav-text">导出指定数据库排除某些表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E7%89%B9%E5%AE%9A%E8%A1%A8%E5%86%85%E5%AE%B9"><span class="nav-text">导出特定表内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-text">示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3"><span class="nav-text">参数详解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%EF%BC%88%E8%BF%98%E5%8E%9F%EF%BC%89"><span class="nav-text">导入（还原）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#soure-%E6%96%B9%E6%B3%95"><span class="nav-text">soure 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">系统行命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E5%BF%97"><span class="nav-text">日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%A5%E9%94%99"><span class="nav-text">报错</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,18 +162,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">80</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-count">51</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -235,12 +235,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="mysql 常用命令 | 刘伟杰的个人博客">
+      <meta itemprop="name" content="MySQL 常用命令 | 刘伟杰的个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          mysql 常用命令
+          MySQL 常用命令
         </h1>
 
         <div class="post-meta-container">
@@ -258,7 +258,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-03 14:14:25" itemprop="dateModified" datetime="2022-12-03T14:14:25+08:00">2022-12-03</time>
+      <time title="修改时间：2023-01-11 10:54:44" itemprop="dateModified" datetime="2023-01-11T10:54:44+08:00">2023-01-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -284,14 +284,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>7.7k</span>
+      <span>13k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
+      <span>11 分钟</span>
     </span>
 </div>
 
@@ -302,48 +302,79 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>source &#x2F;data&#x2F;install&#x2F;utils.fc<br>ssh $BK_MYSQL_IP<br>mysql –login-path&#x3D;mysql-default</p>
-<p>ssh $BK_APPO_IP<br>vim &#x2F;data&#x2F;bkee&#x2F;etc&#x2F;paas_agent_config.yaml</p>
-<p>MySQL 运行状态<br>show status</p>
-<p>创建数据库<br>CREATE DATABASE <code>&#123;APP_CODE&#125;</code> default charset utf8 COLLATE utf8_general_ci;</p>
-<p>CREATE DATABASE <code>bk-bug-report</code> default charset utf8 COLLATE utf8_general_ci;</p>
-<p>查看数据库<br>show databases;</p>
-<p>选择数据库<br>use databases_name;</p>
-<p>删除数据库<br>drop dababase dababase_name;</p>
-<p>查看表<br>show tables;</p>
-<p>设置使用的字符集<br>set names utf8;</p>
-<p>读取数据表的信息<br>SELECT * FROM Websites;</p>
-<p>查看表结构<br>desc Websites;</p>
-<h1 id="SQL-SELECT"><a href="#SQL-SELECT" class="headerlink" title="SQL SELECT"></a>SQL SELECT</h1><p>mysql -uroot -p123456 bk_core –default-character-set&#x3D;utf8 &lt; d:\bk_core.202111181443.sql</p>
-<p>CREATE DATABASE <code>bk_paas</code> default charset utf8 COLLATE utf8_general_ci;<br>CREATE DATABASE <code>bk_core</code> default charset utf8 COLLATE utf8_general_ci;<br>CREATE DATABASE <code>bk_data</code> default charset utf8 COLLATE utf8_general_ci;<br>CREATE DATABASE <code>bk_component</code> default charset utf8 COLLATE utf8_general_ci;</p>
-<p>mysql –defaults-extra-file&#x3D;config.cnf bk_paas –default-character-set&#x3D;utf8 &lt; d:\bk_paas.202111181445.sql<br>mysql –defaults-extra-file&#x3D;config.cnf bk_core –default-character-set&#x3D;utf8 &lt; d:\bk_core.202111181443.sql<br>mysql –defaults-extra-file&#x3D;config.cnf bk_data –default-character-set&#x3D;utf8 &lt; d:\bk_data.202111181444.sql<br>mysql –defaults-extra-file&#x3D;config.cnf bk_component –default-character-set&#x3D;utf8 &lt; d:\bk_component.202111181443.sql</p>
+        <h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p>MySQL 检查运行状态</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> status;</span><br><span class="line"><span class="keyword">show</span> status <span class="keyword">like</span> <span class="string">&#x27;uptime&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE `&#123;APP_CODE&#125;` <span class="keyword">default</span> charset utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> DATABASE `test` <span class="keyword">default</span> charset utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</span><br></pre></td></tr></table></figure>
+
+<p>查看数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> databases;</span><br></pre></td></tr></table></figure>
+
+<p>选择数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use databases_name;</span><br></pre></td></tr></table></figure>
+
+<p>删除数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> dababase dababase_name;</span><br></pre></td></tr></table></figure>
+
+<p>查看表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> tables;</span><br></pre></td></tr></table></figure>
+
+<p>设置使用的字符集</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> names utf8;</span><br></pre></td></tr></table></figure>
+
+<p>读取数据表的信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
+
+<p>查看表结构</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> table_name;</span><br></pre></td></tr></table></figure>
 <p>MySQL常用命令(基础)<br><a target="_blank" rel="noopener" href="https://bk.tencent.com/s-mart/community/question/919?type=answer">https://bk.tencent.com/s-mart/community/question/919?type=answer</a></p>
-<ul>
+<h2 id="LEFT-JOIN"><a href="#LEFT-JOIN" class="headerlink" title="LEFT JOIN"></a>LEFT JOIN</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    t1.c1,</span><br><span class="line">    t1.c2,</span><br><span class="line">    t2.c1,</span><br><span class="line">    t2.c2</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    t1</span><br><span class="line">        <span class="keyword">LEFT</span> <span class="keyword">JOIN</span></span><br><span class="line">    t2 <span class="keyword">ON</span> t1.c1 <span class="operator">=</span> t2.c1; </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    pro.id,</span><br><span class="line">    pro.file_name,</span><br><span class="line">    pro.module_name,</span><br><span class="line">    pro.version,</span><br><span class="line">    pac.name</span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    deploy_projectpackage_tags <span class="keyword">AS</span> dpt</span><br><span class="line">        <span class="keyword">LEFT</span> <span class="keyword">JOIN</span></span><br><span class="line">    deploy_projectpackage <span class="keyword">AS</span> pro <span class="keyword">ON</span> pro.id<span class="operator">=</span>dpt.projectpackage_id</span><br><span class="line">        <span class="keyword">LEFT</span> <span class="keyword">JOIN</span></span><br><span class="line">    deploy_packagetag <span class="keyword">AS</span> pac <span class="keyword">ON</span> pac.id<span class="operator">=</span>dpt.packagetag_id</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    dpt.packagetag_id<span class="operator">=</span><span class="number">507</span>;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    c.id <span class="keyword">AS</span> case_id,</span><br><span class="line">    c.name <span class="keyword">AS</span> case_name,</span><br><span class="line">    c.parent_id_id <span class="keyword">AS</span> project_id,</span><br><span class="line">    c.spend <span class="keyword">AS</span> case_spend,</span><br><span class="line">    c.result <span class="keyword">AS</span> case_result,</span><br><span class="line">    c.desc <span class="keyword">AS</span> case_desc,</span><br><span class="line">    r.name <span class="keyword">AS</span> result_name,</span><br><span class="line">    r.desc <span class="keyword">AS</span> result_desc,</span><br><span class="line">    r.result <span class="keyword">AS</span> result_result,</span><br><span class="line">    r.standard <span class="keyword">AS</span> result_standard</span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    survey_testresult <span class="keyword">AS</span> r</span><br><span class="line">        <span class="keyword">LEFT</span> <span class="keyword">JOIN</span></span><br><span class="line">    survey_testcase <span class="keyword">AS</span> c <span class="keyword">ON</span> r.parent_id_id <span class="operator">=</span> c.id</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    survey_testproject <span class="keyword">AS</span> p</span><br><span class="line">        <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> </span><br><span class="line">        (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            c.id <span class="keyword">AS</span> case_id,</span><br><span class="line">            c.name <span class="keyword">AS</span> case_name,</span><br><span class="line">            c.parent_id_id <span class="keyword">AS</span> project_id,</span><br><span class="line">            c.spend <span class="keyword">AS</span> case_spend,</span><br><span class="line">            c.result <span class="keyword">AS</span> case_result,</span><br><span class="line">            c.desc <span class="keyword">AS</span> case_desc,</span><br><span class="line">            r.name <span class="keyword">AS</span> result_name,</span><br><span class="line">            r.desc <span class="keyword">AS</span> result_desc,</span><br><span class="line">            r.result <span class="keyword">AS</span> result_result,</span><br><span class="line">            r.standard <span class="keyword">AS</span> result_standard</span><br><span class="line">        <span class="keyword">FROM</span> </span><br><span class="line">            survey_testcase <span class="keyword">AS</span> c </span><br><span class="line">                <span class="keyword">LEFT</span> <span class="keyword">JOIN</span></span><br><span class="line">            survey_testresult <span class="keyword">AS</span> r <span class="keyword">ON</span> r.parent_id_id <span class="operator">=</span> c.id</span><br><span class="line">        ) <span class="keyword">AS</span> sub <span class="keyword">ON</span> sub.project_id<span class="operator">=</span> p.id</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    p.name<span class="operator">=</span> <span class="string">&#x27;firmware_burn&#x27;</span></span><br><span class="line">    <span class="keyword">AND</span></span><br><span class="line">    sub.case_name<span class="operator">=</span><span class="string">&#x27;burn&#x27;</span></span><br><span class="line">    <span class="keyword">AND</span></span><br><span class="line">    p.time<span class="operator">&gt;</span><span class="string">&#x27;2022-10-01 00:00:00&#x27;</span></span><br><span class="line">    <span class="keyword">AND</span></span><br><span class="line">    p.time<span class="operator">&lt;</span><span class="string">&#x27;2022-12-13 23:59:59&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    a.barcode,a.name,a.long_name,a.working_line,a.station,a.time,a.spend,</span><br><span class="line">    a.result,a.desc,a.version,u.name,a.case_name,a.case_desc,a.case_result,</span><br><span class="line">    a.case_spend,a.result_name,a.result_result,a.result_desc,a.result_standard </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    xtauth_user <span class="keyword">AS</span> u</span><br><span class="line">        <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> </span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="operator">*</span></span><br><span class="line">        <span class="keyword">FROM</span> </span><br><span class="line">            survey_testproject <span class="keyword">AS</span> p</span><br><span class="line">                <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> </span><br><span class="line">            (</span><br><span class="line">                <span class="keyword">SELECT</span> </span><br><span class="line">                    c.id <span class="keyword">AS</span> case_id,</span><br><span class="line">                    c.name <span class="keyword">AS</span> case_name,</span><br><span class="line">                    c.parent_id_id <span class="keyword">AS</span> project_id,</span><br><span class="line">                    c.spend <span class="keyword">AS</span> case_spend,</span><br><span class="line">                    c.result <span class="keyword">AS</span> case_result,</span><br><span class="line">                    c.desc <span class="keyword">AS</span> case_desc,</span><br><span class="line">                    r.name <span class="keyword">AS</span> result_name,</span><br><span class="line">                    r.desc <span class="keyword">AS</span> result_desc,</span><br><span class="line">                    r.result <span class="keyword">AS</span> result_result,</span><br><span class="line">                    r.standard <span class="keyword">AS</span> result_standard</span><br><span class="line">                <span class="keyword">FROM</span> </span><br><span class="line">                    survey_testcase <span class="keyword">AS</span> c </span><br><span class="line">                        <span class="keyword">LEFT</span> <span class="keyword">JOIN</span>  </span><br><span class="line">                    survey_testresult <span class="keyword">AS</span> r <span class="keyword">ON</span> r.parent_id_id <span class="operator">=</span> c.id</span><br><span class="line">            ) <span class="keyword">AS</span> sub <span class="keyword">ON</span> sub.project_id<span class="operator">=</span> p.id</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            p.name<span class="operator">=</span> <span class="string">&#x27;firmware_burn&#x27;</span></span><br><span class="line">            <span class="keyword">AND</span> </span><br><span class="line">            sub.case_name<span class="operator">=</span><span class="string">&#x27;burn&#x27;</span></span><br><span class="line">            <span class="keyword">AND</span> </span><br><span class="line">            p.time<span class="operator">&gt;</span><span class="string">&#x27;2022-10-01 00:00:00&#x27;</span></span><br><span class="line">            <span class="keyword">AND</span> </span><br><span class="line">            p.time<span class="operator">&lt;</span><span class="string">&#x27;2022-12-13 23:59:59&#x27;</span></span><br><span class="line">    ) <span class="keyword">AS</span> a <span class="keyword">ON</span> u.uid <span class="operator">=</span> a.user_id</span><br></pre></td></tr></table></figure>
+
+<h2 id="RIGHT-JOIN"><a href="#RIGHT-JOIN" class="headerlink" title="RIGHT JOIN"></a>RIGHT JOIN</h2><p>RIGHT JOIN 类似于 LEFT JOIN 是对表反转的处理。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    <span class="operator">*</span> </span><br><span class="line"><span class="keyword">FROM</span> t1</span><br><span class="line">    <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> </span><br><span class="line">t2 <span class="keyword">ON</span> t1.pk <span class="operator">=</span> t2.fk ; </span><br></pre></td></tr></table></figure>
+
+<p>t1是左表，t2是右表</p>
+<p>将左表（t1）上的行与右表（t2）上的行匹配</p>
+<blockquote>
+<p>重要：<code>RIGHT JOIN</code>与 <code>LEFT JOIN</code> 子句在功能上是等效的，只要切换表顺序，它们就可以互相替换。</p>
+<p>注意：<code>RIGHT OUTER JOIN</code>是<code>RIGHT JOIN</code>的同义词。</p>
+</blockquote>
+<h2 id="工作案例"><a href="#工作案例" class="headerlink" title="工作案例"></a>工作案例</h2><ul>
 <li>ATE阿里云服务:修改装备工程包工厂(单个)</li>
 </ul>
-<p>use ate_2021;</p>
-<p>select * from deploy_packagetag WHERE name LIKE ‘WFV01%’;</p>
-<p>507</p>
-<p>select * from deploy_projectpackage_tags where packagetag_id&#x3D;”507”;</p>
-<p>select * from deploy_packagetag WHERE id&#x3D;”507”;</p>
-<p>select * from tools_factory;</p>
-<p>温州id 是1</p>
-<p>select * from deploy_projectpackage where id&#x3D;3854;<br>select * from deploy_projectpackage where module_name&#x3D;”D56F1_FT”;</p>
-<p>select id,file_name,module_name,version from deploy_projectpackage where module_name LIKE “WFV01%”;</p>
-<p>select id,file_name,version from deploy_projectpackage where module_name&#x3D;”D56F1_FT”;</p>
-<p>select id,file_name,module_name,version from deploy_projectpackage where id&#x3D;2859;<br>select * from deploy_projectpackage_factory where projectpackage_id&#x3D;2859;</p>
-<p>+——+——————-+—————+<br>| id   | projectpackage_id | packagetag_id |<br>+——+——————-+—————+<br>| 4938 |              2859 |           507 |<br>| 4939 |              2860 |           507 |<br>| 4940 |              2861 |           507 |<br>| 4950 |              2872 |           507 |<br>| 4988 |              2901 |           507 |<br>| 4989 |              2902 |           507 |<br>| 4990 |              2903 |           507 |<br>| 5013 |              2924 |           507 |<br>| 5014 |              2925 |           507 |<br>| 5015 |              2926 |           507 |<br>| 5054 |              2956 |           507 |<br>| 5055 |              2957 |           507 |<br>| 5056 |              2958 |           507 |<br>| 5160 |              3043 |           507 |<br>| 5366 |              3241 |           507 |<br>| 5367 |              3242 |           507 |<br>| 5368 |              3243 |           507 |</p>
+<p>1、选择对于数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use ate_2021;</span><br></pre></td></tr></table></figure>
+<p>2、找到自己需要的数据及id</p>
+<p>2.1 找到包标签对于的id</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> deploy_packagetag <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">&#x27;WFV01%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">packagetag_id<span class="operator">=</span><span class="number">507</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> deploy_packagetag <span class="keyword">WHERE</span> id<span class="operator">=</span>&quot;507&quot;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.2 根据包标签id找到与其有关系的包id</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> deploy_projectpackage_tags <span class="keyword">where</span> packagetag_id<span class="operator">=</span>&quot;507&quot;;</span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">------+-------------------+---------------+</span></span><br><span class="line"><span class="operator">|</span> id   <span class="operator">|</span> projectpackage_id <span class="operator">|</span> packagetag_id <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------+-------------------+---------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4938</span> <span class="operator">|</span>              <span class="number">2859</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4939</span> <span class="operator">|</span>              <span class="number">2860</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4940</span> <span class="operator">|</span>              <span class="number">2861</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4950</span> <span class="operator">|</span>              <span class="number">2872</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4988</span> <span class="operator">|</span>              <span class="number">2901</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4989</span> <span class="operator">|</span>              <span class="number">2902</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4990</span> <span class="operator">|</span>              <span class="number">2903</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5013</span> <span class="operator">|</span>              <span class="number">2924</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5014</span> <span class="operator">|</span>              <span class="number">2925</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5015</span> <span class="operator">|</span>              <span class="number">2926</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5054</span> <span class="operator">|</span>              <span class="number">2956</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5055</span> <span class="operator">|</span>              <span class="number">2957</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5056</span> <span class="operator">|</span>              <span class="number">2958</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5160</span> <span class="operator">|</span>              <span class="number">3043</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5366</span> <span class="operator">|</span>              <span class="number">3241</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5367</span> <span class="operator">|</span>              <span class="number">3242</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5368</span> <span class="operator">|</span>              <span class="number">3243</span> <span class="operator">|</span>           <span class="number">507</span> <span class="operator">|</span></span><br></pre></td></tr></table></figure>
+
+<p>2.3 找到温州工厂及对应id</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tools_factory;</span><br><span class="line"></span><br><span class="line">factory_id<span class="operator">=</span><span class="number">1</span></span><br><span class="line">温州id 是<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>2.4 找到需要修改包的数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> deploy_projectpackage <span class="keyword">where</span> id<span class="operator">=</span><span class="number">3854</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> deploy_projectpackage <span class="keyword">where</span> module_name<span class="operator">=</span>&quot;D56F1_FT&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> id,file_name,module_name,version <span class="keyword">from</span> deploy_projectpackage <span class="keyword">where</span> module_name <span class="keyword">LIKE</span> &quot;WFV01%&quot;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> id,file_name,version <span class="keyword">from</span> deploy_projectpackage <span class="keyword">where</span> module_name<span class="operator">=</span>&quot;D56F1_FT&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> id,file_name,module_name,version <span class="keyword">from</span> deploy_projectpackage <span class="keyword">where</span> id<span class="operator">=</span><span class="number">2859</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> deploy_projectpackage_factory <span class="keyword">where</span> projectpackage_id<span class="operator">=</span><span class="number">2859</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+
 <p>3607</p>
 <p>插入数据</p>
 <p>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (3607,1);</p>
-<ul>
-<li>ATE阿里云服务:修改装备工程包工厂(多个)</li>
-</ul>
-<p>通过多对多关系查询单个标签对于的所有包，并为包插入工厂</p>
-<p>select projectpackage_id from deploy_projectpackage_tags where packagetag_id&#x3D;”507”;</p>
-<p>select<br>id,file_name,module_name,version<br>from<br>deploy_projectpackage </p>
-<p>where id&#x3D;2859;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">pro.id,pro.file_name,pro.module_name,pro.version,pac.name</span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">deploy_projectpackage_tags dpt</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span>  deploy_projectpackage pro</span><br><span class="line"><span class="keyword">on</span> pro.id<span class="operator">=</span>dpt.projectpackage_id</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span>  deploy_packagetag pac</span><br><span class="line"><span class="keyword">on</span> pac.id<span class="operator">=</span>dpt.packagetag_id</span><br><span class="line"></span><br><span class="line"><span class="keyword">WHERE</span> dpt.packagetag_id<span class="operator">=</span><span class="number">507</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">- ATE阿里云服务:修改装备工程包工厂(多个)</span><br><span class="line"></span><br><span class="line">通过多对多关系查询单个标签对于的所有包，并为包插入工厂</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">select projectpackage_id from deploy_projectpackage_tags where packagetag_id=&quot;507&quot;;</span><br><span class="line"></span><br><span class="line">select </span><br><span class="line">id,file_name,module_name,version </span><br><span class="line">from </span><br><span class="line">deploy_projectpackage </span><br><span class="line"></span><br><span class="line">where id=2859;</span><br><span class="line"></span><br><span class="line">```sql</span><br><span class="line">SELECT </span><br><span class="line">pro.id,pro.file_name,pro.module_name,pro.version,pac.name</span><br><span class="line">FROM </span><br><span class="line">deploy_projectpackage_tags dpt</span><br><span class="line">LEFT JOIN </span><br><span class="line">deploy_projectpackage pro</span><br><span class="line">on pro.id=dpt.projectpackage_id</span><br><span class="line">LEFT JOIN </span><br><span class="line">deploy_packagetag pac</span><br><span class="line">on pac.id=dpt.packagetag_id</span><br><span class="line"></span><br><span class="line">WHERE dpt.packagetag_id=507;</span><br></pre></td></tr></table></figure>
 <p>+——+————————-+————–+———+——————+<br>| id   | file_name               | module_name  | version | name             |<br>+——+————————-+————–+———+——————+<br>| 2859 | S0V01_MBT_V1.0.1.rar    | S0V01_MBT    | V1.0.1  | WFV01(S0V01_W02) |<br>| 2860 | S0V01_SFT_V1.0.1.rar    | S0V01_SFT    | V1.0.1  | WFV01(S0V01_W02) |<br>| 2861 | S0V01_W02_FT_V1.0.2.rar | S0V01_W02_FT | V1.0.2  | WFV01(S0V01_W02) |<br>| 2872 | S0V01_W02_FT_V1.0.3.rar | S0V01_W02_FT | V1.0.3  | WFV01(S0V01_W02) |<br>| 2924 | S0V01_MBT_V1.0.4.rar    | S0V01_MBT    | V1.0.4  | WFV01(S0V01_W02) |<br>| 2925 | S0V01_SFT_V1.0.4.rar    | S0V01_SFT    | V1.0.4  | WFV01(S0V01_W02) |<br>| 2926 | S0V01_W02_FT_V1.0.6.rar | S0V01_W02_FT | V1.0.6  | WFV01(S0V01_W02) |<br>| 2956 | S0V01_MBT_V1.0.5.rar    | S0V01_MBT    | V1.0.5  | WFV01(S0V01_W02) |<br>| 2957 | S0V01_SFT_V1.0.5.rar    | S0V01_SFT    | V1.0.5  | WFV01(S0V01_W02) |<br>| 2958 | S0V01_W02_FT_V1.0.7.rar | S0V01_W02_FT | V1.0.7  | WFV01(S0V01_W02) |<br>| 3043 | S0V01_W02_FT_V1.0.8.rar | S0V01_W02_FT | V1.0.8  | WFV01(S0V01_W02) |<br>| 3241 | S0V01_W02_FT_V1.0.9.zip | S0V01_W02_FT | V1.0.9  | WFV01(S0V01_W02) |<br>| 3242 | S0V01_SFT1_V1.0.4.zip   | S0V01_SFT1   | V1.0.4  | WFV01(S0V01_W02) |<br>| 3243 | S0V01_SFT_V1.0.5.zip    | S0V01_SFT    | V1.0.5  | WFV01(S0V01_W02) |<br>+——+————————-+————–+———+——————+</p>
 <p>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2859,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2860,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2861,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2872,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2924,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2925,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2926,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2956,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2957,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (2958,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (3043,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (3241,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (3242,1);<br>INSERT INTO deploy_projectpackage_factory ( projectpackage_id,factory_id) VALUES (3243,1);</p>
 <ul>
@@ -378,6 +409,160 @@
 <p>insert into <code>services_productmodel</code> (<code>id</code>, <code>model</code>, <code>research</code>, <code>sn_head</code>, <code>server</code>, <code>remark</code>, <code>create_user</code>, <code>create_time</code>, <code>batch_time</code>, <code>country</code>, <code>country_code</code>, <code>product_mark</code>, <code>product_sn</code>, <code>ptp</code>, <code>ptp_num</code>, <code>fill_light</code>, <code>picture_rotation</code>, <code>server_code_id</code>) values(‘552’,’BL1-WiFi’,’KMWA0’,’BL1’,’凯迪仕’,’博流BL602C（替换乐鑫8266模组）’,’张泳伦’,’2022-10-27 16:00:00.255667’,NULL,’中国’,’CN’,NULL,NULL,NULL,NULL,NULL,NULL,’1’);</p>
 <p>django.db.utils.InternalError: (1054, “Unknown column ‘tools_telecomdata.profile_id’ in ‘field list’”)</p>
 <p>UPDATE <code>ate_2021</code>.<code>services_productmodel</code><br>SET <code>model</code> &#x3D; ‘DDL709-FVP-7HW’, <code>research</code> &#x3D; ‘79FVU’, <code>sn_head</code> &#x3D; ‘79U’, <code>server</code> &#x3D; ‘飞利浦’, <code>remark</code> &#x3D; ‘1.增加云存储需求；2.更新TDK超声波模组’, <code>create_user</code> &#x3D; ‘余国平’, <code>create_time</code> &#x3D; ‘2022-11-08 09:29:45.376362’, <code>country</code> &#x3D; ‘中国’, <code>country_code</code> &#x3D; ‘CN’, <code>ptp</code> &#x3D; ‘凯迪仕（腾讯云V2.5）’, <code>ptp_num</code> &#x3D; 4, <code>fill_light</code> &#x3D; 0, <code>picture_rotation</code> &#x3D; ‘0’, <code>server_code_id</code> &#x3D; 18, <code>cardgroupnum</code> &#x3D; 100, <code>facegroupnum</code> &#x3D; 20, <code>fingergroupnum</code> &#x3D; 100, <code>fingerveingroupnum</code> &#x3D; NULL, <code>isactivationcode</code> &#x3D; 1, <code>isequipmentdistribution</code> &#x3D; 0, <code>policypwdgroupnum</code> &#x3D; 0, <code>pwdgroupnum</code> &#x3D; 20, <code>pwdtype</code> &#x3D; ‘1,2’, <code>iswanderingsensor</code> &#x3D; 1, <code>logocode</code> &#x3D; 18<br>WHERE <code>id</code> &#x3D; 977;</p>
+<h2 id="数据库管理"><a href="#数据库管理" class="headerlink" title="数据库管理"></a>数据库管理</h2><h3 id="启动-x2F-停止"><a href="#启动-x2F-停止" class="headerlink" title="启动&#x2F;停止"></a>启动&#x2F;停止</h3><h3 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h3><p>SELECT user, host FROM mysql.user;</p>
+<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>CREATE USER ‘MySlave228‘@’172.16.2.228’ IDENTIFIED BY ‘123456’;</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>DROP USER ‘jack‘@’localhost’;</p>
+<h3 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h3><p><a target="_blank" rel="noopener" href="https://www.sjkjc.com/mysql/grant-privileges/">https://www.sjkjc.com/mysql/grant-privileges/</a></p>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>MySQL 删除表的几种情况:</p>
+<p>1 drop table table_name : 删除表全部数据和表结构，会立刻释放磁盘空间，</p>
+<p>例子：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> `tbl`;</span><br></pre></td></tr></table></figure>
+
+<p>2 truncate table table_name : 删除表全部数据，保留表结构，立刻释放磁盘空间。（此时可以通过desc tablename来查看表结构依然是存在的，但是使用select * from tablename会发现表内的数据已经删除。）</p>
+<p>3 delete from table_name : 删除表全部数据，表结构不变，mysql也会立即释放磁盘空间。</p>
+<p>4 delete from table_name where xxx : 加了条件判读where从句，表结构不变，不会释放磁盘空间。</p>
+<p>5 delete 操作以后，使用 optimize table table_name 会立刻释放磁盘空间。</p>
+<p>6 Delete可以rollback撤销，truncate不能。</p>
+<h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p>导出&#x3D;备份</p>
+<blockquote>
+<p>注意：运算符(&gt;)表示导出。</p>
+</blockquote>
+<h4 id="导出指定数据库"><a href="#导出指定数据库" class="headerlink" title="导出指定数据库"></a>导出指定数据库</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysqldump <span class="operator">-</span>u root <span class="operator">-</span>p test <span class="operator">&gt;</span> test.sql</span><br><span class="line"></span><br><span class="line">mysqldump <span class="operator">-</span>u root <span class="operator">-</span>p <span class="comment">--databases test &gt; test.sql</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：test.sql 默认位于 C:\Program Files\MySQL\MySQL Server 5.7\bin</p>
+</blockquote>
+<h4 id="导出指定数据库指定表"><a href="#导出指定数据库指定表" class="headerlink" title="导出指定数据库指定表"></a>导出指定数据库指定表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump <span class="operator">-</span>uroot <span class="operator">-</span>p  mysql db event <span class="operator">&gt;</span> <span class="operator">/</span>backup<span class="operator">/</span>mysqldump<span class="operator">/</span>tables.sql</span><br></pre></td></tr></table></figure>
+
+<p>其中 db 、event为 mysql 库 的表</p>
+<blockquote>
+<p>注意：多个表用空格间隔</p>
+</blockquote>
+<h4 id="导出指定数据库排除某些表"><a href="#导出指定数据库排除某些表" class="headerlink" title="导出指定数据库排除某些表"></a>导出指定数据库排除某些表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump <span class="operator">-</span>uroot <span class="operator">-</span>p test <span class="comment">--ignore-table=testtable &gt; /backup/mysqldump/test.sql</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="导出特定表内容"><a href="#导出特定表内容" class="headerlink" title="导出特定表内容"></a>导出特定表内容</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tools_bluetooth </span><br><span class="line"><span class="keyword">WHERE</span> sn <span class="keyword">LIKE</span> <span class="string">&#x27;K58%&#x27;</span> </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> barcode</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> `create_time`</span><br><span class="line"><span class="keyword">INTO</span> OUTFILE <span class="string">&#x27;/var/lib/mysql-files/K58.txt&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost tmp]<span class="comment"># mysqldump -u&#x27;root&#x27; -p&#x27;123456&#x27; --all-databases --single-transaction --master-data=2 --flush-logs --default-character-set=utf8 &gt; /tmp/mysqlbackup/`date +%F_%H-%M-%S`-mysql-all.sql   # 备份数据库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面的命令是发送数据备份文件到从服务器的/tmp/目录下</span></span><br><span class="line">[root@localhost tmp]<span class="comment"># scp /tmp/2020-12-09_13-18-55-mysql-all.sql 192.168.137.101:/tmp/</span></span><br><span class="line">The authenticity of host <span class="string">&#x27;192.168.137.101 (192.168.137.101)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">ECDSA key fingerprint is SHA256:XGNB4Tf/YmQOhuzY8BXxSIEbRbKli30IAJLfR5UM4VI.</span></span><br><span class="line"><span class="string">ECDSA key fingerprint is MD5:96:ef:27:6c:35:16:f0:99:5c:4b:1d:4c:27:b1:56:bf.</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no)? yes        # 这里输入yes表示需要连接</span></span><br><span class="line"><span class="string">Warning: Permanently added &#x27;</span>192.168.137.101<span class="string">&#x27; (ECDSA) to the list of known hosts.</span></span><br><span class="line"><span class="string">root@192.168.137.101&#x27;</span>s password:    <span class="comment"># 这里输入从服务器密码</span></span><br><span class="line">2020-12-09_13-18-55-mysql-all.sql         100%  777KB  89.1MB/s   00:00    <span class="comment"># 看到100%说明传输成功</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="参数详解"><a href="#参数详解" class="headerlink" title="参数详解"></a>参数详解</h4><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>缩写</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–host</td>
+<td>-h</td>
+<td>服务器IP地址</td>
+</tr>
+<tr>
+<td>–port</td>
+<td>-P</td>
+<td>服务器端口号</td>
+</tr>
+<tr>
+<td>–user</td>
+<td>-u</td>
+<td>MySQL 用户名</td>
+</tr>
+<tr>
+<td>–pasword</td>
+<td>-p</td>
+<td>MySQL 密码</td>
+</tr>
+<tr>
+<td>–databases</td>
+<td></td>
+<td>指定要备份的数据库</td>
+</tr>
+<tr>
+<td>–all-databases</td>
+<td></td>
+<td>备份mysql服务器上的所有数据库</td>
+</tr>
+<tr>
+<td>–compact</td>
+<td></td>
+<td>压缩模式，产生更少的输出</td>
+</tr>
+<tr>
+<td>–comments</td>
+<td></td>
+<td>添加注释信息</td>
+</tr>
+<tr>
+<td>–complete-insert</td>
+<td></td>
+<td>输出完成的插入语句</td>
+</tr>
+<tr>
+<td>–lock-tables</td>
+<td></td>
+<td>备份前，锁定所有数据库表</td>
+</tr>
+<tr>
+<td>–no-create-db&#x2F;–no-create-info</td>
+<td></td>
+<td>禁止生成创建数据库语句</td>
+</tr>
+<tr>
+<td>–force</td>
+<td></td>
+<td>当出现错误时仍然继续备份操作</td>
+</tr>
+<tr>
+<td>–default-character-set</td>
+<td></td>
+<td>指定默认字符集</td>
+</tr>
+<tr>
+<td>–add-locks</td>
+<td></td>
+<td>备份数据库表时锁定数据库表</td>
+</tr>
+<tr>
+<td>–single-transaction</td>
+<td></td>
+<td>一致性服务可用性，锁表机制 , 热备份</td>
+</tr>
+<tr>
+<td>–master-data&#x3D;2</td>
+<td></td>
+<td>该选项将会记录binlog的日志位置与文件名，可以选择1或者2，效果一样</td>
+</tr>
+<tr>
+<td>–max_allowed_pa​​cket&#x3D;512M</td>
+<td></td>
+<td>数据库包含大数据字段，则应使用–max_allowed_pa​​cket参数</td>
+</tr>
+<tr>
+<td>–flush-logs</td>
+<td></td>
+<td>自动刷新日志</td>
+</tr>
+<tr>
+<td>–ignore-table</td>
+<td></td>
+<td>排除指定表</td>
+</tr>
+</tbody></table>
+<h3 id="导入（还原）"><a href="#导入（还原）" class="headerlink" title="导入（还原）"></a>导入（还原）</h3><h4 id="soure-方法"><a href="#soure-方法" class="headerlink" title="soure 方法"></a>soure 方法</h4><p>将需要导入的文件 test.sql 放到bin文件下 （windows默认C:\Program Files\MySQL\MySQL Server 5.7\bin）</p>
+<p>命令行导入数据库：</p>
+<p>1，将要导入的.sql文件移至bin文件下，这样的路径比较方便<br>2，同上面导出的第1步<br>3，进入MySQL：<code>mysql -u root -p</code><br>4，在MySQL-Front中新建你要建的数据库，这时是空数据库，如新建一个名为news的目标数据库<br>5，<strong>输入：<code>mysql&gt;use 目标数据库名</code></strong><br>6，<strong>导入文件：<code>mysql&gt;source 导入的文件名;</code></strong></p>
+<p>比如我输入的命令行：mysql&gt;source test.sql;</p>
+<h4 id="系统行命令"><a href="#系统行命令" class="headerlink" title="系统行命令"></a>系统行命令</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql <span class="operator">-</span>u root <span class="operator">-</span>p db_name <span class="operator">&lt;</span> d:\database_bak\db_name.sql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：导入备份数据库前，需要存在 db_name 库； 而且与db_name.sql中数据库名是一样的才可以导入。</p>
+<p>运算符(&lt;)表示导入。</p>
+</blockquote>
+<h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2><p>查看日志<br>SHOW GLOBAL VARIABLES LIKE ‘%log%’;</p>
+<p>日志文件路径<br>mysql&gt; show variables like ‘general_log_file’;</p>
+<p>错误日志文件路径<br>mysql&gt; show variables like ‘log_error’;</p>
+<p>慢查询日志文件路径<br>mysql&gt; show variables like ‘slow_query_log_file’;</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/albertsh/article/details/103421646">MySQL中全局变量、会话变量、用户变量和局部变量的区别</a></p>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhouzhiwengang/article/details/118192674">django.db.utils.InternalError: (1153, “Got a packet bigger than ‘max_allowed_packet’ bytes”)</a></p>
 
     </div>
 
@@ -394,20 +579,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/mysql/" rel="tag"><i class="fa fa-tag"></i> mysql</a>
+              <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/sql/date_and_string_conversion/" rel="prev" title="mysql 日期和字符串转换、日期查询">
-                  <i class="fa fa-chevron-left"></i> mysql 日期和字符串转换、日期查询
+                <a href="/sql/date_and_string_conversion/" rel="prev" title="MySQL 日期和字符串转换、日期查询">
+                  <i class="fa fa-chevron-left"></i> MySQL 日期和字符串转换、日期查询
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/vue/install/" rel="next" title="Vue 安装基本命令">
-                  Vue 安装基本命令 <i class="fa fa-chevron-right"></i>
+                <a href="/mysql/date_and_string_conversion/" rel="next" title="mysql 日期和字符串转换、日期查询">
+                  mysql 日期和字符串转换、日期查询 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -429,7 +614,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -441,14 +626,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">187k</span>
+    <span title="站点总字数">224k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:50</span>
+    <span title="站点阅读时长">3:24</span>
   </span>
 </div>
 <div class="busuanzi-count">

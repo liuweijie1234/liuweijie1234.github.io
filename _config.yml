@@ -108,9 +108,9 @@ theme: next-theme
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://liuweijie1234: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@github.com/liuweijie1234/liuweijie1234.github.io
+  repo: https://liuweijie1234:@github.com/liuweijie1234/liuweijie1234.github.io
   branch: main
-  token: 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
+  token: 
   name: liuweijie1234
 
 search:

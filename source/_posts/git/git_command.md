@@ -86,6 +86,8 @@ git config --global https.proxy http://127.0.0.1:7890
 `git rm` 将文件从暂存区和工作区中删除。
 `git mv` 移动或重命名工作区文件。
 
+git push --force origin main 强制推送到远程仓库，覆盖远程仓库的内容。
+
 - 忽略文件
 
 .gitignore 文件格式规范如下：

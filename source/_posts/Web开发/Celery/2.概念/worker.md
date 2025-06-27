@@ -83,7 +83,7 @@ monkey.patch_all()
 
 
 ```bash
-celery -A app.core.celery worker --loglevel=info
+celery -A app.core.celery worker --loglevel=info --concurrency=100
 
 celery -A app.core.celery worker --loglevel=info --pool=threads --concurrency=10
 
@@ -95,10 +95,58 @@ celery -A app.core.celery worker --loglevel=info --pool=solo --without-gossip --
 ```
 
 
+### 停止worker
+
+```bash
+# 优雅停止所有 worker
+celery -A app.core.celery control shutdown
+
+# 强制终止残留进程（如果优雅停止无效）
+pkill -f "celery -A app.core.celery worker"
+```
+
+### 启动定时任务
 
 
 ```bash
 celery -A app.core.celery beat --loglevel=info
+celery -A app.core.celery beat --loglevel=debug 
 celery -A app.core.celery beat --loglevel=info --logfile=logs/beat.log
 ```
 
+
+
+### 清空队列
+```bash
+# 强制清空默认队列（最直接的方法）
+celery -A app.core.celery purge --force
+```
+
+### 清空消息中间件的 Celery 数据
+```bash
+# Redis 清空 Celery 数据
+# 清空 Redis 中的 Celery 数据（假设使用默认数据库）
+redis-cli FLUSHDB
+
+# 或者更精确地删除所有 Celery 相关键
+redis-cli KEYS "celery*" | xargs redis-cli DEL
+
+
+# RabbitMQ 清空 Celery 数据
+# 清空默认队列（通常名为 celery）
+sudo rabbitmqctl purge_queue celery
+
+# 删除并重建队列（更彻底）
+sudo rabbitmqctl delete_queue celery
+sudo rabbitmqctl declare_queue celery durable=true
+```
+
+### 查看队列
+
+```bash
+# 查看队列
+celery -A app.core.celery inspect registered  # 查看注册的任务
+celery -A app.core.celery inspect active  # 查看正在执行的任务
+celery -A app.core.celery inspect reserved  # 查看已保留的任务
+celery -A app.core.celery inspect stats  # 查看 Worker 统计信息
+```

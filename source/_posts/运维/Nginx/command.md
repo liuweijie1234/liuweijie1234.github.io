@@ -2,6 +2,47 @@
 
 ## Nginx常用命令
 
+
+
+
+### 1. 启动/停止/重启
+
+```bash
+sudo systemctl start nginx	  # 启动 Nginx
+sudo systemctl stop nginx     # 停止 Nginx	
+sudo systemctl restart nginx  # 重启 Nginx	
+sudo systemctl reload nginx	  # 热重载配置（不中断服务）
+sudo systemctl enable nginx	  # 开机自动启动	
+sudo nginx -s quit	          # 优雅退出（完成当前请求后停止）	
+```
+### 2. 状态检查
+```bash
+sudo systemctl status nginx	  # 查看运行状态	
+sudo nginx -t	              # 测试配置文件语法	
+sudo nginx -T	              # 测试+显示全部配置内容	
+netstat -tuln | grep :80	  # 检查是否监听端口
+```
+
+### 3. 日志操作
+```bash
+tail -f /var/log/nginx/access.log	实时访问日志
+tail -f /var/log/nginx/error.log	实时错误日志
+grep -i error /var/log/nginx/error.log	筛选错误记录
+```
+### 4. 配置文件操作
+
+```bash
+nginx -t -c /etc/nginx/nginx.conf	测试指定配置文件
+nginx -s reopen	重新打开日志文件
+```
+
+### 5. 进程管理
+```bash
+ps aux | grep nginx	查看 Nginx 进程
+pkill -9 nginx	强制终止进程
+```
+
+
 ```bash
 nginx -t	    # 测试配置文件语法（检查是否有错误，不重启服务）。
 nginx -s reload	# 平滑重启（重新加载配置，不影响已建立的连接）。
@@ -12,6 +53,10 @@ nginx -V	    # 查看详细版本及编译参数（显示安装的模块，如 -
 nginx -c /path/to/nginx.conf	# 指定配置文件启动（默认从 /etc/nginx/nginx.conf 加载）。
 ps aux | grep nginx	            # 查看 Nginx 进程（确认 Master/Worker 进程是否运行）。
 journalctl -u nginx --no-pager	# 查看 Nginx 日志（Systemd 系统）。
+# 1. 查看详细错误
+journalctl -xe -u nginx --no-pager | tail -n 50
+# 2. 检查端口占用
+sudo lsof -i :80
 ```
 
 ## Nginx 配置文件查看与结构

@@ -21,7 +21,34 @@ def my_task():
     # 任务逻辑
     pass
 ```
+```python
+from celery import shared_task
+import time
 
+# 全局配置
+app.conf.task_time_limit = 300  # 硬超时时间
+app.conf.task_soft_time_limit = 250  # 软超时时间  
+
+> 注意：软超时是指当任务执行时间超过设定的时间后，会引发一个 SoftTimeLimitExceeded 异常，你可以捕获这个异常并进行自定义的处理逻辑。
+
+@shared_task(time_limit=1800, soft_time_limit=1700)  # 任务定义时设置超时时间
+def my_long_task():
+    try:
+        loop = asyncio.get_event_loop()
+        if loop.is_closed():
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+        result = loop.run_until_complete(fetch_keyword_data())
+        return result
+    except SoftTimeLimitExceeded:
+        logger.warning("Task exceeded soft time limit")
+    except Exception as e:
+        logger.error(f"Error in sync_keyword_task: {e}", exc_info=True)
+        raise
+
+# 调用任务时设置超时时间
+my_long_task.apply_async(args=[], kwargs={}, time_limit=900, soft_time_limit=800)
+```
 ### 执行任务
 
 ```python
@@ -72,6 +99,12 @@ print(result.get())       # 阻塞获取结果（慎用，会破坏异步性）
 - 任务路由（routing_key）
 - 序列化方式（serializer）
 
+参数
+eta ：指定任务的预定执行时间（datetime 对象），任务会在该时间到达时执行。
+countdown ：与 eta 类似，但更简单，表示任务在多少秒后执行。
+expires ：指定任务的过期时间，如果任务在该时间内未被处理，则会被丢弃。
+queue ：指定任务应该发送到的队列名称，用于任务的路由。
+
 ```python
 result = add.apply_async(args=(2, 3))  # 等效于 delay(2, 3)
 ```
@@ -98,6 +131,8 @@ result = add.apply_async(
     queue='high_priority',
     priority=10,   # 数字越大优先级越高
 )
+
+add.apply_async(args=[], kwargs={}, time_limit=900, soft_time_limit=800) # 调用任务时设置超时时间
 ```
 
 适用场景

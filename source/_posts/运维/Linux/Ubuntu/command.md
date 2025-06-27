@@ -35,7 +35,7 @@ sudo systemctl start mysql
 sudo service mysql start
 sudo service mysql stop
 sudo service mysql status
-
+sudo service mysql restart
 # 安装 Redis
 sudo apt install redis-server
 sudo nano /etc/redis/redis.conf

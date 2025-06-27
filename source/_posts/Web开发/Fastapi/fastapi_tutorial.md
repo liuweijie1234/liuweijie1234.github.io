@@ -346,6 +346,87 @@ class Course(Base):
 - student_course 是一个中间表，用于连接 students 和 courses 表。
 - secondary=student_course 告诉 SQLAlchemy 使用 student_course 作为关联表。
 
+### 预加载
+
+#### joinedload()
+连接加载
+
+工作原理：
+- 使用 SQL JOIN 语句一次性加载主表和关联表的数据。
+- 生成一个较大的结果集，包含主表和关联表的所有字段。
+
+示例查询
+```python
+session.query(MonitorAccount).options(joinedload(MonitorAccount.account_stats)).all()
+```
+
+生成的 SQL 查询
+```sql
+SELECT monitor_account.*, account_stats.*
+FROM monitor_account
+LEFT OUTER JOIN account_stats ON monitor_account.id = account_stats.account_id;
+```
+
+
+优点：
+- 单次查询：只需 1 次数据库往返。
+- 适合小规模数据：如果关联数据量少，性能较好。
+
+缺点：
+- 数据冗余：如果主表有 100 条记录，每条记录关联 10 条数据，结果集会有 1000 行，可能包含大量重复数据（主表字段）,需要去重。
+- 性能问题：当关联数据量大时，JOIN 会导致结果集膨胀，增加内存和网络开销。
+
+适用场景
+- 关联数据量少（如 1:1 或 1:few 关系）。
+- 需要严格保证数据一致性（JOIN 是原子的）。
+
+```python
+stmt = (
+    select(Terminal)
+    .where(Terminal.online == True)
+    .options(joinedload(Terminal.robots))
+)
+result = await db.execute(stmt)
+online_terminals = result.scalars().unique().all()
+```
+
+
+#### selectinload()
+
+子查询加载
+
+工作原理
+- 先查询主表，再用 IN 子查询单独加载关联数据。
+- 执行 2 次查询（主查询 + 关联查询）。
+
+示例查询
+```python
+session.query(MonitorAccount).options(selectinload(MonitorAccount.account_stats)).all()
+```
+
+生成的 SQL 查询
+```sql
+-- 第一次查询：主表
+SELECT * FROM monitor_account;
+
+-- 第二次查询：关联表（自动执行）
+SELECT * FROM account_stats
+WHERE account_stats.account_id IN (1, 2, 3, ...);
+```
+
+
+优点：
+- 减少数据冗余：关联表查询结果无重复字段。
+- 适合大规模数据：即使主表有 1000 条记录，IN 查询也能高效处理。
+- 避免笛卡尔积：不会因 JOIN 导致结果集膨胀。
+
+缺点：
+- 多次查询：至少 2 次数据库往返。
+- IN 子查询限制：某些数据库对 IN 列表长度有限制（如 Oracle 的 1000 条限制）。**需数据库支持长 IN 列表**
+
+适用场景
+- 关联数据量较大（如 1:many 或 many:many 关系）。
+- 主表记录多，但关联数据分布稀疏。
 
 ## schemas-Pydantic 模型
 
@@ -372,6 +453,8 @@ class Task(TaskBase):
 ## crud
 
 ### SQLAlchemy CRUD 操作 
+
+
 
 #### fetchall()
 

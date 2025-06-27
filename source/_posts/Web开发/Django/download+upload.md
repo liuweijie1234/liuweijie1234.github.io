@@ -9,7 +9,7 @@ categories:
 
 ## django 上传文件 实现方式
 
-[Django官方文档参考](https://docs.djangoproject.com/zh-hans/3.2/topics/http/file-uploads/)
+[Django官方文档参考](https://docs.djangoproject.com/zh-hans/5.2/topics/http/file-uploads/)
 
 
 ## 用户上传问题

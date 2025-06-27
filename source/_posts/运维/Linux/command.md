@@ -7,8 +7,21 @@ categories:
 - linux
 ---
 
+### 系统时间时区设置
+
+查看服务器时间
+date
+sudo date -s "2025-06-23 13:18:00"
+
+查看系统时区
+timedatectl
+sudo timedatectl set-timezone Asia/Shanghai
+sudo timedatectl set-time "2025-06-20 14:30:00"
+
+### 查看系统资源
 top ：查看系统资源占用情况，显示当前进程信息
 uptime：查看报告系统运行时长及平均负载
+
 
 查看端口情况
 netstat -tunlp | grep 端口号：查看端口号占用情况

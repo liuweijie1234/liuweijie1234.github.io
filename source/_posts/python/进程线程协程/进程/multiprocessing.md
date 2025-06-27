@@ -1,5 +1,5 @@
 ---
-title: Python3 多进程
+title: Python3 进程 multiprocessing 
 date: 2022-08-15 10:14:00
 tags:
 - Python
@@ -8,11 +8,15 @@ categories:
 - Python
 ---
 
+## 概念
+
+进程是具有一定独立功能的程序在一个数据集合上的一次运行活动。在 Python 中，可以使用 multiprocessing 模块来创建进程
+
+进程可以绕过 GIL(全局解释器锁) 的限制，在 CPU 密集型任务中可以更好地利用多核 CPU。但是进程的创建和切换开销比线程大，并且进程间的通信比线程间通信复杂。
+
 参考：
 - [multiprocessing](https://docs.python.org/zh-cn/3/library/multiprocessing.html)
 - https://zhuanlan.zhihu.com/p/64702600
-
-多进程可以绕过全局解释器锁
 
 
 ### Process 类

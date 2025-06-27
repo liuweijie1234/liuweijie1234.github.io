@@ -129,12 +129,12 @@ def custom_task(paraml, param2):
 def exe_task(request):
     param1 = request.GET.get('param1')
     param2 = request.GET.get('param2')
-    custom_task.apply async(args=[param1, param2])
+    custom_task.apply_async(args=[param1, param2])
     return HttpResponse(json.dumps({'result': True}))
 ```
 
 
-调用custom_task.apply_async(args=[param1, param2])时，不会立即执行custom_task函数，而是向消息队列中插入一条相关的任务元数据，接着程序会立即执行return操作。
+调用 custom_task.apply_async(args=[param1, param2])时，不会立即执行custom_task函数，而是向消息队列中插入一条相关的任务元数据，接着程序会立即执行return操作。
 
 同时，celery服务端会从消息队列中取出这条元数据并执行custom_task。这样就实现了耗时任务的异步化，空闲出了uwsgi的worker资源。
 

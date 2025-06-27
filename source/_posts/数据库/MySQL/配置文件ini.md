@@ -18,6 +18,10 @@ MySQL\MySQL Server 5.7\my.ini
 /etc/mysql/my.cnf 
 ```
 
+查看命令
+
+show global variables like "%max_connections%";
+
 ## 客户端配置
 ```ini
 [client]

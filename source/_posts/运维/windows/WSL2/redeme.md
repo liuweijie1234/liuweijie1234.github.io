@@ -13,7 +13,15 @@ debian系统
 wsl --install
 ```
 
+wsl -l -v
+
+
+<3>WSL (14)ERRoR: createProcesscomon:559: execvpe(/bin/bash) failed: No such file or directory
+
 ## 常用命令
+
+
+wsl --set-default Ubuntu # 设置 Ubuntu 为默认发行版
 
 
 一、安装与配置
@@ -26,7 +34,7 @@ wsl --set-default-version 2	设置默认使用 WSL2	wsl --set-default-version 2
 
 二、系统管理
 命令	说明	示例
-wsl -d Ubuntu  
+wsl -d Ubuntu    启动指定的WSL
 wsl --shutdown	强制关闭所有 WSL 实例	wsl --shutdown
 wsl --terminate <发行版名>	终止指定发行版	wsl --terminate Ubuntu-20.04
 wsl --list --verbose	查看已安装发行版及状态	wsl --list -v

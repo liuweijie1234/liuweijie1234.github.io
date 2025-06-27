@@ -20,6 +20,7 @@ celery -A my_app worker --loglevel=info -P eventlet
 # 使用 gevent
 celery -A my_app worker --loglevel=info -P gevent
 ```
+
 ## 使用消息队列
 Celery 默认使用 RabbitMQ 作为消息队列，可以通过 -b 参数指定其他消息队列：
 

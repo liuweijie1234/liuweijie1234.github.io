@@ -13,11 +13,11 @@ categories:
 
 ## 0. 了解Django
 
-[Django 官方入门教程](https://docs.djangoproject.com/zh-hans/3.2/intro/)
+[Django 官方入门教程](https://docs.djangoproject.com/zh-hans/5.2/intro/)
 
-[Django 总体文档内容](https://docs.djangoproject.com/zh-hans/3.2/contents/)
+[Django 总体文档内容](https://docs.djangoproject.com/zh-hans/5.2/contents/)
 
-[Django 内置模块文档](https://docs.djangoproject.com/zh-hans/3.2/py-modindex/)
+[Django 内置模块文档](https://docs.djangoproject.com/zh-hans/5.2/py-modindex/)
 
 [Python 框架：Django 基础知识](https://bk.tencent.com/s-mart/community/question/936?type=answer)
 
@@ -61,7 +61,7 @@ categories:
 
 ### 1.4 安装 Django
 
-[官方文档：Django 安装](https://docs.djangoproject.com/zh-hans/3.2/intro/install/)
+[官方文档：Django 安装](https://docs.djangoproject.com/zh-hans/5.2/intro/install/)
 
 ```bash
 pip install django==3.2
@@ -181,7 +181,7 @@ python manage.py runserver 8080
 
 创建 Django 应用的典型流程是，先建立数据模型，然后搭建管理站点，之后你的员工（或者客户）就可以向网站里填充数据了。
 
-[Django models 官方文档](https://docs.djangoproject.com/zh-hans/3.2/ref/models/)
+[Django models 官方文档](https://docs.djangoproject.com/zh-hans/5.2/ref/models/)
 
 ### 2.1 数据库配置
 
@@ -215,7 +215,7 @@ DATABASES = {
 }
 ```
 
-[多数据库配置](https://docs.djangoproject.com/zh-hans/3.2/topics/db/multi-db/)
+[多数据库配置](https://docs.djangoproject.com/zh-hans/5.2/topics/db/multi-db/)
 
 
 ```python
@@ -271,7 +271,7 @@ def my_view(request):
 
 ### 2.2 模型
 
-[models 字段 官方文档](https://docs.djangoproject.com/zh-hans/3.2/ref/models/fields/)
+[models 字段 官方文档](https://docs.djangoproject.com/zh-hans/5.2/ref/models/fields/)
 
 #### 2.2.0 模型配置
 
@@ -322,7 +322,7 @@ ModelA 只能对应 ModelB 中特定的值，同样 ModelB 也只能对应 Model
 ```python
 b = models.OneToOneField(ModelB，related_name="info", on_delete=models.CASCAED)
 ```
-[一对一关联模型 API 用法示例文档](https://docs.djangoproject.com/zh-hans/3.2/topics/db/examples/one_to_one/)
+[一对一关联模型 API 用法示例文档](https://docs.djangoproject.com/zh-hans/5.2/topics/db/examples/one_to_one/)
 
 ##### 2.2.2.2 一对多（外键）
 
@@ -354,7 +354,7 @@ limit_choices_to：一个 Q 对象（或其他满足 QuerySet API 的对象）�
 
 to_field：将关联目标模型的哪个字段用作外键。如果未指定，则默认使用主键（即 id）作为外键。
 
-[on_delete](https://docs.djangoproject.com/zh-hans/3.2/ref/models/fields/#django.db.models.ForeignKey.on_delete): 定义在删除关联对象时如何处理外键
+[on_delete](https://docs.djangoproject.com/zh-hans/5.2/ref/models/fields/#django.db.models.ForeignKey.on_delete): 定义在删除关联对象时如何处理外键
 
 | 参数 | 作用 | 示例 | 
 | -- | -- | -- |
@@ -367,14 +367,14 @@ to_field：将关联目标模型的哪个字段用作外键。如果未指定，
 | on_delete=models.SET_DEFAULT | 删除关联数据,与之关联的值设置为默认值（前提FK字段需要设置默认值,一对一同理） | `on_delete=models.SET_DEFAULT, default='默认值'` |
 | on_delete=models.SET |  删除关联数据 |  a. 与之关联的值设置为指定值,设置：models.SET(值)<br> b. 与之关联的值设置为可执行对象的返回值,设置：models.SET(可执行对象)  |
 
-[一对多关联模型 API 用法示例文档](https://docs.djangoproject.com/zh-hans/3.2/topics/db/examples/many_to_one/)
+[一对多关联模型 API 用法示例文档](https://docs.djangoproject.com/zh-hans/5.2/topics/db/examples/many_to_one/)
 
 > 注意：外键(ForeignKey) 和 一对一(OneToOneField) 的时候，必须添加 `on_delete` 参数，
 > 若不设置 related_name，可以基于"**外键模型小写_set**"来获取外键模型
 > 请注意，add()、create()、remove()、clear() 和 set() 都会对所有类型的相关字段立即应用数据库变化。
 > 换句话说，没有必要在关系的任何一端调用 save()。
 
-[Django 关联对象 参考](https://docs.djangoproject.com/zh-hans/3.2/ref/models/relations/)
+[Django 关联对象 参考](https://docs.djangoproject.com/zh-hans/5.2/ref/models/relations/)
 
 [Django中外键使用详解](https://blog.csdn.net/xujin0/article/details/83552349)
 
@@ -399,7 +399,7 @@ class Student(models.Model):
     courses = models.ManyToManyField(Course)
 ```
 
-[多对多关联模型 API 用法示例文档](https://docs.djangoproject.com/zh-hans/3.2/topics/db/examples/many_to_many/)
+[多对多关联模型 API 用法示例文档](https://docs.djangoproject.com/zh-hans/5.2/topics/db/examples/many_to_many/)
 
 #### 2.2.3 字段选项
 
@@ -431,15 +431,15 @@ class Student(models.Model):
 
 #### 2.2.4 索引
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/models/indexes/
+https://docs.djangoproject.com/zh-hans/5.2/ref/models/indexes/
 
 #### 2.2.5 模型 类 
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/models/class/
+https://docs.djangoproject.com/zh-hans/5.2/ref/models/class/
 
 #### 2.2.6 模型 方法
 
-https://docs.djangoproject.com/zh-hans/3.2/topics/db/models/#model-attributes
+https://docs.djangoproject.com/zh-hans/5.2/topics/db/models/#model-attributes
 
 #### 2.2.7 Meta 选项(元选项)
 
@@ -455,20 +455,20 @@ db_table 作用：修改数据库表的默认的名称
           ordering = ['name']  # 数据排序
 ```
 
-[Meta 字段详解 官方文档](https://docs.djangoproject.com/zh-hans/3.2/ref/models/options/)
+[Meta 字段详解 官方文档](https://docs.djangoproject.com/zh-hans/5.2/ref/models/options/)
 
 [Meta 详解](https://blog.csdn.net/bbwangj/article/details/79967858)
 
 
 #### 2.2.8 模型继承
 
-[模型继承 官方文档](https://docs.djangoproject.com/zh-hans/3.2/topics/db/models/#model-inheritance)
+[模型继承 官方文档](https://docs.djangoproject.com/zh-hans/5.2/topics/db/models/#model-inheritance)
 
 [Django中Model继承的三种方式](https://blog.csdn.net/weixin_43789195/article/details/86363456)
 
 #### 2.2.9 实例
 
-[模型实例参考](https://docs.djangoproject.com/zh-hans/3.2/ref/models/instances)
+[模型实例参考](https://docs.djangoproject.com/zh-hans/5.2/ref/models/instances)
 
 ### 2.3 数据库迁移
 
@@ -481,7 +481,7 @@ db_table 作用：修改数据库表的默认的名称
 python manage.py makemigrations [app_label [app_label ...]]
 ```
 
-[makemigrations 详解](https://docs.djangoproject.com/zh-hans/3.2/ref/django-admin/#django-admin-makemigrations)
+[makemigrations 详解](https://docs.djangoproject.com/zh-hans/5.2/ref/django-admin/#django-admin-makemigrations)
 
 ```bash
 # 应用数据库迁移,将Model中的操作转换为数据库语言
@@ -491,7 +491,7 @@ python manage.py migrate
 python manage.py collectstatic
 ```
 
-[migrate 详解](https://docs.djangoproject.com/zh-hans/3.2/ref/django-admin/#django-admin-migrate)
+[migrate 详解](https://docs.djangoproject.com/zh-hans/5.2/ref/django-admin/#django-admin-migrate)
 
 ```bash
 # 查看具体数据库操作
@@ -510,33 +510,33 @@ ALTER TABLE `blog_book_authors` ADD CONSTRAINT `blog_book_authors_book_id_35eae5
 ALTER TABLE `blog_book_authors` ADD CONSTRAINT `blog_book_authors_author_id_fa034e3d_fk_blog_author_id` FOREIGN KEY (`author_id`) REFERENCES `blog_author` (`id`);
 
 ```
-[迁移概述](https://docs.djangoproject.com/zh-hans/3.2/topics/migrations/)
+[迁移概述](https://docs.djangoproject.com/zh-hans/5.2/topics/migrations/)
 
 #### 2.3.2 操作参考
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/migration-operations/
+https://docs.djangoproject.com/zh-hans/5.2/ref/migration-operations/
 
 #### 2.3.4 SchemaEditor
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/schema-editor/
+https://docs.djangoproject.com/zh-hans/5.2/ref/schema-editor/
 
 #### 2.3.5 编写迁移语句
 
-https://docs.djangoproject.com/zh-hans/3.2/howto/writing-migrations/
+https://docs.djangoproject.com/zh-hans/5.2/howto/writing-migrations/
 
-### 2.4 Model API（CRUD）
+### 2.4 Model API（CRUD）ORM
 
 - 常用
 
-[数据库 执行查询 参考](https://docs.djangoproject.com/zh-hans/3.2/topics/db/queries/)
+[数据库 执行查询 参考](https://docs.djangoproject.com/zh-hans/5.2/topics/db/queries/)
 
-[QuerySet API 参考](https://docs.djangoproject.com/zh-hans/3.2/ref/models/querysets/)
+[QuerySet API 参考](https://docs.djangoproject.com/zh-hans/5.2/ref/models/querysets/)
 
 - 不常用
 
-[查找 API 参考](https://docs.djangoproject.com/zh-hans/3.2/ref/models/lookups/)
+[查找 API 参考](https://docs.djangoproject.com/zh-hans/5.2/ref/models/lookups/)
 
-[模型 _meta API¶](https://docs.djangoproject.com/zh-hans/3.2/ref/models/meta/)
+[模型 _meta API¶](https://docs.djangoproject.com/zh-hans/5.2/ref/models/meta/)
 
 
 #### 2.4.1 插入数据
@@ -549,6 +549,11 @@ c = Category('test category')
 c.save()
 t = Tag('test tag')
 t.save()
+
+from .models import Book
+
+book = Book(title='The Great Gatsby', author='F. Scott Fitzgerald', publish_date='1925-04-10')
+book.save()
 ```
 
 打开数据库可以看到插入的数据
@@ -565,7 +570,7 @@ c_list = Category.objects.all()
 
 ##### 1、特定条件(get 、filter)
 
-- get()
+- get():获取单个对象（如果找不到会抛出异常）
 
 ```python
 # 查找单个特定的数据，
@@ -588,7 +593,7 @@ else:
     print(p.name)
 ```
 
-- filter()
+- filter(): 获取特定条件的数据
 
 如果需要执行更复杂的查询（例如，使用 OR 语句的查询），可以使用 Q 对象 （*args）。
 
@@ -642,7 +647,7 @@ c_test = Category.objects.filter(id__range=[0, 10])
 
 时间查询: date,year,month,day,week_day,hour,minute,second
 
-[下划线 字段查询](https://docs.djangoproject.com/zh-hans/3.2/ref/models/querysets/#field-lookups)
+[下划线 字段查询](https://docs.djangoproject.com/zh-hans/5.2/ref/models/querysets/#field-lookups)
 
 ```python
 # 大于，小于操作
@@ -796,7 +801,7 @@ print(c_list[0].post_count) # 12
 
 #### 2.4.3 聚合函数
 
-[查询表达式](https://docs.djangoproject.com/zh-hans/3.2/ref/models/expressions/)
+[查询表达式](https://docs.djangoproject.com/zh-hans/5.2/ref/models/expressions/)
 
 ##### F 对象
 
@@ -844,7 +849,7 @@ def get(self,request):
 
 但是 Q 对象一般只用于或者的使用，只有多嵌套复杂的查询条件才会使用`&`和`~`进行与和非的意思.
 
-[条件表达式](https://docs.djangoproject.com/zh-hans/3.2/ref/models/conditional-expressions/)
+[条件表达式](https://docs.djangoproject.com/zh-hans/5.2/ref/models/conditional-expressions/)
 
 
 ##### Q对象和F对象 的区别在于：
@@ -867,14 +872,14 @@ https://bk.tencent.com/s-mart/community/question/1064?type=answer
 
 ##### 数据库函数
 
-[数据库函数](https://docs.djangoproject.com/zh-hans/3.2/ref/models/database-functions/)
+[数据库函数](https://docs.djangoproject.com/zh-hans/5.2/ref/models/database-functions/)
 [数据库函数之文本函数](https://blog.csdn.net/weixin_43354181/article/details/125252120)
 
 #### 多表查询
 
 https://blog.csdn.net/weixin_46371752/article/details/126375988
 
-#### 关联查询
+#### 关联查询（联表查询）
 
 
 Django ORM 优化之select_related
@@ -884,8 +889,6 @@ Django查询优化之select_related和prefetch_related
 https://developer.aliyun.com/article/538196
 
 https://blog.csdn.net/qq_52385631/article/details/126695685
-
-
 
 
 关于Django ORM 数据库查询使用优化
@@ -900,7 +903,7 @@ https://bk.tencent.com/s-mart/community/question/958?type=answer
 
 https://www.cnblogs.com/zonghan/p/17039500.html
 
-[QuerySet API 参考](https://docs.djangoproject.com/zh-hans/3.2/ref/models/querysets/)
+[QuerySet API 参考](https://docs.djangoproject.com/zh-hans/5.2/ref/models/querysets/)
 
 #### 2.4.4 修改数据
 
@@ -1032,39 +1035,98 @@ class BookAdmin(admin.ModelAdmin):
 
 #### 概览
 
-[表单基础概念](https://docs.djangoproject.com/zh-hans/3.2/topics/forms/)
+[表单基础概念](https://docs.djangoproject.com/zh-hans/5.2/topics/forms/)
 
 [django - 表单(form)验证及错误提示设置](https://blog.csdn.net/xxm524/article/details/48369623)
 
-
-
 `action=""`意味着表单将提交给与当前页面相同的URL。
+
+#### HTML 表单 ：
+可以直接在 HTML 模板中编写表单，然后在视图中通过 request.POST 或 request.GET 获取表单数据。例如，HTML 表单：
+```html
+<form method="post" action="/submit_form/">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Submit</button>
+</form>
+```
+视图中处理：
+```python
+from django.http import HttpResponse
+
+def submit_form(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        # 处理 name 数据
+        return HttpResponse(f"Hello, {name}")
+    else:
+        return HttpResponse("Invalid request method")
+```
+#### Django 表单：
+
+Django 提供了表单类（forms.Form 或 forms.ModelForm），它可以在服务器端对表单数据进行验证，并自动生成 HTML 表单。例如：
+
+定义表单类：
+```python
+from django import forms
+
+class NameForm(forms.Form):
+    name = forms.CharField(label='Your name', max_length=100)
+```
+
+在视图中使用：
+```python
+from django.shortcuts import render
+from .forms import NameForm
+
+def name_form_view(request):
+    if request.method == 'POST':
+        form = NameForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            # 处理 name 数据
+            return HttpResponse(f"Hello, {name}")
+    else:
+        form = NameForm()
+    return render(request, 'name_form.html', {'form': form})
+```
+
+在模板中渲染表单：
+```html
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+```
+使用 Django 表单类的好处是可以方便地进行表单验证，如字段长度验证、数据类型验证等，并且可以利用其自动生成功能来快速开发表单相关的功能。
 
 #### 表单API
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/forms/api/
+https://docs.djangoproject.com/zh-hans/5.2/ref/forms/api/
 
 #### 内建字段
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/forms/fields/
+https://docs.djangoproject.com/zh-hans/5.2/ref/forms/fields/
 
 #### 内建部件
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/forms/widgets/
+https://docs.djangoproject.com/zh-hans/5.2/ref/forms/widgets/
 
 ### 进阶
 
 #### 针对模型的表单
-https://docs.djangoproject.com/zh-hans/3.2/topics/forms/modelforms/
+https://docs.djangoproject.com/zh-hans/5.2/topics/forms/modelforms/
 
 #### 表单资源
-https://docs.djangoproject.com/zh-hans/3.2/topics/forms/media/
+https://docs.djangoproject.com/zh-hans/5.2/topics/forms/media/
 
 #### 表单集
-https://docs.djangoproject.com/zh-hans/3.2/topics/forms/formsets/
+https://docs.djangoproject.com/zh-hans/5.2/topics/forms/formsets/
 
 #### 自定义验证
-https://docs.djangoproject.com/zh-hans/3.2/ref/forms/validation/
+https://docs.djangoproject.com/zh-hans/5.2/ref/forms/validation/
 
 
 
@@ -1075,9 +1137,9 @@ https://docs.djangoproject.com/zh-hans/3.2/ref/forms/validation/
 
 ### 路由规则
 
-[path() 详解](https://docs.djangoproject.com/zh-hans/3.2/ref/urls/#django.urls.path)
+[path() 详解](https://docs.djangoproject.com/zh-hans/5.2/ref/urls/#django.urls.path)
 
-[include() 详解](https://docs.djangoproject.com/zh-hans/3.2/ref/urls/#django.urls.include)
+[include() 详解](https://docs.djangoproject.com/zh-hans/5.2/ref/urls/#django.urls.include)
 
 1. 首先在应用文件夹下创建 urls.py 文件，用来配置视图的 url，然后我们需要在项目下的 urls.py 文件中将该应用的 urls 配置进去
 
@@ -1183,7 +1245,7 @@ cookies , token, session
 
 ### 3.2 使用模板建立视图(模板层)
 
-[模板概述](https://docs.djangoproject.com/zh-hans/3.2/topics/templates/)
+[模板概述](https://docs.djangoproject.com/zh-hans/5.2/topics/templates/)
 
 1. 首先在项目根目录下创建 templates 文件夹，用来放视图模版，然后在项目下的 settings.py 文件中注册 templates 文件夹，使 django 能够在 templates 文件夹中找到相应的模版，在 TEMPLATES 中的 DIRS 列表中加入如下代码
 
@@ -1233,7 +1295,7 @@ return render(request, 'blog\index.html', locals())
 
 #### 3.2.1 内置模版标签
 
-[官网-内置模板标签和过滤器](https://docs.djangoproject.com/zh-hans/3.2/ref/templates/builtins/)
+[官网-内置模板标签和过滤器](https://docs.djangoproject.com/zh-hans/5.2/ref/templates/builtins/)
 
 - 继承模版标签:
 
@@ -1354,7 +1416,7 @@ eg:
 
 #### 3.2.3 自定义过滤器和标签
 
-[自定义模板过滤器和标签¶](https://docs.djangoproject.com/zh-hans/3.2/howto/custom-template-tags/)
+[自定义模板过滤器和标签¶](https://docs.djangoproject.com/zh-hans/5.2/howto/custom-template-tags/)
 
 1. 在应用目录下创建 templatetags 文件夹，同时建立空文件 `__ init __.py` 和过滤器文件 例如 `custom_filter.py` 
 2. 在 `custom_filter.py` 文件中添加过滤器
@@ -1412,7 +1474,7 @@ def get_all_category
 ![使用过滤器添加分类列表](/images/2888797-484be5f05be72101.png)
 
 
-[自定义模板的后端](https://docs.djangoproject.com/zh-hans/3.2/howto/custom-template-backend/)
+[自定义模板的后端](https://docs.djangoproject.com/zh-hans/5.2/howto/custom-template-backend/)
 
 
 #### 3.2.4 静态文件处理
@@ -1434,11 +1496,11 @@ def get_all_category
 
 #### 3.3.1 基于类的视图 View
 
-[基于类的视图](https://docs.djangoproject.com/zh-hans/3.2/topics/class-based-views/)
+[基于类的视图](https://docs.djangoproject.com/zh-hans/5.2/topics/class-based-views/)
 
-[基于类的视图详解](https://docs.djangoproject.com/zh-hans/3.2/topics/class-based-views/intro/)
+[基于类的视图详解](https://docs.djangoproject.com/zh-hans/5.2/topics/class-based-views/intro/)
 
-[内置的基于类的通用视图](https://docs.djangoproject.com/zh-hans/3.2/topics/class-based-views/generic-display/)
+[内置的基于类的通用视图](https://docs.djangoproject.com/zh-hans/5.2/topics/class-based-views/generic-display/)
 
 [Django 基于类的通用视图详解](https://blog.csdn.net/SL_World/article/details/83415971)
 
@@ -1599,7 +1661,7 @@ class ProtectedView(TemplateView):
 
 #### 3.3.3 使用 基于Mixin 的类视图
 
-[在基于类的视图中使用 mixins](https://docs.djangoproject.com/zh-hans/3.2/topics/class-based-views/mixins/)
+[在基于类的视图中使用 mixins](https://docs.djangoproject.com/zh-hans/5.2/topics/class-based-views/mixins/)
 
 #### 3.3.3 装饰类
 
@@ -1723,7 +1785,7 @@ class PublisherBookListView(ListView):
 
 
 
-[使用基于类的视图处理表单](https://docs.djangoproject.com/zh-hans/3.2/topics/class-based-views/generic-editing/)
+[使用基于类的视图处理表单](https://docs.djangoproject.com/zh-hans/5.2/topics/class-based-views/generic-editing/)
 
 ```python
 from django.views.generic import DetailView
@@ -1740,7 +1802,7 @@ class PublisherDetailView(DetailView):
         context['book_list'] = Book.objects.all()
         return context
 ```
-[get_context_data解释](https://docs.djangoproject.com/zh-hans/3.2/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.get_context_data)
+[get_context_data解释](https://docs.djangoproject.com/zh-hans/5.2/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.get_context_data)
 将合并当前类的所有父类的上下文数据，返回用于显示对象的上下文数据。
 
 
@@ -1795,11 +1857,11 @@ class AuthorDetailView(DetailView):
 
 #### 3.3.7 进阶
 
-[在基于类的视图中使用混入](https://docs.djangoproject.com/zh-hans/3.2/topics/class-based-views/mixins/)
+[在基于类的视图中使用混入](https://docs.djangoproject.com/zh-hans/5.2/topics/class-based-views/mixins/)
 
-[内置基于类的视图 API](https://docs.djangoproject.com/zh-hans/3.2/ref/class-based-views/)
+[内置基于类的视图 API](https://docs.djangoproject.com/zh-hans/5.2/ref/class-based-views/)
 
-[基于类的通用视图——扁平化索引](https://docs.djangoproject.com/zh-hans/3.2/ref/class-based-views/flattened-index/)
+[基于类的通用视图——扁平化索引](https://docs.djangoproject.com/zh-hans/5.2/ref/class-based-views/flattened-index/)
 
 [装饰类视图：Django内置method_decorator](https://blog.csdn.net/JosephThatwho/article/details/101109514)
 
@@ -1807,7 +1869,7 @@ class AuthorDetailView(DetailView):
 
 #### 3.4.1 内置视图
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/views/
+https://docs.djangoproject.com/zh-hans/5.2/ref/views/
 
 #### 3.4.2 request请求/响应对象
 
@@ -1874,11 +1936,11 @@ body_dict = json.loads(request.body)
 print(body_dict) 
 ```
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/request-response/
+https://docs.djangoproject.com/zh-hans/5.2/ref/request-response/
 
 #### 3.4.3 TemplateResponse 对象
 
-https://docs.djangoproject.com/zh-hans/3.2/ref/template-response/
+https://docs.djangoproject.com/zh-hans/5.2/ref/template-response/
 
 ### 3.5 文件上传
 
@@ -2083,14 +2145,14 @@ MIDDLEWARE = [
 
 ### 日志
 
-https://docs.djangoproject.com/zh-hans/3.2/topics/logging/
+https://docs.djangoproject.com/zh-hans/5.2/topics/logging/
 
 ### 分页
 
 https://www.django.cn/article/show-34.html
 
 
-https://docs.djangoproject.com/zh-hans/3.2/topics/pagination/
+https://docs.djangoproject.com/zh-hans/5.2/topics/pagination/
 
 ### 缓存
 
@@ -2242,7 +2304,7 @@ with connection.cursor() as cursor:
 
 [Django Signals之pre_save & post_save ，pre_delete & post_delete](https://blog.csdn.net/Lockey23/article/details/80805758)
 
-[信号 官方文档](https://docs.djangoproject.com/zh-hans/3.2/ref/signals/ )
+[信号 官方文档](https://docs.djangoproject.com/zh-hans/5.2/ref/signals/ )
 
 ### Celery
 

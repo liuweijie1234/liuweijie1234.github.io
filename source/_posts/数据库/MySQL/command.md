@@ -1267,16 +1267,20 @@ mysql> show variables like 'slow_query_log_file';
 
 show global variables;
 
-
-showglobal variables like "%max_connections%";
-
 - max_connections：允许的最大连接数
+
+```sql
+show global variables like "%max_connections%";
+```
 
 MySQL默认允许的最大连接数取决于所使用的MySQL版本和配置。在MySQL 5.7及更高版本中，默认的最大连接数是150。
 
 这个值可以通过在MySQL配置文件中设置 max_connections 参数来修改。此参数的值可以根据您的特定需求进行修改。如果需要更多的连接，可以将此参数的值增加到适当的水平，但需要注意系统资源的限制和性能问题。
 
 - wait_timeout：连接超时时间
+```sql
+show global variables like "%wait_timeout%";
+```
 
 默认情况下，MySQL服务器会在8小时后关闭空闲连接，此超时时间由wait_timeout参数控制。
 
@@ -1285,7 +1289,6 @@ wait_timeout参数定义了一个客户端连接在没有任何活动（即没�
 如果在这段时间内没有任何活动，则服务器将断开与客户端的连接。在MySQL中，连接的超时时间取决于wait_timeout参数的值和MySQL服务器上当前的负载情况。
 
 除此之外，还有一些其他的MySQL配置选项可以影响连接的超时时间，比如 interactive_timeout 参数。需要根据实际情况来设置这些参数以达到最佳性能。
-
 
 
 - interactive_timeout：交互超时时间
@@ -1301,13 +1304,14 @@ interactive_timeout参数是MySQL服务器的一个系统变量，它控制了�
 需要注意的是，修改interactive_timeout参数的值可能会对MySQL服务器的性能产生影响，因此需要谨慎设置。
 
 
-
 - Max_used_connections
 
 显示已连接数
+
 show global status like 'Max_used_connections';
 
 显示最大连接数
+
 show variables like '%max_connections%';
 
 

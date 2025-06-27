@@ -73,9 +73,16 @@ month_of_year：一年中的某个月（1-12）
 
 crontab(minute=0, hour=0)：每天午夜（00:00）执行
 crontab(minute=30)：每小时的第 30 分钟执行
+crontab(minute="*/30") 每 30 分钟执行一次
+
 crontab(minute=0, hour='*/2')：每 2 小时执行一次
+crontab(minute=0, hour=0) 每天的 00:00 执行一次
+crontab(minute=0, hour=12) 每天的 12:00 执行一次
+
 crontab(minute=0, hour=0, day_of_week=0)：每周一的午夜执行
 crontab(minute=0, hour=0, day_of_month=1)：每月第一天的午夜执行
+
+
 
 
 ## 周期任务调度策略

@@ -82,6 +82,7 @@ git config --global https.proxy http://127.0.0.1:7890
 `git diff` 比较文件的不同，即暂存区和工作区的差异。 `git diff --cached` 比较暂存区和上一次提交之间的差异。
 `git commit -m 'demogit'` 提交暂存区到本地仓库。
 `git commit --amend -m 'demogit'` 修改上一次提交错误的提交信息。
+git commit --amend  # 修改最近一次提交
 `git reset` 回退版本
 `git rm` 将文件从暂存区和工作区中删除。
 `git mv` 移动或重命名工作区文件。
@@ -182,6 +183,7 @@ git fetch 命令用于从远程获取代码库。
 
 ```bash
 git fetch --all
+git fetch origin master  # 从远程仓库获取最新的 master 分支
 ```
 
 [git fetch 命令](https://www.yiibai.com/git/git_fetch.html)
@@ -339,6 +341,7 @@ $ git reset --soft HEAD~3   # 回退上上上一个版本
 
 ```bash
 git reset --hard HEAD  # 
+git reset --hard origin/master  # 回退到远程仓库的最新版本
 ```
 
 > 注意：谨慎使用 –-hard 参数，它会删除回退点之前的所有信息。

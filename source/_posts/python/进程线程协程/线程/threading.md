@@ -1,13 +1,58 @@
 ---
-title: Python3 多线程
+title: Python3 线程 threading
 date: 2022-08-15 10:22:00
 tags:
 - Python
 categories:
 - Python
 ---
+## 概念
 
-### 多线程
+线程是操作系统能够进行运算调度的最小单位。
+
+线程适合用于 I/O 密集型任务（如文件读写、网络请求等），因为线程在等待 I/O 操作完成时可以释放 CPU，让其他线程运行。
+但是由于 Python 的全局解释器锁（GIL）的存在，在 CPU 密集型任务中，多线程可能并不能充分利用多核 CPU 的优势。
+
+## 原理
+
+基于操作系统级的原生线程（内核级线程）
+通过 POSIX threads (pthread) 或 Windows threads 实现
+受 Python GIL（全局解释器锁）限制
+
+**优点**：
+
+- 操作系统支持：直接使用内核级线程，适用于所有平台
+- 阻塞操作友好：I/O 操作时自动释放 GIL，适合网络/磁盘 I/O 场景
+- 丰富的同步原语：
+
+```python
+lock = threading.Lock()
+event = threading.Event()
+sem = threading.Semaphore()
+```
+
+- 与系统集成好：
+    支持线程优先级设置
+    可通过 os.setuid() 等系统调用
+    兼容调试器（如 pdb）
+
+**缺点**：
+- GIL 瓶颈：CPU 密集型任务无法并行
+- 内存开销：每个线程默认 8MB 栈空间
+
+```python
+# 内存使用示例
+import resource
+print(f"线程内存开销: {resource.getpagesize() * 1024 * 8 / 1024/1024:.1f}MB")  # ≈8MB
+```
+- 线程切换成本：内核态/用户态切换开销大
+- 最大线程数限制：通常 1000-4000 线程（取决于系统）
+```bash
+# Linux 查看线程限制
+$ ulimit -u
+```
+
+## 多线程
 
 Python 提供了 thread 和 threading 两个模块来实现多线程，`thread` 是低级模块，`threading` 是高级模块，对 `thread`进行了封装。
 
@@ -16,7 +61,6 @@ Python 提供了 thread 和 threading 两个模块来实现多线程，`thread` 
 ```python
 import threading
 import time
-
 
 def loop():
     n = 0
@@ -38,11 +82,9 @@ print('thread {} ended.' .format(threading.current_thread().name))
 
 多线程会造成数据的不安全，在 Python 中可以通过加锁来保证数据安全：
 
-
 在 Python 中，threading.Lock 是用来在多线程编程中进行线程同步的工具。
 
 它可以在多个线程之间创建临界区，确保在任意时刻只有一个线程可以访问共享资源，避免出现竞争条件（race condition）和数据不一致的情况。
-
 
 用法:
 - 当多个线程需要访问共享资源时，可以使用 `threading.Lock` 对临界区进行加锁和解锁。

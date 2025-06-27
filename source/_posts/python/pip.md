@@ -149,7 +149,7 @@ pip freeze > requirements.txt # 导出已安装的包到requirements.txt文件
 pip install requests # 安装requests包
 pip install requests -i https://mirrors.aliyun.com/pypi/simple/
 
-pip uninstall requests # 卸载requests包
+pip uninstall -y requests # 卸载requests包
 pip list # 查看已安装的包
 pip show requests # 查看requests包的详细信息
 pip search requests # 搜索requests包

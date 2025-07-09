@@ -27,6 +27,13 @@ https://git-scm.com/downloads/win
 sudo apt-get install git -y
 ```
 
+### macOS 安装 git
+
+```bash
+brew install git
+```
+
+https://git-scm.com/downloads/mac
 
 ### 基本命令
 
@@ -504,3 +511,18 @@ https://blog.csdn.net/zpf1813763637/article/details/128340109
 
 git config --global http.proxy 127.0.0.1:7897
 git config --global https.proxy 127.0.0.1:7897
+
+- Git报错：SSL certificate problem: self signed certificate
+
+```bash
+ldmac@ldmac2deMacBook-Pro Projects % git clone https://39.129.90.146:29923/Shenzhen_SD/513-API.git
+Cloning into '513-API'...
+fatal: unable to access 'https://39.129.90.146:29923/Shenzhen_SD/513-API.git/': SSL certificate problem: self signed certificate
+```
+1、临时禁用SSL验证
+
+git clone -c http.sslVerify=false https://39.129.90.146:29923/Shenzhen_SD/513-API.git
+
+2、全局禁用SSL验证
+
+git config --global http.sslVerify false

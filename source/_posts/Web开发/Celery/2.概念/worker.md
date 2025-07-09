@@ -83,7 +83,11 @@ monkey.patch_all()
 
 
 ```bash
-celery -A app.core.celery worker --loglevel=info --concurrency=100
+
+celery -A app.core.celery:celery_app worker -Q celery --loglevel=info --concurrency=100
+
+celery -A app.core.celery:celery_app worker -Q file_generation --concurrency=1  --loglevel=info --hostname=file_generator@%h
+
 
 celery -A app.core.celery worker --loglevel=info --pool=threads --concurrency=10
 
@@ -92,6 +96,16 @@ celery -A app.core.celery worker --loglevel=info --pool=gevent --concurrency=100
 celery -A app.core.celery worker --loglevel=info --pool=eventlet --concurrency=100 --without-gossip --without-mingle --without-heartbeat
 
 celery -A app.core.celery worker --loglevel=info --pool=solo --without-gossip --without-mingle --without-heartbeat
+
+# 消息队列+并发为1
+celery -A app.core.celery:celery_app worker \
+  -Q file_generation \         # 只消费指定队列
+  --concurrency=1 \            # 并发工作进程数
+  --loglevel=info \            # 日志级别
+  --hostname=file_generator@%h \ # 自定义主机标识
+  --without-gossip \           # 禁用集群协议
+  --without-mingle \           # 禁用启动同步
+  --without-heartbeat          # 禁用心跳事件
 ```
 
 

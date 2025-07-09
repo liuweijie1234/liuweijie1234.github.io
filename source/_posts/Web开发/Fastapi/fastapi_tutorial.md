@@ -29,7 +29,7 @@ pip install pydantic-settings  # 配置文件
 pip install gunicorn  # 部署
 
 
-source .wsl-venv/bin/activate  # 激活虚拟环境
+source myenv/bin/activate  # 激活虚拟环境
 
 pip freeze > requirements.txt  # 生成requirements.txt
 
@@ -128,7 +128,7 @@ from sqlalchemy import create_engine, MetaData
 DATABASE_URL = "mysql+mysqlconnector://username:password@localhost/dbname"
 database = Database(DATABASE_URL)
 
-@app.on_event("startup")
+@app.on_event("startup")image.png
 async def startup():
     await database.connect()
 
@@ -450,10 +450,55 @@ class Task(TaskBase):
     class Config:
         from_attributes = True  # 兼容 SQLAlchemy 模型
 ```
-## crud
 
-### SQLAlchemy CRUD 操作 
 
+## SQLAlchemy CRUD 操作 
+
+### 传统ORM查询方式(db.query())
+
+```python
+db.query(FileTask).filter(FileTask.task_id == request.task_id).first()
+```
+特点：
+同步操作：这是 SQLAlchemy ORM 的传统同步查询方式
+
+链式调用：支持方法链式调用，可读性强
+
+灵活性：可以方便地添加更多过滤条件和操作
+
+兼容性：适用于所有 SQLAlchemy 版本
+
+使用场景：
+常规的同步 FastAPI 应用
+
+不需要异步数据库操作的项目
+
+简单的 CRUD 操作
+
+### 异步查询方式 (select() + execute())
+
+```python
+from sqlalchemy import select
+
+stmt = select(FileTask).where(FileTask.task_id == request.task_id)
+result = await db.execute(stmt)
+stats = result.scalars().first()
+```
+特点：
+异步支持：这是 SQLAlchemy 1.4+ 引入的异步查询方式
+
+更接近 SQL：使用 select() 构造查询更接近原生 SQL 语法
+
+性能更好：在异步环境中能更好地利用资源
+
+类型提示：与 Python 类型系统配合更好
+
+使用场景：
+异步 FastAPI 应用（使用 async def 端点）
+
+需要高性能的 I/O 密集型应用
+
+使用 SQLAlchemy 1.4+ 版本的项目
 
 
 #### fetchall()

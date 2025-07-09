@@ -1,0 +1,81 @@
+### 通用规则
+1. 默认情况下，所有回复都必须是中文，而且需要在开头称呼用户为"靓仔："
+2. 复杂需求拆解成小任务，分步实现，每完成一个小任务后再继续
+3. 代码实现前后要仔细检查，确保Vue组件props定义完整、单向数据流正确
+4. 在已有功能基础上添加新功能时，必须确保：
+   - 不影响原有功能和组件复用性
+   - 不添加其他功能、代码、逻辑、文件、配置、依赖
+5. 遵循项目架构设计，保持Vue单文件组件结构与ESLint规范一致
+6. 组件设计遵循单一职责原则，优先使用Element Plus组件库
+7. 组件拆分原则：将UI和业务逻辑分离，通用功能封装为独立组件
+8. 代码实现时遵循"KISS原则"，保持简洁清晰
+9. 优先使用现有Element Plus组件和项目内工具函数，避免重复代码
+10. 不引入不必要的依赖，使用项目已有的@/utils/http封装进行API调用
+
+### Vue3 + TypeScript特定规则
+11. 使用Vue 3 Composition API + TypeScript，组件结构：`<template>` / `<script setup lang="ts">` / `<style scoped>`
+12. props必须有完整的TypeScript类型定义和默认值，使用vue-types或自定义类型接口
+13. 使用Vue生命周期钩子函数正确管理组件状态和副作用
+14. 使用computed属性处理数据派生，watch监听数据变化，避免深度监听
+15. 事件处理使用defineEmits定义emit事件，遵循TypeScript类型约束
+16. 组件引用使用TemplateRef类型，确保类型安全
+17. 使用type-only imports: `import { type xxx } from 'xxx'`
+
+### Element Plus集成规则
+18. 优先使用Element Plus组件库，保持UI风格一致性
+19. 组件样式调整通过局部scoped样式覆盖，避免全局污染
+20. 表单验证使用Element Plus内置验证系统和rules配置
+21. 对话框、抽屉等模态组件使用v-model管理可见性
+22. 使用Element Plus的暗色主题适配，遵循项目epTheme store配置
+23. 图标优先使用@iconify/vue，其次使用Element Plus内置图标
+
+### Pinia状态管理
+24. 状态管理统一使用Pinia，store模块放在src/store/modules目录
+25. Store使用Composition API风格：defineStore + setup语法
+26. 复杂组件状态考虑使用Pinia管理，简单状态使用props/emit
+27. Store模块按业务领域划分：app、user、permission、multiTags等
+28. 使用TypeScript接口定义Store的state类型
+29. Store中的actions使用async/await处理异步操作
+
+### 路由与权限系统
+30. 路由配置使用自动导入模式，新增路由放在src/router/modules目录
+31. 路由meta信息必须包含title、roles、permissions等权限配置
+32. 使用@/components/ReAuth和@/components/RePerms进行按钮级权限控制
+33. 动态路由通过permission store管理，支持角色和权限双重验证
+34. 路由守卫统一在src/router/index.ts中配置，遵循现有鉴权逻辑
+
+### API层架构
+35. API接口统一放在src/api目录，按业务模块划分文件
+36. 使用@/utils/http进行HTTP请求，支持请求/响应拦截器
+37. API函数必须定义完整的TypeScript类型，包括请求参数和响应数据
+38. 接口返回数据结构遵循项目约定：{ success: boolean, data: T }
+39. 错误处理统一通过http工具类处理，组件层面只处理业务逻辑
+
+### 组件复用与架构
+40. 通用UI组件放在src/components目录，使用Re前缀命名（如ReDialog、ReTable）
+41. 业务组件应该是基础组件的组合，处理特定业务逻辑
+42. 工具函数放在src/utils目录，按功能模块划分
+43. 页面级组件放在src/views目录，负责数据获取和状态管理
+44. 使用@pureadmin/table、@pureadmin/descriptions等项目扩展组件
+45. 组件Props使用TypeScript接口定义，避免直接修改props
+
+### 构建与开发配置
+46. 遵循Vite构建配置，使用路径别名@指向src目录
+47. 样式使用SCSS + Tailwind CSS，重置样式已在main.ts中引入
+48. 代码格式化遵循ESLint + Prettier配置，支持Vue 3语法
+49. 国际化使用vue-i18n，多语言文件放在locales目录
+50. 环境变量使用VITE_前缀，类型定义在vite-env.d.ts中
+
+### 性能与优化
+51. 使用动态import()进行路由懒加载和组件异步加载
+52. 大列表使用虚拟滚动或分页，避免性能问题
+53. 图片资源放在src/assets目录，使用Vite的资源处理
+54. 组件缓存使用keep-alive配合路由meta.keepAlive配置
+55. 生产环境自动移除console和debugger语句
+
+### 代码质量与维护
+56. 组件名称使用PascalCase命名，文件名使用kebab-case
+57. 关键业务逻辑添加JSDoc注释，复杂组件提供使用说明
+58. 提交代码前通过lint-staged进行代码检查和格式化
+59. 遵循Conventional Commits规范，使用commitlint进行约束
+60. 组件Props、Events、Slots必须有完整的TypeScript类型定义

@@ -155,6 +155,7 @@ async def get_processed_data():
 回滚到特定版本：alembic downgrade <revision_id>
 升级到最新版本：alembic upgrade head
 
+alembic stamp head
 
 #### 单数据库配置
 

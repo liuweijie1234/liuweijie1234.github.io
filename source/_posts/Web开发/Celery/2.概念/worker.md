@@ -84,7 +84,7 @@ monkey.patch_all()
 
 ```bash
 
-celery -A app.core.celery:celery_app worker -Q celery --loglevel=info --concurrency=100
+celery -A app.core.celery:celery_app worker -Q celery --concurrency=100 --loglevel=info --hostname=worker1@%h
 
 celery -A app.core.celery:celery_app worker -Q file_generation --concurrency=1  --loglevel=info --hostname=file_generator@%h
 
@@ -123,6 +123,8 @@ pkill -f "celery -A app.core.celery worker"
 
 
 ```bash
+celery -A app.core.celery:celery_app beat --scheduler=sqlalchemy_celery_beat.schedulers:DatabaseScheduler --loglevel=debug
+celery -A app.core.celery:celery_app beat --loglevel=info --pidfile=./celerybeat.pid --schedule=./celerybeat-schedule
 celery -A app.core.celery beat --loglevel=info
 celery -A app.core.celery beat --loglevel=debug 
 celery -A app.core.celery beat --loglevel=info --logfile=logs/beat.log

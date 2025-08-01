@@ -222,8 +222,8 @@ git branch issue1 创建名为issue1的分支
 #### 切换分支
 
 ```bash
-git checkout <分支名称>  切换到指定分支
-git checkout issue1 切换到issue1分支
+git checkout <分支名称>  # 切换到指定分支
+git checkout issue1     # 切换到issue1分支
 
 git checkout -b <branch>  # 创建并切换到指定分支
 
@@ -265,6 +265,11 @@ git push origin --delete <branchname>  # 删除远程分支
 ```bash
 git branch -m <old_name> <new_name>  # 重命名分支
 ```
+推送到远程仓库（可选）
+```bash
+git push -u origin lwj_test
+```
+-u 表示设置上游分支
 
 #### 合并分支
 
@@ -526,3 +531,29 @@ git clone -c http.sslVerify=false https://39.129.90.146:29923/Shenzhen_SD/513-AP
 2、全局禁用SSL验证
 
 git config --global http.sslVerify false
+
+### 提交冲突
+
+error: Your local changes to the following files would be overwritten by merge:
+        apps/order/tasks.py
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+
+
+方法一：保存本地修改
+
+```bash
+# 暂存修改（创建临时存档点）
+git stash
+
+# 拉取远程更新
+git pull origin test
+
+# 恢复暂存的修改（自动尝试合并）
+git stash pop
+```
+
+如果恢复后文件出现 <<<<<<< 冲突标记，需要手动编辑文件解决冲突
+
+解决后执行 git add <文件> 和 git commit

@@ -7,7 +7,6 @@ RESTful API 是一种基于 HTTP 协议的网络应用程序设计风格和开�
 
 ## 设计原则
 
-
 ### 资源导向 ：
 将系统中的数据和功能抽象为资源，每个资源都有一个唯一的 URI（Uniform Resource Identifier）来标识。例如，/api/users/1 表示用户 ID 为 1 的资源。
 

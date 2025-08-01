@@ -12,7 +12,8 @@ https://python-poetry.org/docs/
 windows PowerShell
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
 
-
+注意需要添加环境变量到Path,后重启PowerShell
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";C:\Users\liuwe\AppData\Roaming\Python\Scripts", "User")
 
 ## 常用命令
 
@@ -25,8 +26,9 @@ poetry new myproject  # 创建新项目
 poetry add requests  # 添加依赖
 
 poetry env use 3.11
+poetry env use C:\Python38\python.exe   # 明确指定 Python 3.8 路径
 
-poetry install
+poetry install # 安装依赖
 
 poetry shell  # 进入虚拟环境
 
@@ -97,8 +99,15 @@ poetry remove requests # 移除依赖
 
 poetry update requests # 更新依赖
 
+poetry show # 检查已安装包
+
 poetry show requests # 查看依赖
 
+
+```powershell
+# 逐行安装 requirements.txt 中的依赖
+Get-Content requirements.txt | ForEach-Object { poetry add $_ }
+```
 
 ## 管理Python版本
 

@@ -8,6 +8,9 @@ categories:
 ---
 
 ## 命令
+
+mstsc 远程服务器
+
 ### 查看端口
 
 netstat -aon

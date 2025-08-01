@@ -94,3 +94,6 @@ docker compose down  停止容器
 
 
 
+docker run --hostname=7ddcdfc6b6c1 --mac-address=de:af:25:d2:26:66 --env=MYSQL_ROOT_PASSWORD=zfx@2021 --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=GOSU_VERSION=1.17 --env=MYSQL_MAJOR=8.0 --env=MYSQL_VERSION=8.0.39-1.el9 --env=MYSQL_SHELL_VERSION=8.0.38-1.el9 --volume=/var/lib/mysql --network=bridge -p 13336:3306 -p 33060 --restart=no --runtime=runc -d mysql:8.0
+
+docker run --hostname=47c4a89e9395 --mac-address=0a:aa:7f:8b:c3:f4 --env=requirepass=zfx@2021wxcm11taofx --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=GOSU_VERSION=1.17 --env=REDIS_VERSION=7.4.0 --env=REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.4.0.tar.gz --env=REDIS_DOWNLOAD_SHA=57b47c2c6682636d697dbf5d66d8d495b4e653afc9cd32b7adf9da3e433b8aaf --volume=/data --network=bridge --workdir=/data -p 16379:6379 --restart=no --runtime=runc -d redis:latest

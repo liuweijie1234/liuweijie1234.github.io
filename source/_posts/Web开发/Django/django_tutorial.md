@@ -698,6 +698,28 @@ print(Category.objects.filter(name='test category').values_list('name', flat=Tru
 # <QuerySet ['test category']>
 ```
 
+- only() / defer()（模型实例仍然可用，懒加载可控）
+
+```python
+master_order_list = (
+    MasterOrder.objects
+    .filter(id__in=ids, del_flag=False)
+    .only(
+        'warehouse_receipt_number',
+        'ref_num',
+        'order_num',
+        'carrier_code',
+    )
+)
+```
+优点：
+• 返回的还是 模型实例，后续如有少量字段访问仍可懒加载；
+• 比 values() 灵活。
+缺点：
+• 如果后面不小心再访问未 select 的字段，会触发额外查询（N+1）；
+• 生成的 SQL 仍比 values() 略大（包含 id 与少量元数据）。
+
+
 ##### 2、查询条件外的数据
 
 推荐使用 filter, 避免使用.exclude()方法带来的性能开销。
@@ -896,6 +918,74 @@ https://bk.tencent.com/s-mart/community/question/993?type=answer
 
 Django开发中常用到的数据库操作总结
 https://bk.tencent.com/s-mart/community/question/958?type=answer
+
+
+
+select_related：把“一”方（ForeignKey / OneToOne）直接 JOIN 进同一条 SQL，一次查完。
+prefetch_related：对“多”方（Reverse FK / ManyToMany）额外再发 1~2 条 SQL，用 IN 批量查，然后在 Python 里拼装。
+
+原理：
+
+| 方法                | SQL 条数  | 适用关系             | 底层实现                      | 是否去重 |
+| ----------------- | ------- | ---------------- | ------------------------- | ---- |
+| select_related   | 1       | 正向 FK、OneToOne   | 数据库 JOIN（LEFT OUTER JOIN） | 自动   |
+| prefetch_related | 1+N → 2 | 反向 FK、ManyToMany | 额外 SQL + Python 合并        | 自动   |
+
+
+```python
+# 一、正向外键：用 select_related
+qs = Order.objects.select_related('customer', 'product')   # 只发 1 条 SQL
+
+# 二、反向外键 / ManyToMany：用 prefetch_related
+qs = Order.objects.prefetch_related('items__sku')          # 额外 2 条 SQL
+
+# 三、混用：先 JOIN“一”方，再批量“多”方
+qs = Order.objects.select_related('customer')\
+                  .prefetch_related('items__sku')
+
+```
+
+```python
+# 优化前：N+1
+orders = Order.objects.all()
+for o in orders:                    # 1 条
+    print(o.customer.name)          # N 条 → 100001 次查询
+
+# 优化后：select_related
+orders = Order.objects.select_related('customer')  # 1 条
+for o in orders:
+    print(o.customer.name)          # 0 条
+
+# 优化后：prefetch_related（反向）
+orders = Order.objects.prefetch_related('items')
+for o in orders:
+    print(o.items.all())            # 0 条额外 SQL
+```
+
+
+问题：链式过滤外键字段                  
+现象：`select_related('customer').filter(customer__level=3)` 不会失效，但 `filter(customer__name__contains='A')` 可能导致 JOIN 后表放大 
+解决方法：用 `distinct()` 或改写成子查询 
+
+问题：对 ManyToMany 使用 select_related
+现象：无任何效果，甚至报错
+解决方法：换 prefetch_related
+
+问题：在 `prefetch_related` 后加过滤
+现象：会重新触发查询
+解决方法：用 `Prefetch` 对象 
+
+```python
+from django.db.models import Prefetch
+
+qs = Order.objects.prefetch_related(
+        Prefetch('items',
+                 queryset=Item.objects.filter(price__gte=100),
+                 to_attr='expensive_items')
+)
+```
+
+“正向 FK 用 select_related，反向 FK / M2M 用 prefetch_related，复杂过滤用 Prefetch 对象。
 
 #### 内连接/子查询
 

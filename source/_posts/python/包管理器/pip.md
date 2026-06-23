@@ -116,6 +116,9 @@ pip config list
 
 ```bash
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```
 
 - 编辑文件更新
@@ -148,7 +151,7 @@ pip freeze > requirements.txt # 导出已安装的包到requirements.txt文件
 
 pip install requests # 安装requests包
 pip install requests -i https://mirrors.aliyun.com/pypi/simple/
-
+pip install opencv-python==4.11.0.86 --verbose  # 查看详细进度
 pip uninstall -y requests # 卸载requests包
 pip list # 查看已安装的包
 pip show requests # 查看requests包的详细信息
@@ -157,3 +160,8 @@ pip install -r requirements.txt # 根据requirements.txt文件安装包
 ```
 
 
+## mac安装ssl报错
+
+```bash
+open /Applications/Python\ 3.*/Install\ Certificates.command
+```

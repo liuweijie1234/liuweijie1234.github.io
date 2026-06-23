@@ -21,6 +21,8 @@ https://dev.mysql.com/downloads/mysql/
 
 ```bash
 brew install mysql
+
+brew install mysql@8.0
 ```
 
 启动 MySQL
@@ -33,6 +35,8 @@ mysql.server start
 后台服务（推荐）：
 ```bash
 brew services start mysql
+brew services start mysql@8.0
+
 ```
 
 初始化 MySQL（首次安装后）

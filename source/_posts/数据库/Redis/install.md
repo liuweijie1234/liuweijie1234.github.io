@@ -92,6 +92,14 @@ docker exec -it my-redis redis-cli ping
 ```
 
 
+## 配置
+
+mac 修改配置文件
+```bash
+nano /usr/local/etc/redis.conf
+```
+
+
 ## 常见问题
 
 Redis 连接问题

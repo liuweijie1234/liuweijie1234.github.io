@@ -7,7 +7,32 @@ categories:
 - linux
 ---
 
-### 系统时间时区设置
+### 查看系统版本和发行版信息
+```bash
+# 查看发行版信息
+cat /etc/os-release
+lsb_release -a
+
+# 查看内核版本
+uname -a
+uname -r  # 只显示内核版本
+uname -m  # 显示系统架构
+
+# 查看系统主机名
+hostname
+hostnamectl
+```
+
+### 查看系统运行时间
+```bash
+# 显示系统运行时间和负载
+uptime
+
+# 显示系统启动时间
+who -b
+
+# 显示系统运行时间详情
+cat /proc/uptime
 
 查看服务器时间
 date
@@ -17,34 +42,76 @@ sudo date -s "2025-06-23 13:18:00"
 timedatectl
 sudo timedatectl set-timezone Asia/Shanghai
 sudo timedatectl set-time "2025-06-20 14:30:00"
+```
 
 ### 查看系统资源
-top ：查看系统资源占用情况，显示当前进程信息
-uptime：查看报告系统运行时长及平均负载
 
+CPU信息
+```bash
+# 查看 CPU 详细信息
+lscpu
+cat /proc/cpuinfo
 
-查看端口情况
-netstat -tunlp | grep 端口号：查看端口号占用情况
-lsof -i:端口号：查看端口号占用情况
+# 查看 CPU 核心数
+nproc
 
-磁盘 
+# 查看 CPU 使用情况
+top：查看系统资源占用情况，显示当前进程信息
+htop：增强版 top（需要安装）
+mpstat
+sar -u 1 5
+```
+
+内存信息
+```bash
+# 查看内存交换区
+free -m -h
+
+# 查看详细内存信息
+cat /proc/meminfo
+
+# 监控内存使用
+vmstat
+```
+
+磁盘信息 
+```bash
+# 查看磁盘分区
+lsblk
+fdisk -l
+
+# 查看磁盘使用情况
 df -hl：查看磁盘剩余空间
 df -h：查看每个根路径的分区大小 (如果出现磁盘报警和实际有出入，可能因为文件操作符或者文件句柄未释放导致)
 du -sh [目录名]：返回该目录的大小
 du -sh * 当前目录下所有目录的大小
 du -sm [文件夹]：返回该文件夹总M数
 du -h [目录名]：查看指定文件夹下的所有文件大小（包含子文件夹）
-
-
-查看内存交换区
-free -m -h
-
-cpu
-sar -u 1 5
-
-IO
+# 查看磁盘 I/O 统计
+iostat
 iotop：查看IO读写（yum install iotop安装）
 iotop -o：直接查看比较高的磁盘读写程序
+```
+
+硬件设备信息
+```bash
+# 查看 PCI 设备
+lspci
+
+# 查看 USB 设备
+lsusb
+
+# 查看硬件概况
+lshw
+sudo lshw -short
+
+# 查看硬件信息摘要
+hwinfo --short
+```
+
+查看端口情况
+netstat -tunlp | grep 端口号：查看端口号占用情况
+lsof -i:端口号：查看端口号占用情况
 
 
 查看进程
@@ -86,6 +153,16 @@ mkdir -p /opt/test/img：在/opt/test目录下创建目录img，若无test目录
 
 cat desc.txt：查看desc.txt的内容
 
+# 显示匹配行及其后5行
+grep -A 5 "error" logfile.log
+# 显示匹配行及其前5行
+grep -B 5 "error" logfile.log
+
+# 显示匹配行及其前后5行
+grep -C 5 "error" logfile.log
+
+# 显示匹配行及其前后3行，并显示行号
+grep -n -C 3 "error" logfile.log
 
 
 7、分页查看文件内容：more
@@ -96,6 +173,7 @@ more desc.txt：分页查看desc.txt的内容
 
 tail -100 desc.txt：查看desc.txt的最后100行内容
 tail -n 2000 /var/log/messages/error.log： 查看日志
+tail -f /var/log/syslog : 实时查看日志
 
 9、拷贝：cp
 

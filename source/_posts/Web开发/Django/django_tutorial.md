@@ -155,6 +155,7 @@ https://blog.csdn.net/joexiaoh/article/details/106423342
 
 python manage.py migrate --fake
 
+python manage.py makemigrations --merge  # 合并冲突文件
 
 #### 1.4.5 创建超级管理员
 
@@ -904,10 +905,10 @@ https://blog.csdn.net/weixin_46371752/article/details/126375988
 #### 关联查询（联表查询）
 
 
-Django ORM 优化之select_related
+Django ORM 优化（查询优化）之select_related
 https://www.jianshu.com/p/937464304096
-
-Django查询优化之select_related和prefetch_related
+https://blog.csdn.net/study_in/article/details/95366421
+https://blog.csdn.net/weixin_43354181/article/details/123367231
 https://developer.aliyun.com/article/538196
 
 https://blog.csdn.net/qq_52385631/article/details/126695685

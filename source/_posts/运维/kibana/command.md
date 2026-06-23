@@ -56,7 +56,7 @@ board: ieod_clouds AND req_system_name: CC AND req_app_code: bksops AND req_comp
 
 Field req_app_code
 
-order by  metirc: Count
+order by metirc: Count
 
 Descending 降序
 

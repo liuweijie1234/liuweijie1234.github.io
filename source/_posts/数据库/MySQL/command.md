@@ -992,13 +992,13 @@ DELETE FROM survey_testproject WHERE time BETWEEN '2016-01-01 00:00:00' AND '201
 ### 删除表
 
 MySQL 删除表的几种情况:
-
+```sql
 drop table table_name : 删除表全部数据和表结构，会立刻释放磁盘空间，
-
+```
 例子：
 
 ```sql
-DROP TABLE IF EXISTS `tbl`;
+DROP TABLE IF EXISTS table_name;
 ```
 
 
@@ -1013,6 +1013,14 @@ truncate table table_name
 delete from table_name : 删除表全部数据，表结构不变，mysql也会立即释放磁盘空间。
 
 delete from table_name where xxx : 加了条件判读where从句，表结构不变，不会释放磁盘空间。
+
+delete from `alita_test`.`translate_translation` WHERE `key` LIKE '%.%'
+
+-- 2. 重置自增ID（从 1 重新开始）
+ALTER TABLE table_name AUTO_INCREMENT = 1;
+
+
+ALTER TABLE table_name AUTO_INCREMENT = 35162;
 ```
 
 

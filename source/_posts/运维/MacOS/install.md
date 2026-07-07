@@ -69,7 +69,7 @@ which mysql
 which mysqld
 
 ps aux | grep mysql
-lsof -i :3306
+sudo lsof -i :3306
 netstat -an | grep 3306
 
 /usr/local/mysql/bin/mysql -u root

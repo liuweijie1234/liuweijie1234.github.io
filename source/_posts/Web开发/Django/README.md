@@ -9,3 +9,8 @@
 
 
 Django 适合需要快速开发和复杂功能的全栈应用。
+
+
+ORM 底层、事务、缓存、中间件、信号、路由分发、Admin、认证系统、分页、异步任务 Celery 完整链路
+
+难点：ORM 查询优化、select_related/prefetch_related、原生 SQL、事务隔离、并发请求锁

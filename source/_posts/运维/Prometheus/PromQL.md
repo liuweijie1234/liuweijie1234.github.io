@@ -1,1 +1,0 @@
-学习PromQL查询metrics,使用Graph显示一段时间的metrics数据

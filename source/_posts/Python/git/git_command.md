@@ -587,11 +587,13 @@ Merge with strategy ort failed.
 方法一：保存本地修改
 
 ```bash
+git fetch origin
+
 # 暂存修改（创建临时存档点）
 git stash
 
-# 拉取远程更新
-git pull origin test
+# 拉取远程更新+合并  /  变基
+git pull origin test   /  git pull --rebase origin main
 
 # 恢复暂存的修改（自动尝试合并）
 git stash pop

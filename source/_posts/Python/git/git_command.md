@@ -364,6 +364,108 @@ HEAD 说明：
 
 `git reset HEAD` 命令用于取消已缓存的内容
 
+##### 具體操作
+一、先查询历史，定位版本
+```bash
+# 查看简洁提交历史（推荐）
+git log --oneline --graph --decorate --all
+
+# 只看当前分支最近 20 条
+git log --oneline -n 20
+
+# 查看某个提交的具体改动
+git show <commit-hash>
+
+# 查看所有 HEAD 移动记录（包括 reset 掉的，后悔药）
+git reflog
+
+# 查看某提交在哪些分支上
+git branch --contains <commit-hash>
+找到你要回退到的那个版本，记下它的 commit hash，比如 abc1234。
+```
+二、回退前先保证工作区干净
+```bash
+git status
+```
+如果有未提交改动，先处理：
+
+```bash
+git stash        # 暂存改动
+# 或者
+git add . && git commit -m "临时提交"
+```
+三、选择回退方式
+场景 1：本地回退，还没推送到远程
+用 git reset，三种模式按需选：
+
+```bash
+# 回退到 abc1234，之后的改动保留在暂存区（可重新提交）
+git reset --soft abc1234
+
+# 回退到 abc1234，之后的改动保留在工作区，未暂存（默认）
+git reset --mixed abc1234
+
+# 回退到 abc1234，之后的改动全部丢弃（危险！）
+git reset --hard abc1234
+```
+--soft：最安全，改动还在，只是 commit 没了。
+
+--mixed：改动还在工作区，需要重新 add。
+
+--hard：彻底丢弃，慎用。
+
+场景 2：已经推送到远程，或多人协作
+不要用 reset 改写历史，推荐用 git revert：
+
+```bash
+# 撤销某一次提交，生成一个新提交来抵消它
+git revert <commit-hash>
+
+# 撤销一段连续提交（从旧到新）
+git revert <oldest-commit>..<newest-commit>
+revert 不会删除历史，只是新增一个“反向操作”的提交，安全，可以直接 push。
+```
+场景 3：只想临时看看旧版本，不改分支
+```bash
+git checkout <commit-hash>      # 旧写法
+git switch --detach <commit-hash>  # 新写法
+```
+看完后 git switch dev/sauron 切回分支即可。
+
+四、推送到远程
+如果用 reset 且已经推送过，需要强制推送：
+
+```bash
+git push --force-with-lease origin <branch>
+--force-with-lease 比 --force 安全，如果远程有别人新提交会拒绝，避免覆盖别人工作。
+```
+如果用 revert，正常推送：
+
+```bash
+git push origin <branch>
+```
+
+五、完整示例
+假设当前在 dev/sauron，想回退到 abc1234：
+
+```bash
+# 1. 查看历史
+git log --oneline --graph --decorate --all
+
+# 2. 找到目标 abc1234，看看改动
+git show abc1234
+
+# 3. 确保干净
+git status
+
+# 4. 本地彻底回退
+git reset --hard abc1234
+
+# 5. 如果已推送，强制推送（谨慎）
+git push --force-with-lease origin dev/sauron
+```
+
+
 #### git remote 命令
 
 git remote：列出当前仓库中已配置的远程仓库。
